@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c5xjod0lq61ko"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_snj8o"]
+[ext_resource type="Texture2D" uid="uid://bo8mk6vka4ur" path="res://images/items/mining/shards/Mine_Yellow_Shard.png" id="2_m4jw7"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_bfact"]
+
+[resource]
+script = ExtResource("3_bfact")
+image = ExtResource("2_m4jw7")
+item_name = "Yellow Shard"
+item_type = 5
+rarity = 1
+flavor_text = "A shard of ancient technology. Could it be pieced back together?"
+use_effect = Array[ExtResource("1_snj8o")]([])
+throw_effect = Array[ExtResource("1_snj8o")]([])
+equip_effect = Array[ExtResource("1_snj8o")]([])
+base_value = 10
+consumable = false
+stone = false
+wood = false

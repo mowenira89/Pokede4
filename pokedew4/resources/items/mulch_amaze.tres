@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MulchData" load_steps=6 format=3 uid="uid://3u6j176lnqft"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_lalju"]
+[ext_resource type="Texture2D" uid="uid://jndg3s0p52kb" path="res://images/items/mulch/Bag_Amaze_Mulch_Sprite.png" id="2_dxer6"]
+[ext_resource type="Script" path="res://scripts/mulch_data.gd" id="3_ap0fr"]
+[ext_resource type="Script" path="res://resources/effects/mulch_effect.gd" id="4_ooi67"]
+
+[sub_resource type="Resource" id="Resource_xhdi6"]
+script = ExtResource("4_ooi67")
+
+[resource]
+script = ExtResource("3_ap0fr")
+mulch = 4
+lasting_time = 200
+growth_boost = 3
+pesticide = -20
+moisture_retention = 3
+berry_boost = 2
+mutation_chance = 10
+happines_boost = 10
+image = ExtResource("2_dxer6")
+item_name = "Amaze Mulch"
+item_type = 9
+rarity = 5
+flavor_text = "This mulch is... simply amazing!"
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+use_effect = Array[ExtResource("1_lalju")]([SubResource("Resource_xhdi6")])
+throw_effect = Array[ExtResource("1_lalju")]([])
+equip_effect = Array[ExtResource("1_lalju")]([])
+base_value = 30
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 4
+fuel = false
+fuel_amount = 0

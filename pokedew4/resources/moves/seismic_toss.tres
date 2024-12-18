@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://dw0ib0hsibclq"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_8jd8c"]
+[ext_resource type="Script" path="res://resources/effects/exact_damage.gd" id="2_r50uj"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_4ik1t"]
+
+[sub_resource type="Resource" id="Resource_cahd7"]
+script = ExtResource("2_r50uj")
+damage = 0
+by_level = true
+ohko = false
+
+[resource]
+script = ExtResource("3_4ik1t")
+_name = "Seismic Toss"
+type = 9
+level_learned = 16
+power = 0
+acc = 0
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 5
+mining_value = 5
+priority = 1
+effect = Array[ExtResource("1_8jd8c")]([SubResource("Resource_cahd7")])
+passive_effect = Array[ExtResource("1_8jd8c")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

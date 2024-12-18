@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://biveta48vytc2"]
+
+[ext_resource type="Texture2D" uid="uid://dp3m8uhh331nm" path="res://images/pokemon/vileplume.png" id="1_2t8u8"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_bbjla"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_r6rg6"]
+
+[resource]
+script = ExtResource("3_r6rg6")
+produce = Array[ExtResource("2_bbjla")]([])
+image = ExtResource("1_2t8u8")
+species = "Vileplume"
+num = 45
+type = Array[int]([3, 15])
+base_stats = {
+"attk": 80,
+"cook": 20,
+"craft": 33,
+"def": 85,
+"energy": 150,
+"farm": 80,
+"fishing": 20,
+"forage": 70,
+"hp": 75,
+"mine": 10,
+"perform": 35,
+"sattk": 110,
+"sdef": 90,
+"speed": 50
+}
+base_happiness = 50
+height = 12
+weight = 186
+base_exp = 245
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([9])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

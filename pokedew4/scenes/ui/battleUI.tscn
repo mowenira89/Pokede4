@@ -1,0 +1,362 @@
+[gd_scene load_steps=19 format=3 uid="uid://rdrf5c80u6tj"]
+
+[ext_resource type="Script" path="res://scripts/ui/battle_ui.gd" id="1_54bn8"]
+[ext_resource type="Texture2D" uid="uid://dy57b8nn5bgrt" path="res://images/battlebg.png" id="2_7d7vw"]
+[ext_resource type="Script" path="res://scripts/states/battle_state_machine.gd" id="3_jrtxe"]
+[ext_resource type="Theme" uid="uid://68jyy75n57ow" path="res://themes/blue_buttons.tres" id="3_r6clp"]
+[ext_resource type="PackedScene" uid="uid://d24uykbjd3myh" path="res://scenes/ui/pkmn_menu.tscn" id="3_v0soo"]
+[ext_resource type="Script" path="res://scripts/states/battle_state/battle_start.gd" id="4_f1wtn"]
+[ext_resource type="Script" path="res://scripts/states/battle_state/player_turn.gd" id="5_4a37w"]
+[ext_resource type="Script" path="res://scripts/states/battle_state/enemy_turn.gd" id="6_nkvda"]
+[ext_resource type="Script" path="res://scripts/states/battle_state/between_turns.gd" id="7_a7t5h"]
+[ext_resource type="PackedScene" uid="uid://cg8htco1og2mt" path="res://scenes/ui/message.tscn" id="8_p4pho"]
+[ext_resource type="Script" path="res://scripts/states/battle_state/end_battle.gd" id="11_iwqgv"]
+[ext_resource type="PackedScene" uid="uid://cchxoff4xxnj1" path="res://scenes/ui/inv_screen.tscn" id="11_j4ix5"]
+[ext_resource type="Script" path="res://scripts/states/battle_state/caught.gd" id="13_ijvin"]
+[ext_resource type="PackedScene" uid="uid://dmpevprkxc2k6" path="res://scenes/ui/naming_window.tscn" id="15_5rfms"]
+
+[sub_resource type="Theme" id="Theme_pk4iw"]
+Label/font_sizes/font_size = 30
+
+[sub_resource type="Theme" id="Theme_wvur4"]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmsj0"]
+bg_color = Color(0, 0.776471, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txd1u"]
+bg_color = Color(0.627451, 0.745098, 0.0352941, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_54bn8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_7d7vw")
+
+[node name="PlayerSprite" type="Sprite2D" parent="TextureRect"]
+position = Vector2(1542, 436)
+scale = Vector2(3, 3)
+
+[node name="EnemySprite" type="Sprite2D" parent="TextureRect"]
+position = Vector2(300, 488)
+scale = Vector2(3, 3)
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -719.0
+offset_bottom = 119.0
+grow_horizontal = 0
+color = Color(0, 0.321569, 1, 0.458824)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/ColorRect"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -333.5
+offset_top = -59.5
+offset_right = 333.5
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="VBoxContainer" parent="TextureRect/ColorRect/MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_pk4iw")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_wvur4")
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "HP:  "
+
+[node name="ProgressBar2" type="ProgressBar" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/fill = SubResource("StyleBoxFlat_kmsj0")
+show_percentage = false
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/ProgressBar2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Energy:  "
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_txd1u")
+show_percentage = false
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect/MarginContainer/HBoxContainer/VBoxContainer2/ProgressBar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="TextureRect"]
+layout_mode = 1
+offset_right = 719.0
+offset_bottom = 119.0
+color = Color(0.826514, 0.325234, 0.532379, 0.717647)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/ColorRect2"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -333.5
+offset_top = -59.5
+offset_right = 333.5
+offset_bottom = 100.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="VBoxContainer" parent="TextureRect/ColorRect2/MarginContainer"]
+layout_mode = 2
+theme = SubResource("Theme_pk4iw")
+
+[node name="VBoxContainer" type="HBoxContainer" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_wvur4")
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "HP:  "
+
+[node name="ProgressBar2" type="ProgressBar" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_styles/fill = SubResource("StyleBoxFlat_kmsj0")
+show_percentage = false
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer/VBoxContainer/ProgressBar2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -21.0
+offset_right = 20.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Energy:  "
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer/VBoxContainer2"]
+custom_minimum_size = Vector2(500, 40)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_txd1u")
+show_percentage = false
+
+[node name="Label" type="Label" parent="TextureRect/ColorRect2/MarginContainer/HBoxContainer/VBoxContainer2/ProgressBar"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 42.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 250)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_r6clp")
+color = Color(0.220655, 0.383079, 0.771669, 1)
+
+[node name="OptionsContainer" type="ColorRect" parent="ColorRect"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -600.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0, 0.262745, 0.384314, 0.796078)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/OptionsContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/OptionsContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="Fight" type="Button" parent="ColorRect/OptionsContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "FIGHT"
+
+[node name="PKMN" type="Button" parent="ColorRect/OptionsContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "PKMN"
+
+[node name="Bag" type="Button" parent="ColorRect/OptionsContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "BAG"
+
+[node name="Run" type="Button" parent="ColorRect/OptionsContainer/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "RUN"
+
+[node name="FightContainer" type="ColorRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_left = 736.0
+offset_top = 20.0
+offset_right = 1290.0
+offset_bottom = 226.0
+color = Color(0, 0.262745, 0.384314, 0.796078)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/FightContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/FightContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="Button" type="Button" parent="ColorRect/FightContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="ColorRect/FightContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="ColorRect/FightContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="ColorRect/FightContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 90)
+layout_mode = 2
+
+[node name="PKMNMenu" parent="." instance=ExtResource("3_v0soo")]
+visible = false
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_jrtxe")
+
+[node name="BattleStart" type="Node" parent="StateMachine"]
+script = ExtResource("4_f1wtn")
+
+[node name="SelectionState" type="Node" parent="StateMachine"]
+script = ExtResource("5_4a37w")
+
+[node name="EnemyTurn" type="Node" parent="StateMachine"]
+script = ExtResource("6_nkvda")
+
+[node name="PlayerTurn" type="Node" parent="StateMachine"]
+script = ExtResource("7_a7t5h")
+
+[node name="EndBattle" type="Node" parent="StateMachine"]
+script = ExtResource("11_iwqgv")
+
+[node name="Caught" type="Node" parent="StateMachine"]
+script = ExtResource("13_ijvin")
+
+[node name="Message" parent="." instance=ExtResource("8_p4pho")]
+visible = false
+offset_top = -20.0
+
+[node name="InvScreen" parent="." node_paths=PackedStringArray("message") instance=ExtResource("11_j4ix5")]
+visible = false
+message = NodePath("../Message")
+
+[node name="NamingWindow" parent="." instance=ExtResource("15_5rfms")]
+visible = false
+
+[connection signal="pressed" from="ColorRect/OptionsContainer/MarginContainer/GridContainer/Run" to="." method="_on_run_pressed"]

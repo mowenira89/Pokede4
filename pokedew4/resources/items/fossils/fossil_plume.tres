@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://buiyck7ug0yko"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_pwbp7"]
+[ext_resource type="Texture2D" uid="uid://c2fupmk3ni0yg" path="res://images/items/mining/artifacts/Dream_Plume_Fossil_Sprite.png" id="2_camy3"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_2e1nq"]
+
+[resource]
+script = ExtResource("3_2e1nq")
+image = ExtResource("2_camy3")
+item_name = "Plume Fossil"
+item_type = 5
+rarity = 20
+flavor_text = "Fossil of a dinosaur feather!"
+use_effect = Array[ExtResource("1_pwbp7")]([])
+throw_effect = Array[ExtResource("1_pwbp7")]([])
+equip_effect = Array[ExtResource("1_pwbp7")]([])
+base_value = 500
+consumable = false
+stone = false
+wood = false

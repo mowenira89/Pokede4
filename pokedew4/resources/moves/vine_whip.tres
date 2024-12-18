@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://cajqrx34aueh4"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_cf2n6"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_o288m"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_8qraf"]
+
+[sub_resource type="Resource" id="Resource_vf7g2"]
+script = ExtResource("2_o288m")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_8qraf")
+_name = "Vine Whip"
+type = 3
+power = 45
+acc = 100
+move_type = 0
+energy = 8
+targ = 0
+perform_type = 0
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_cf2n6")]([SubResource("Resource_vf7g2")])
+passive_effect = Array[ExtResource("1_cf2n6")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = "Doubles crafting speed."
+jaw_move = false

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://bo5ypbc7th7pg"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_lwkwj"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_3yqh2"]
+[ext_resource type="Script" path="res://resources/effects/exact_damage.gd" id="2_l3j7m"]
+
+[sub_resource type="Resource" id="Resource_bl4oj"]
+script = ExtResource("2_l3j7m")
+damage = 20
+by_level = false
+ohko = false
+
+[resource]
+script = ExtResource("2_3yqh2")
+_name = "Sonic Boom"
+type = 0
+level_learned = 18
+power = 0
+acc = 0
+move_type = 0
+energy = 15
+targ = 0
+perform_type = 0
+perform_value = 6
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_lwkwj")]([SubResource("Resource_bl4oj")])
+passive_effect = Array[ExtResource("1_lwkwj")]([])
+contact = false
+sound = false
+unmissable = true
+description = "Does 20 damage and never misses!"
+description_passive = "Provides a powerful flourish to the end of a performance!"
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://cduqnjhfc4xdf"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_lhbdc"]
+[ext_resource type="Script" path="res://resources/effects/heal_by_percent.gd" id="2_b7t42"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_wnpml"]
+
+[sub_resource type="Resource" id="Resource_m2swv"]
+script = ExtResource("2_b7t42")
+percentage = 0.5
+
+[resource]
+script = ExtResource("3_wnpml")
+_name = "Recover"
+type = 0
+level_learned = 36
+power = 0
+acc = 0
+move_type = 2
+energy = 5
+targ = 0
+perform_type = 5
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_lhbdc")]([SubResource("Resource_m2swv")])
+passive_effect = Array[ExtResource("1_lhbdc")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

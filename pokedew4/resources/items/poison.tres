@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bsebu41vry4ou"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_4yor5"]
+[ext_resource type="Texture2D" uid="uid://drqgioshi7trg" path="res://images/items/poison.png" id="2_eovhb"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_8176w"]
+
+[resource]
+script = ExtResource("3_8176w")
+image = ExtResource("2_eovhb")
+item_name = "Poison"
+item_type = 5
+flavor_text = "A substance dangerous to most forms of life, but also an essential component in many medicines. "
+use_effect = Array[ExtResource("1_4yor5")]([])
+throw_effect = Array[ExtResource("1_4yor5")]([])
+equip_effect = Array[ExtResource("1_4yor5")]([])
+base_value = 8
+consumable = false

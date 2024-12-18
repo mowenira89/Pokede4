@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c6w1umcfo415q"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ckrv0"]
+[ext_resource type="Texture2D" uid="uid://bggb8jnwtr87" path="res://images/items/mist_condensate.png" id="2_rri78"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_1bsle"]
+
+[resource]
+script = ExtResource("3_1bsle")
+image = ExtResource("2_rri78")
+item_name = "Mist Condensate"
+item_type = 5
+rarity = 0
+flavor_text = "The condensed form of the move Mist, used to create certain stat-protecting capsules."
+use_effect = Array[ExtResource("1_ckrv0")]([])
+throw_effect = Array[ExtResource("1_ckrv0")]([])
+equip_effect = Array[ExtResource("1_ckrv0")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false

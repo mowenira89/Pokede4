@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://4kydjnit13yx"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_a0xd8"]
+[ext_resource type="Texture2D" uid="uid://ct06r2hmqjm2x" path="res://images/items/feather_clever.png" id="2_v7l5o"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_lx5ti"]
+
+[resource]
+script = ExtResource("3_lx5ti")
+image = ExtResource("2_v7l5o")
+item_name = "Clever Feather"
+item_type = 0
+rarity = 2
+flavor_text = "Feather from a clever birdy. Slightly increases Special Defense."
+use_effect = Array[ExtResource("1_a0xd8")]([])
+throw_effect = Array[ExtResource("1_a0xd8")]([])
+equip_effect = Array[ExtResource("1_a0xd8")]([])
+base_value = 20
+consumable = true

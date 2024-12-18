@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://cxp1e8mho83el"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_vxjbg"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_5c6cc"]
+
+[resource]
+script = ExtResource("2_5c6cc")
+_name = "Earthquake"
+type = 5
+level_learned = 48
+power = 100
+acc = 100
+move_type = 0
+energy = 30
+targ = 0
+perform_type = 4
+perform_value = 10
+mining_value = 10
+priority = 1
+effect = Array[ExtResource("1_vxjbg")]([])
+passive_effect = Array[ExtResource("1_vxjbg")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Increases depth of mines."
+jaw_move = false

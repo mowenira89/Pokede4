@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://r0fkrhc8iqvw"]
+
+[ext_resource type="Texture2D" uid="uid://dvcn0d3gw0y74" path="res://images/machines/campfire.png" id="1_7rrl8"]
+[ext_resource type="Script" path="res://scripts/cookfire.gd" id="1_p6611"]
+[ext_resource type="PackedScene" uid="uid://dv3jhm5olpf1t" path="res://scenes/placeable.tscn" id="2_5gl4g"]
+[ext_resource type="Theme" uid="uid://cf152vbenaok8" path="res://themes/green_progress_bar.tres" id="4_15ne5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kblt5"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_383qi"]
+size = Vector2(64, 64)
+
+[node name="Cookfire" type="Node2D" node_paths=PackedStringArray("placeable")]
+y_sort_enabled = true
+script = ExtResource("1_p6611")
+placeable = NodePath("Placeable")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_7rrl8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_kblt5")
+
+[node name="Placeable" parent="." node_paths=PackedStringArray("collision_seeker", "collider") instance=ExtResource("2_5gl4g")]
+collision_seeker = NodePath("Area2D")
+collider = NodePath("../StaticBody2D/CollisionShape2D")
+
+[node name="Area2D" type="Area2D" parent="Placeable" groups=["Obstruction"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeable/Area2D"]
+shape = SubResource("RectangleShape2D_383qi")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -19.0
+offset_top = -81.0
+offset_right = 21.0
+offset_bottom = -58.0
+text = "5"
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="Label"]
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 0
+offset_left = -4.0
+offset_top = 25.0
+offset_right = 46.0
+offset_bottom = 35.0
+theme = ExtResource("4_15ne5")
+show_percentage = false

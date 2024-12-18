@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://7ividq6abjsl"]
+
+[ext_resource type="Texture2D" uid="uid://cwrv4bi6satnt" path="res://images/pokemon/wartortle.png" id="1_yox4y"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_gfr5w"]
+
+[resource]
+script = ExtResource("2_gfr5w")
+image = ExtResource("1_yox4y")
+species = "Wartortle"
+num = 8
+type = Array[int]([2])
+base_stats = {
+"attk": 63,
+"cook": 20,
+"craft": 40,
+"def": 80,
+"energy": 200,
+"farm": 35,
+"fishing": 80,
+"forage": 40,
+"hp": 59,
+"mine": 30,
+"perform": 60,
+"sattk": 65,
+"sdef": 80,
+"speed": 58
+}
+base_happiness = 50
+height = 10
+weight = 225
+base_exp = 142
+capture_rate = 45
+abilities = Array[String](["Rain Dish"])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

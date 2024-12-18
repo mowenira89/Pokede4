@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://dft6oblgxpgxf"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_r1m3r"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_l3arv"]
+[ext_resource type="Texture2D" uid="uid://br6hy2vt8coiw" path="res://images/crops/batch1/ChestoTreeTallerIII.png" id="3_d2hfc"]
+[ext_resource type="Texture2D" uid="uid://vm7ssdgok7db" path="res://images/crops/batch1/ChestoTreeBloomIII.png" id="4_35l4n"]
+[ext_resource type="Texture2D" uid="uid://d0ygk8e6k4tlu" path="res://images/crops/batch1/ChestoTreeBerryIII.png" id="5_s11kq"]
+
+[resource]
+script = ExtResource("2_l3arv")
+_name = "Chesto"
+growth_time = 130
+growth_speed = 2
+sprites = Array[Texture2D]([ExtResource("3_d2hfc"), ExtResource("4_35l4n"), ExtResource("5_s11kq")])
+pest_rate = 10
+pests = Array[ExtResource("1_r1m3r")]([])
+min_berries = 3
+max_barries = 5
+thirst = 5
+is_herb = false

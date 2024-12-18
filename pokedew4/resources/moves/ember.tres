@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Move" load_steps=10 format=3 uid="uid://dxif1boceloal"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5llc8"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_41ysn"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_gm0m1"]
+[ext_resource type="Resource" uid="uid://cb3qjxbur3kbi" path="res://resources/items/fire.tres" id="3_hll3l"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="4_o644j"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="5_8svfq"]
+
+[sub_resource type="Resource" id="Resource_o1dio"]
+script = ExtResource("2_gm0m1")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_yxcd5"]
+script = ExtResource("4_o644j")
+data = ExtResource("3_hll3l")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_pns2j"]
+script = ExtResource("5_8svfq")
+item = SubResource("Resource_yxcd5")
+min = 1
+max = 1
+method = 0
+min_production_time = 0
+production_time = 0
+weight = 0
+
+[resource]
+script = ExtResource("2_41ysn")
+_name = "Ember"
+type = 1
+level_learned = 0
+power = 40
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 7
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_5llc8")]([SubResource("Resource_o1dio")])
+passive_effect = Array[ExtResource("1_5llc8")]([])
+produce = SubResource("Resource_pns2j")
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Provides fire."
+jaw_move = false
+ice = 0
+fire = 1
+water = 0
+electric = 0
+psi = 0
+depester = false

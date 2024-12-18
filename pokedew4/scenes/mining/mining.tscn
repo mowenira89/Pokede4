@@ -1,0 +1,146 @@
+[gd_scene load_steps=11 format=3 uid="uid://jiof0tunjwua"]
+
+[ext_resource type="Script" path="res://scenes/mining/scripts/mining.gd" id="1_x2ulh"]
+[ext_resource type="Texture2D" uid="uid://cykew5s228rvj" path="res://images/ui/pointer.png" id="2_nr0xt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5gxc"]
+size = Vector2(372, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0rko"]
+size = Vector2(211, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_la7sn"]
+size = Vector2(110, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1vu6"]
+size = Vector2(24, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_33sky"]
+size = Vector2(36.6129, 4.09756)
+
+[sub_resource type="Animation" id="Animation_0kli0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pointer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(10, -23)]
+}
+
+[sub_resource type="Animation" id="Animation_6yy6i"]
+resource_name = "move"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pointer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(10, -23), Vector2(512, -21)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3t0p5"]
+_data = {
+"RESET": SubResource("Animation_0kli0"),
+"move": SubResource("Animation_6yy6i")
+}
+
+[node name="Mining" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x2ulh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+offset_right = 521.0
+offset_bottom = 40.0
+color = Color(0.582144, 0.614937, 0.598663, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 82.0
+offset_right = 455.0
+offset_bottom = 40.0
+color = Color(1, 0.0745098, 0.117647, 0.423529)
+
+[node name="Area2D" type="Area2D" parent="ColorRect/ColorRect2" groups=["MiningArea"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/ColorRect2/Area2D"]
+position = Vector2(186, 19.5)
+shape = SubResource("RectangleShape2D_r5gxc")
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 162.0
+offset_right = 373.0
+offset_bottom = 40.0
+color = Color(1, 0.117647, 0.172549, 0.47451)
+
+[node name="Area2D" type="Area2D" parent="ColorRect/ColorRect3" groups=["MiningArea"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/ColorRect3/Area2D"]
+position = Vector2(105.5, 19)
+shape = SubResource("RectangleShape2D_a0rko")
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 218.0
+offset_right = 326.0
+offset_bottom = 40.0
+color = Color(1, 0.309804, 0.329412, 0.52549)
+
+[node name="Area2D" type="Area2D" parent="ColorRect/ColorRect4" groups=["MiningArea"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/ColorRect4/Area2D"]
+position = Vector2(52, 19)
+shape = SubResource("RectangleShape2D_la7sn")
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRect"]
+layout_mode = 0
+offset_left = 256.0
+offset_right = 281.0
+offset_bottom = 40.0
+color = Color(1, 0, 0, 0.552941)
+
+[node name="Area2D" type="Area2D" parent="ColorRect/ColorRect5" groups=["MiningArea"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ColorRect/ColorRect5/Area2D"]
+position = Vector2(12, 18.5)
+shape = SubResource("RectangleShape2D_e1vu6")
+
+[node name="Pointer" type="Sprite2D" parent="."]
+position = Vector2(10, -23)
+rotation = 1.5708
+scale = Vector2(2.81818, 1.95238)
+texture = ExtResource("2_nr0xt")
+
+[node name="Area2D" type="Area2D" parent="Pointer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pointer/Area2D"]
+position = Vector2(8.87097, 0.512196)
+shape = SubResource("RectangleShape2D_33sky")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3t0p5")
+}
+
+[connection signal="area_entered" from="Pointer/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Pointer/Area2D" to="." method="_on_area_2d_area_exited"]

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=8 format=3 uid="uid://pcwfidx2fwj"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_wk03r"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_dirjs"]
+[ext_resource type="Resource" uid="uid://bu10is8ycwklu" path="res://resources/pokedata/caterpie.tres" id="2_uy70e"]
+[ext_resource type="Resource" uid="uid://bsu6rdh2csaax" path="res://resources/pokedata/weedle.tres" id="3_4ysj4"]
+[ext_resource type="Texture2D" uid="uid://c6h116xv18eed" path="res://images/crops/batch1/AspearTreeTallerIII.png" id="3_fmtay"]
+[ext_resource type="Texture2D" uid="uid://d38jo58kx6uyj" path="res://images/crops/batch1/AspearTreeBloomIII.png" id="4_85rpy"]
+[ext_resource type="Texture2D" uid="uid://fi7irqnaj30l" path="res://images/crops/batch1/AspearTreeBerryIII.png" id="5_cula8"]
+
+[resource]
+script = ExtResource("2_dirjs")
+_name = "Aspear"
+growth_time = 160
+growth_speed = 2
+sprites = Array[Texture2D]([ExtResource("3_fmtay"), ExtResource("4_85rpy"), ExtResource("5_cula8")])
+pest_rate = 2
+pests = Array[ExtResource("1_wk03r")]([ExtResource("2_uy70e"), ExtResource("3_4ysj4")])
+min_berries = 4
+max_barries = 8
+thirst = 2
+is_herb = false

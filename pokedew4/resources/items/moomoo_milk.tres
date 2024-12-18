@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://dpyd0og0qa7q"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_clnpp"]
+[ext_resource type="Texture2D" uid="uid://dl3l1jtoyy87r" path="res://images/items/moomoo_milk.png" id="2_j5weq"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_fy8fc"]
+[ext_resource type="Script" path="res://resources/effects/heal.gd" id="4_g076n"]
+
+[sub_resource type="Resource" id="Resource_1pfn0"]
+script = ExtResource("4_g076n")
+amount = 100
+
+[resource]
+script = ExtResource("3_fy8fc")
+flavor = Array[int]([1])
+flavor_profile = 3
+image = ExtResource("2_j5weq")
+item_name = "Moomoo Milk"
+item_type = 1
+rarity = 100
+flavor_text = ""
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_clnpp")]([SubResource("Resource_1pfn0")])
+throw_effect = Array[ExtResource("1_clnpp")]([])
+equip_effect = Array[ExtResource("1_clnpp")]([])
+base_value = 20
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://7vc3dsouuout"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_e0fn4"]
+[ext_resource type="Texture2D" uid="uid://d0ofalujn2oug" path="res://images/items/mushroom-balm.png" id="2_gfods"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_x0saf"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_yt8i6"]
+
+[sub_resource type="Resource" id="Resource_ooncp"]
+script = ExtResource("4_yt8i6")
+flavor = Array[int]([0, 1, 5])
+flavor_profile = 9
+health_restored = 0
+energy_restored = 0
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_x0saf")
+flavor = Array[int]([0, 1, 5])
+flavor_profile = 9
+image = ExtResource("2_gfods")
+item_name = "Balm Mushroom"
+item_type = 1
+rarity = 2
+flavor_text = "A rare and valuable delicacy, found more easily by certain Pokemon."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_e0fn4")]([SubResource("Resource_ooncp")])
+throw_effect = Array[ExtResource("1_e0fn4")]([])
+equip_effect = Array[ExtResource("1_e0fn4")]([])
+base_value = 400
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 4
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

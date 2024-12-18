@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=7 format=3 uid="uid://d3g2dgrh1vpy2"]
+
+[ext_resource type="Resource" uid="uid://bdhaspm4o8mm7" path="res://resources/crops/sitrus.tres" id="1_tq71a"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_tbkc2"]
+[ext_resource type="Texture2D" uid="uid://ckst5ajsrde4c" path="res://images/items/berries/berry-sitrus.png" id="3_kr8e0"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_jhefm"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="5_vw1bc"]
+
+[sub_resource type="Resource" id="Resource_b33f8"]
+script = ExtResource("5_vw1bc")
+flavor = Array[int]([2])
+flavor_profile = 5
+health_restored = 30
+energy_restored = 20
+happiness_bonus = 2
+
+[resource]
+script = ExtResource("4_jhefm")
+crop = ExtResource("1_tq71a")
+flavor = Array[int]([2])
+flavor_profile = 5
+image = ExtResource("3_kr8e0")
+item_name = "Sitrus Berry"
+item_type = 2
+rarity = 1
+flavor_text = "A sour, coarse-fleshed berry, which heals some HP!"
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("2_tbkc2")]([SubResource("Resource_b33f8")])
+throw_effect = Array[ExtResource("2_tbkc2")]([])
+equip_effect = Array[ExtResource("2_tbkc2")]([])
+base_value = 10
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

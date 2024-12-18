@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://du3woaa1frb3p"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_dlro4"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_sc85g"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="3_w8nsg"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_mll5c"]
+
+[sub_resource type="Resource" id="Resource_dypeh"]
+script = ExtResource("2_sc85g")
+power = 85
+acc = 100
+type = 0
+attack_type = 1
+defense_type = 2
+high_crit = false
+flinch = false
+
+[sub_resource type="Resource" id="Resource_dkgfs"]
+script = ExtResource("3_w8nsg")
+chance = 30
+status = 1
+
+[resource]
+script = ExtResource("4_mll5c")
+_name = "Body Slam"
+type = 0
+power = 85
+acc = 100
+move_type = 0
+energy = 15
+targ = 0
+perform_type = 0
+perform_value = 5
+priority = 1
+effect = Array[ExtResource("1_dlro4")]([SubResource("Resource_dypeh"), SubResource("Resource_dkgfs")])
+passive_effect = Array[ExtResource("1_dlro4")]([])
+contact = true
+sound = false
+unmissable = false
+description = "Slams the opponent with its body."
+description_passive = ""

@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Move" load_steps=14 format=3 uid="uid://bbv76f7n1pyuc"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_rujpk"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_5pmll"]
+[ext_resource type="Resource" uid="uid://bm85p1jq01v6" path="res://resources/items/fiber.tres" id="2_gblat"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_tr2iv"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="3_3to6a"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="3_pbhli"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_bacjn"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="4_iwa5d"]
+
+[sub_resource type="Resource" id="Resource_3vexn"]
+script = ExtResource("2_tr2iv")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_ybnn8"]
+script = ExtResource("3_pbhli")
+stage = -2
+stat = 3
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_inmh2"]
+script = ExtResource("4_bacjn")
+buff = SubResource("Resource_ybnn8")
+chance = 100
+targ = 1
+
+[sub_resource type="Resource" id="Resource_1720m"]
+script = ExtResource("3_3to6a")
+data = ExtResource("2_gblat")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_2xyd3"]
+script = ExtResource("4_iwa5d")
+item = SubResource("Resource_1720m")
+min = 30
+max = 50
+method = 0
+min_production_time = 0
+production_time = 1
+weight = 0
+
+[resource]
+script = ExtResource("2_5pmll")
+_name = "Leaf Storm"
+type = 3
+level_learned = 36
+power = 130
+acc = 90
+move_type = 1
+energy = 20
+targ = 0
+perform_type = 3
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_rujpk")]([SubResource("Resource_3vexn"), SubResource("Resource_inmh2")])
+passive_effect = Array[ExtResource("1_rujpk")]([])
+produce = SubResource("Resource_2xyd3")
+contact = false
+sound = false
+unmissable = false
+description = "Attacks with a flurry of heavy leaves and reduces the user's special attack.."
+description_passive = "Produces leaves that can be used as fiber."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

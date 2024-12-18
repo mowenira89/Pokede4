@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cdkpuuaweohw1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0tvn8"]
+[ext_resource type="Texture2D" uid="uid://bv8x8cx7gbqkf" path="res://images/items/mining/shards/Mine_Red_Shard.png" id="2_16u54"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_nxfxu"]
+
+[resource]
+script = ExtResource("3_nxfxu")
+image = ExtResource("2_16u54")
+item_name = "Red Shard"
+item_type = 5
+rarity = 1
+flavor_text = "A shard of ancient technology, prized by historians and collectors."
+use_effect = Array[ExtResource("1_0tvn8")]([])
+throw_effect = Array[ExtResource("1_0tvn8")]([])
+equip_effect = Array[ExtResource("1_0tvn8")]([])
+base_value = 10
+consumable = false
+stone = false
+wood = false

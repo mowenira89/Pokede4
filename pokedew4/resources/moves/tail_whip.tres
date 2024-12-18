@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://oqs1yw3pj45n"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_n2ggo"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_rfgyx"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_4yah7"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_ymnrk"]
+
+[sub_resource type="Resource" id="Resource_xyhnd"]
+script = ExtResource("2_rfgyx")
+stage = 1
+stat = 2
+id = "defdown"
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_iwxky"]
+script = ExtResource("3_4yah7")
+buff = SubResource("Resource_xyhnd")
+chance = 100
+
+[resource]
+script = ExtResource("4_ymnrk")
+_name = "Tail Whip"
+type = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 4
+targ = 0
+perform_type = 3
+perform_value = 5
+priority = 1
+effect = Array[ExtResource("1_n2ggo")]([SubResource("Resource_iwxky")])
+passive_effect = Array[ExtResource("1_n2ggo")]([])

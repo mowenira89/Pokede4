@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://3avxip1ke686"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_488u6"]
+[ext_resource type="Texture2D" uid="uid://bquswmxfe2cdp" path="res://images/items/pungent_root.png" id="2_rq2m7"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_4460h"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_jjhtb"]
+
+[sub_resource type="Resource" id="Resource_udxya"]
+script = ExtResource("4_jjhtb")
+flavor = Array[int]([2])
+flavor_profile = 7
+health_restored = 3
+energy_restored = 5
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_4460h")
+flavor = Array[int]([2])
+flavor_profile = 7
+image = ExtResource("2_rq2m7")
+item_name = "Pungent Root"
+item_type = 1
+rarity = 50
+flavor_text = "A pungent root vegetable, good in curry."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+use_effect = Array[ExtResource("1_488u6")]([SubResource("Resource_udxya")])
+throw_effect = Array[ExtResource("1_488u6")]([])
+equip_effect = Array[ExtResource("1_488u6")]([])
+base_value = 6
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 1
+fuel = false
+fuel_amount = 0

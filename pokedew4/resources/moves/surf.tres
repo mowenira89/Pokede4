@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://xxyveqem6ns3"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_bk26d"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_qgeuw"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_fxqb3"]
+
+[sub_resource type="Resource" id="Resource_q0xff"]
+script = ExtResource("2_qgeuw")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_fxqb3")
+_name = "Surf"
+type = 2
+level_learned = 36
+power = 90
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 5
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_bk26d")]([SubResource("Resource_q0xff")])
+passive_effect = Array[ExtResource("1_bk26d")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Allows you to cross water."
+jaw_move = false
+ice = 0
+fire = 0
+water = 3
+electric = 0
+psi = 0
+depester = false

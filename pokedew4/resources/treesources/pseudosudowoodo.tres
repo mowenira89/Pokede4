@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Treesource" load_steps=9 format=3 uid="uid://cvwoqeqaw1nqk"]
+
+[ext_resource type="Texture2D" uid="uid://h8qvtp7y47id" path="res://images/trees/pseudosuddowoodo/seed.png" id="1_a3s8k"]
+[ext_resource type="Texture2D" uid="uid://ndh5xfnfyhqq" path="res://images/trees/pseudosuddowoodo/sapling.png" id="2_1djy3"]
+[ext_resource type="Texture2D" uid="uid://dtbk8q807npp" path="res://images/trees/pseudosuddowoodo/immature.png" id="3_3m187"]
+[ext_resource type="Texture2D" uid="uid://dnl2b6xeredm" path="res://images/trees/pseudosuddowoodo/mature1.png" id="4_s3rrc"]
+[ext_resource type="Texture2D" uid="uid://bdkbc27j54oo0" path="res://images/trees/pseudosuddowoodo/mature2.png" id="5_uvvb0"]
+[ext_resource type="Script" path="res://resources/treesource.gd" id="6_jdill"]
+[ext_resource type="Texture2D" uid="uid://3frhkc81mm41" path="res://images/trees/pseudosuddowoodo/stump1.png" id="7_4m5ik"]
+[ext_resource type="Texture2D" uid="uid://dwqt4x0mvyf44" path="res://images/trees/pseudosuddowoodo/stump2.png" id="8_0380t"]
+
+[resource]
+script = ExtResource("6_jdill")
+immature_sprites = Array[Texture2D]([ExtResource("1_a3s8k"), ExtResource("2_1djy3"), ExtResource("3_3m187")])
+mature_sprites = Array[Texture2D]([ExtResource("4_s3rrc"), ExtResource("5_uvvb0")])
+stumps = Array[Texture2D]([ExtResource("7_4m5ik"), ExtResource("8_0380t")])
+growth_time = 1
+hp = 11
+stump_hp = 7
+axe_level = 3

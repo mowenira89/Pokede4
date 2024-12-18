@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://kom2ucfsg5js"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_g3f88"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_s5fup"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_gvlde"]
+
+[sub_resource type="Resource" id="Resource_uxyqs"]
+script = ExtResource("2_s5fup")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_gvlde")
+_name = "Dig"
+type = 5
+level_learned = 0
+power = 80
+acc = 100
+move_type = 0
+energy = 15
+targ = 0
+perform_type = 0
+perform_value = 5
+mining_value = 10
+priority = 1
+effect = Array[ExtResource("1_g3f88")]([SubResource("Resource_uxyqs")])
+passive_effect = Array[ExtResource("1_g3f88")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

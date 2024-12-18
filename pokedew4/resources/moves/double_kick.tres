@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://d30yr7uipilhk"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ddtus"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_gki4g"]
+[ext_resource type="Script" path="res://resources/effects/doubleslap_like_attack.gd" id="3_mfmy2"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_ynn75"]
+
+[sub_resource type="Resource" id="Resource_x6pjw"]
+script = ExtResource("2_gki4g")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_bcqdf"]
+script = ExtResource("3_mfmy2")
+min_hits = 2
+max_hits = 2
+damage = SubResource("Resource_x6pjw")
+
+[resource]
+script = ExtResource("4_ynn75")
+_name = "Double Kick"
+type = 9
+level_learned = 20
+power = 30
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 4
+mining_value = 4
+priority = 1
+effect = Array[ExtResource("1_ddtus")]([SubResource("Resource_bcqdf")])
+passive_effect = Array[ExtResource("1_ddtus")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = "Doubles stone production."
+jaw_move = false

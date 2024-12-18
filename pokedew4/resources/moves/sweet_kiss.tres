@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://83hjqpc8v8rw"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_3a6sf"]
+[ext_resource type="Script" path="res://resources/effects/apply_hidden_status.gd" id="2_6mkqu"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_3na5g"]
+
+[sub_resource type="Resource" id="Resource_ionah"]
+script = ExtResource("2_6mkqu")
+chance = 100
+status = 0
+
+[resource]
+script = ExtResource("3_3na5g")
+_name = "Sweet Kiss"
+type = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 6
+perform_value = 6
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_3a6sf")]([SubResource("Resource_ionah")])
+passive_effect = Array[ExtResource("1_3a6sf")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

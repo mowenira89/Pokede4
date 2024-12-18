@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://dbaqjlvopceu1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_n2ive"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_x6l8c"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_q5hm2"]
+
+[sub_resource type="Resource" id="Resource_yynyq"]
+script = ExtResource("2_x6l8c")
+high_crit = false
+recoil = 0.0
+recovered = 0.5
+
+[resource]
+script = ExtResource("3_q5hm2")
+_name = "Leech Life"
+type = 6
+level_learned = 12
+power = 80
+acc = 100
+move_type = 0
+energy = 5
+targ = 0
+perform_type = 4
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_n2ive")]([SubResource("Resource_yynyq")])
+passive_effect = Array[ExtResource("1_n2ive")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

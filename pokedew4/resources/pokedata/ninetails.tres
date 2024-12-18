@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://difyx71s7c2cj"]
+
+[ext_resource type="Texture2D" uid="uid://blf887eotes02" path="res://images/pokemon/ninetails.png" id="1_iru2x"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_3s7s7"]
+
+[resource]
+script = ExtResource("2_3s7s7")
+image = ExtResource("1_iru2x")
+species = "Ninetails"
+num = 38
+type = Array[int]([1])
+base_stats = {
+"attk": 76,
+"cook": 60,
+"craft": 30,
+"def": 75,
+"energy": 200,
+"farm": 30,
+"fishing": 10,
+"forage": 50,
+"hp": 73,
+"mine": 8,
+"perform": 60,
+"sattk": 81,
+"sdef": 100,
+"speed": 100
+}
+base_happiness = 50
+height = 11
+weight = 199
+base_exp = 177
+capture_rate = 75
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

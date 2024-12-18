@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://de6tgsuncxpim"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_gw4b3"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_n5kur"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_pfif4"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_laalx"]
+
+[sub_resource type="Resource" id="Resource_g7t30"]
+script = ExtResource("2_n5kur")
+stage = 1
+stat = 5
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_fyx2s"]
+script = ExtResource("3_pfif4")
+buff = SubResource("Resource_g7t30")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_laalx")
+_name = "Agility"
+type = 10
+level_learned = 35
+power = 0
+acc = 0
+move_type = 2
+energy = 5
+targ = 1
+perform_type = 5
+perform_value = 6
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_gw4b3")]([SubResource("Resource_fyx2s")])
+passive_effect = Array[ExtResource("1_gw4b3")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

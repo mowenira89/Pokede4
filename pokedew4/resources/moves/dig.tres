@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="Move" load_steps=11 format=3 uid="uid://3cuqfd5kwvi1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5a1o5"]
+[ext_resource type="Resource" uid="uid://kom2ucfsg5js" path="res://resources/moves/dig2.tres" id="2_x2wqk"]
+[ext_resource type="Script" path="res://scripts/buffs/charge_attack.gd" id="3_fhgmw"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_adsri"]
+[ext_resource type="Script" path="res://scripts/buffs/invulnerable.gd" id="5_4prqw"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="6_w8sgm"]
+
+[sub_resource type="Resource" id="Resource_wnsfu"]
+script = ExtResource("3_fhgmw")
+move = ExtResource("2_x2wqk")
+s = "dug deep underground!"
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_ligj7"]
+script = ExtResource("4_adsri")
+buff = SubResource("Resource_wnsfu")
+chance = 100
+targ = 1
+
+[sub_resource type="Resource" id="Resource_xsd82"]
+script = ExtResource("5_4prqw")
+status = 3
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_ng2ik"]
+script = ExtResource("4_adsri")
+buff = SubResource("Resource_xsd82")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("6_w8sgm")
+_name = "Dig"
+type = 5
+level_learned = 30
+power = 80
+acc = 100
+move_type = 0
+energy = 15
+targ = 0
+perform_type = 0
+perform_value = 5
+mining_value = 10
+priority = 1
+effect = Array[ExtResource("1_5a1o5")]([SubResource("Resource_ligj7"), SubResource("Resource_ng2ik")])
+passive_effect = Array[ExtResource("1_5a1o5")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

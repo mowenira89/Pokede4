@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://bq27n1r31tbgo"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_gc56g"]
+[ext_resource type="Texture2D" uid="uid://cak6cumkr6tvw" path="res://images/items/leftovers.png" id="2_3l5iw"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_gquk6"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_5h34e"]
+
+[sub_resource type="Resource" id="Resource_852ac"]
+script = ExtResource("4_5h34e")
+flavor = Array[int]([1])
+flavor_profile = 1
+health_restored = 10
+energy_restored = 10
+happiness_bonus = -1
+
+[resource]
+script = ExtResource("3_gquk6")
+flavor = Array[int]([1])
+flavor_profile = 1
+image = ExtResource("2_3l5iw")
+item_name = "Leftovers"
+item_type = 1
+rarity = 2
+flavor_text = "Discarded leftovers another Pokemon has eaten. They're still just as good."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_gc56g")]([SubResource("Resource_852ac")])
+throw_effect = Array[ExtResource("1_gc56g")]([])
+equip_effect = Array[ExtResource("1_gc56g")]([])
+base_value = 0
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

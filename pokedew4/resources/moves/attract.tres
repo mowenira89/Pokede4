@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://dsk24wy68oo66"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_osxre"]
+[ext_resource type="Script" path="res://resources/effects/apply_hidden_status.gd" id="2_01icr"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="3_isqvn"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_njyqo"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_4vooi"]
+
+[sub_resource type="Resource" id="Resource_dx34f"]
+script = ExtResource("2_01icr")
+chance = 50
+status = 1
+
+[sub_resource type="Resource" id="Resource_g3y6w"]
+script = ExtResource("3_isqvn")
+stage = -1
+stat = 1
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_47o6h"]
+script = ExtResource("4_njyqo")
+buff = SubResource("Resource_g3y6w")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("5_4vooi")
+_name = "Attract"
+type = 14
+level_learned = 18
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 6
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_osxre")]([SubResource("Resource_dx34f"), SubResource("Resource_47o6h")])
+passive_effect = Array[ExtResource("1_osxre")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

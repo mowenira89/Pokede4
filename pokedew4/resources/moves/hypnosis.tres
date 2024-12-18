@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://c2bxgwpji7hfj"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5gmko"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_fekbl"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_s4myr"]
+
+[sub_resource type="Resource" id="Resource_nkc6c"]
+script = ExtResource("2_fekbl")
+chance = 100
+status = 2
+
+[resource]
+script = ExtResource("3_s4myr")
+_name = "Hypnosis"
+type = 10
+level_learned = 26
+power = 0
+acc = 55
+move_type = 2
+energy = 4
+targ = 0
+perform_type = 1
+perform_value = 9
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_5gmko")]([SubResource("Resource_nkc6c")])
+passive_effect = Array[ExtResource("1_5gmko")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

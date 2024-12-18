@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqdorg81ht0ux"]
+
+[ext_resource type="Script" path="res://scripts/chest.gd" id="1_h2kds"]
+[ext_resource type="Texture2D" uid="uid://clt4q2hl5rfd3" path="res://images/Chest.png" id="1_pumwf"]
+[ext_resource type="PackedScene" uid="uid://ej67xagvlj7k" path="res://scenes/obstruction_area.tscn" id="2_l7dm7"]
+[ext_resource type="PackedScene" uid="uid://dv3jhm5olpf1t" path="res://scenes/placeable.tscn" id="3_252u5"]
+[ext_resource type="PackedScene" uid="uid://d22fdji8t8srt" path="res://scenes/ui/chest_ui.tscn" id="4_pdqgm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgdy0"]
+size = Vector2(43, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvsgc"]
+size = Vector2(64, 64)
+
+[node name="Chest" type="Node2D"]
+script = ExtResource("1_h2kds")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("1_pumwf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_cgdy0")
+disabled = true
+
+[node name="ObstructionArea" parent="." instance=ExtResource("2_l7dm7")]
+
+[node name="Placeable" parent="." node_paths=PackedStringArray("collision_seeker", "collider") instance=ExtResource("3_252u5")]
+collision_seeker = NodePath("Area2D")
+collider = NodePath("../StaticBody2D/CollisionShape2D")
+
+[node name="Area2D" type="Area2D" parent="Placeable"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeable/Area2D"]
+shape = SubResource("RectangleShape2D_cvsgc")
+
+[node name="Chest" parent="." instance=ExtResource("4_pdqgm")]
+visible = false
+z_index = 2

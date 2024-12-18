@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://ddkdgkpnu3o52"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0kdrt"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_dv661"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_7dhme"]
+
+[sub_resource type="Resource" id="Resource_73n3g"]
+script = ExtResource("2_dv661")
+high_crit = true
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_7dhme")
+_name = "Hyper Fang"
+type = 0
+level_learned = 25
+power = 80
+acc = 90
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 2
+mining_value = 2
+priority = 1
+effect = Array[ExtResource("1_0kdrt")]([SubResource("Resource_73n3g")])
+passive_effect = Array[ExtResource("1_0kdrt")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

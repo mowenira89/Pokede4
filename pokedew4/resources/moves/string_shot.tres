@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Move" load_steps=12 format=3 uid="uid://bput8q0yisqce"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_jr2hm"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_40r18"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_ofakn"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_a8poq"]
+[ext_resource type="Resource" uid="uid://cvu4bab8gnhg1" path="res://resources/items/raw_silk.tres" id="4_ihhm1"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="5_3aw6r"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="6_hcmjk"]
+
+[sub_resource type="Resource" id="Resource_s6dxi"]
+script = ExtResource("2_40r18")
+stage = -1
+stat = 5
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_eau1s"]
+script = ExtResource("3_ofakn")
+buff = SubResource("Resource_s6dxi")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_croaf"]
+script = ExtResource("5_3aw6r")
+data = ExtResource("4_ihhm1")
+quantity = 15
+
+[sub_resource type="Resource" id="Resource_1soom"]
+script = ExtResource("6_hcmjk")
+item = SubResource("Resource_croaf")
+min = 1
+max = 2
+method = 0
+min_production_time = 0
+production_time = 7
+weight = 100
+
+[resource]
+script = ExtResource("4_a8poq")
+_name = "String Shot"
+type = 6
+level_learned = 10
+power = 0
+acc = 100
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 3
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_jr2hm")]([SubResource("Resource_eau1s")])
+passive_effect = Array[ExtResource("1_jr2hm")]([])
+produce = SubResource("Resource_1soom")
+contact = false
+sound = false
+unmissable = false
+description = "The user shoots a web of silk that tangles up the opponent."
+description_passive = "This Pokemon can produce raw silk."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

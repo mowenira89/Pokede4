@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://b10vnyjmoleq1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_e3qx5"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_i3bf2"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="3_bk6ao"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_id4gn"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_stq1h"]
+
+[sub_resource type="Resource" id="Resource_r8dl5"]
+script = ExtResource("2_i3bf2")
+high_crit = true
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_0ge2y"]
+script = ExtResource("3_bk6ao")
+stage = 1
+stat = 1
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_6qbyl"]
+script = ExtResource("4_id4gn")
+buff = SubResource("Resource_0ge2y")
+chance = 10
+targ = 1
+
+[resource]
+script = ExtResource("5_stq1h")
+_name = "Metal Claw"
+type = 13
+level_learned = 32
+power = 50
+acc = 90
+move_type = 0
+energy = 9
+targ = 0
+perform_type = 0
+perform_value = 2
+mining_value = 6
+priority = 1
+effect = Array[ExtResource("1_e3qx5")]([SubResource("Resource_r8dl5"), SubResource("Resource_6qbyl")])
+passive_effect = Array[ExtResource("1_e3qx5")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

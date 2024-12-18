@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://c6om5frca8bm1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_80m1t"]
+[ext_resource type="Texture2D" uid="uid://dr72k8f8dbofx" path="res://images/items/raddish.png" id="2_qddm8"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_hhr1g"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_7af16"]
+
+[sub_resource type="Resource" id="Resource_4qmvc"]
+script = ExtResource("4_7af16")
+flavor = Array[int]([0, 3])
+flavor_profile = 3
+health_restored = 5
+energy_restored = 5
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_hhr1g")
+flavor = Array[int]([0, 3])
+flavor_profile = 3
+image = ExtResource("2_qddm8")
+item_name = "Raddish"
+item_type = 1
+rarity = 60
+flavor_text = "A common vegetable found in Vallea."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_80m1t")]([SubResource("Resource_4qmvc")])
+throw_effect = Array[ExtResource("1_80m1t")]([])
+equip_effect = Array[ExtResource("1_80m1t")]([])
+base_value = 4
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 3
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

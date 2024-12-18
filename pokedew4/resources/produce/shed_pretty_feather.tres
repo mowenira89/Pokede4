@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Produce" load_steps=5 format=3 uid="uid://v6ctubsgt2ir"]
+
+[ext_resource type="Resource" uid="uid://bok17n1ob8l7l" path="res://resources/items/pretty_feather.tres" id="1_ptwmj"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_6v0ad"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="3_wumbb"]
+
+[sub_resource type="Resource" id="Resource_bwgv0"]
+script = ExtResource("2_6v0ad")
+data = ExtResource("1_ptwmj")
+quantity = 0
+
+[resource]
+script = ExtResource("3_wumbb")
+item = SubResource("Resource_bwgv0")
+min = 1
+max = 2
+method = 1
+min_production_time = 25
+production_time = 100
+weight = 50

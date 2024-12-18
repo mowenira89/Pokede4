@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cwtd1qndpgta7"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_xev6c"]
+[ext_resource type="Texture2D" uid="uid://63g70wf33mq5" path="res://images/items/mining/36px-Bag_Big_Nugget_SV_Sprite.png" id="2_aortb"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_u3mdq"]
+
+[resource]
+script = ExtResource("3_u3mdq")
+image = ExtResource("2_aortb")
+item_name = "Big Nugget"
+item_type = 5
+rarity = 2
+flavor_text = "A big nuggie of gold! Wow!"
+use_effect = Array[ExtResource("1_xev6c")]([])
+throw_effect = Array[ExtResource("1_xev6c")]([])
+equip_effect = Array[ExtResource("1_xev6c")]([])
+base_value = 1000
+consumable = false
+stone = false
+wood = false

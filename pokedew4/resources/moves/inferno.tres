@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dm7gc7yurxvtb"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_wy70c"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_56h4p"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="3_tonda"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_ogr1k"]
+
+[sub_resource type="Resource" id="Resource_kuunn"]
+script = ExtResource("2_56h4p")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_ow8n5"]
+script = ExtResource("3_tonda")
+chance = 100
+status = 4
+
+[resource]
+script = ExtResource("4_ogr1k")
+_name = "Inferno"
+type = 1
+level_learned = 0
+power = 100
+acc = 50
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 7
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_wy70c")]([SubResource("Resource_kuunn"), SubResource("Resource_ow8n5")])
+passive_effect = Array[ExtResource("1_wy70c")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Always burns the target when it hits."
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 4
+water = 0
+electric = 0
+psi = 0
+depester = false

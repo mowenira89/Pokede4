@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://c67jjdi62n4df"]
+
+[ext_resource type="Texture2D" uid="uid://cgobxqtuixpvg" path="res://images/pokemon/kadabra.png" id="1_s6tdx"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_wr7fd"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_ek4ot"]
+
+[resource]
+script = ExtResource("3_ek4ot")
+produce = Array[ExtResource("2_wr7fd")]([])
+image = ExtResource("1_s6tdx")
+species = "Kadabra"
+num = 64
+type = Array[int]([10])
+base_stats = {
+"attk": 35,
+"cook": 35,
+"craft": 50,
+"def": 30,
+"energy": 150,
+"farm": 20,
+"fishing": 20,
+"forage": 30,
+"hp": 40,
+"mine": 10,
+"perform": 60,
+"sattk": 120,
+"sdef": 70,
+"speed": 105
+}
+base_happiness = 50
+height = 13
+weight = 565
+base_exp = 140
+capture_rate = 100
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([2])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

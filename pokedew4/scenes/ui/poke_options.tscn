@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj6t5lek5n0fe"]
+
+[ext_resource type="Script" path="res://scripts/ui/poke_options.gd" id="1_memes"]
+[ext_resource type="Texture2D" uid="uid://cykew5s228rvj" path="res://images/ui/pointer.png" id="1_xc0s2"]
+
+[sub_resource type="Theme" id="Theme_yminm"]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 20
+
+[node name="Options" type="ColorRect"]
+custom_minimum_size = Vector2(80, 120)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -60.0
+offset_right = 40.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_yminm")
+color = Color(0.317647, 1, 0.6, 1)
+script = ExtResource("1_memes")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Go!"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Stats"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("1_xc0s2")

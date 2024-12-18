@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Stench" load_steps=2 format=3 uid="uid://c8b6yhsttn25g"]
+
+[ext_resource type="Script" path="res://scripts/abilities/stench.gd" id="1_b88xa"]
+
+[resource]
+script = ExtResource("1_b88xa")
+ability_name = "Stench"
+desc = "This Pokemon smells terrible! It may cause opponents and spectators to flinch!"
+passive_desc = ""

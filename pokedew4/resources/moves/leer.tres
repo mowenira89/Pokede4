@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://cf1pobih6dxmn"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_bwdwp"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_6vjp2"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_tbtg8"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_dbnoh"]
+
+[sub_resource type="Resource" id="Resource_we7u3"]
+script = ExtResource("2_6vjp2")
+stage = -1
+stat = 2
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_xkp6a"]
+script = ExtResource("3_tbtg8")
+buff = SubResource("Resource_we7u3")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_dbnoh")
+_name = "Leer"
+type = 0
+level_learned = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 2
+targ = 0
+perform_type = 4
+perform_value = -5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_bwdwp")]([SubResource("Resource_xkp6a")])
+passive_effect = Array[ExtResource("1_bwdwp")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = true

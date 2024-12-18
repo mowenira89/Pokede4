@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bvmw2jywdwvbr"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_b0iea"]
+[ext_resource type="Texture2D" uid="uid://cw14a3ae6t12b" path="res://images/items/mining/amber.png" id="2_bifsv"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_ag6qw"]
+
+[resource]
+script = ExtResource("3_ag6qw")
+image = ExtResource("2_bifsv")
+item_name = "amber"
+item_type = 5
+rarity = 50
+flavor_text = "Ancient tree sap solidifier and trapped underground for millions of years! "
+use_effect = Array[ExtResource("1_b0iea")]([])
+throw_effect = Array[ExtResource("1_b0iea")]([])
+equip_effect = Array[ExtResource("1_b0iea")]([])
+base_value = 100
+consumable = false

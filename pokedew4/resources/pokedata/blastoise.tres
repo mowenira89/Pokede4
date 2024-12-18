@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://b5g5cyci6qk"]
+
+[ext_resource type="Texture2D" uid="uid://d3ib5r5vrk655" path="res://images/pokemon/blastoise.png" id="1_esysq"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_dqeie"]
+
+[resource]
+script = ExtResource("2_dqeie")
+image = ExtResource("1_esysq")
+species = "Blastoise"
+num = 9
+type = Array[int]([2])
+base_stats = {
+"attk": 83,
+"cook": 25,
+"craft": 50,
+"def": 100,
+"energy": 300,
+"farm": 45,
+"fishing": 120,
+"forage": 60,
+"hp": 79,
+"mine": 69,
+"perform": 50,
+"sattk": 85,
+"sdef": 105,
+"speed": 78
+}
+base_happiness = 50
+height = 16
+weight = 855
+base_exp = 265
+capture_rate = 45
+abilities = Array[String](["Rain Dish"])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

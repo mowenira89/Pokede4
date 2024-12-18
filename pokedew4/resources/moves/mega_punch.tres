@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://8wxympw2atjt"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_athb5"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_kasdd"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_lpxgp"]
+
+[sub_resource type="Resource" id="Resource_1bpom"]
+script = ExtResource("2_kasdd")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_lpxgp")
+_name = "Mega Punch"
+type = 0
+level_learned = 22
+power = 80
+acc = 85
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 5
+mining_value = 3
+priority = 1
+effect = Array[ExtResource("1_athb5")]([SubResource("Resource_1bpom")])
+passive_effect = Array[ExtResource("1_athb5")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

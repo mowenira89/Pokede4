@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cbeu0vbjf3fhy"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_v78yd"]
+[ext_resource type="Texture2D" uid="uid://25dscpgq41s3" path="res://images/items/feather_resist.png" id="2_5q5bc"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_7fkea"]
+
+[resource]
+script = ExtResource("3_7fkea")
+image = ExtResource("2_5q5bc")
+item_name = "Resist Feather"
+item_type = 0
+rarity = 2
+flavor_text = "A feather from a resistent birdy. Slightly increases special defense."
+use_effect = Array[ExtResource("1_v78yd")]([])
+throw_effect = Array[ExtResource("1_v78yd")]([])
+equip_effect = Array[ExtResource("1_v78yd")]([])
+base_value = 20
+consumable = true

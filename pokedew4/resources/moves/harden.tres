@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dgo2lv0eyqu8s"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_t7uqt"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_kryp8"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_0yef2"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_d4v0x"]
+
+[sub_resource type="Resource" id="Resource_vohtb"]
+script = ExtResource("2_kryp8")
+stage = 1
+stat = 2
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_qrldk"]
+script = ExtResource("3_0yef2")
+buff = SubResource("Resource_vohtb")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_d4v0x")
+_name = "Harden"
+type = 0
+level_learned = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 5
+targ = 1
+perform_type = 5
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_t7uqt")]([SubResource("Resource_qrldk")])
+passive_effect = Array[ExtResource("1_t7uqt")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

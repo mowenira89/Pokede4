@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=7 format=3 uid="uid://civ22o2cmm2ys"]
+
+[ext_resource type="Texture2D" uid="uid://bt72oge5q46yd" path="res://images/pokemon/onix.png" id="1_u2q3v"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_ul0g4"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="3_1npnc"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_gbbj4"]
+
+[sub_resource type="Resource" id="Resource_7cnsg"]
+script = ExtResource("3_1npnc")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_hx2bu"]
+script = ExtResource("2_ul0g4")
+item = SubResource("Resource_7cnsg")
+min = 2
+max = 6
+method = 1
+production_time = 100
+weight = 100
+
+[resource]
+script = ExtResource("3_gbbj4")
+produce = Array[ExtResource("2_ul0g4")]([SubResource("Resource_hx2bu")])
+rarity = 0
+image = ExtResource("1_u2q3v")
+species = "Onix"
+num = 95
+type = Array[int]([7, 5])
+base_stats = {
+"attk": 45,
+"cook": 1,
+"craft": 1,
+"def": 160,
+"energy": 120,
+"farm": 1,
+"fishing": 1,
+"forage": 10,
+"hp": 35,
+"mine": 100,
+"perform": 10,
+"sattk": 30,
+"sdef": 45,
+"speed": 70
+}
+base_happiness = 50
+height = 88
+weight = 2100
+base_exp = 77
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([11])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 25

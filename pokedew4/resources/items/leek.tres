@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://wqrulelbqy4f"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5s4to"]
+[ext_resource type="Texture2D" uid="uid://gmhs7irc20sv" path="res://images/items/leek.png" id="2_asx33"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_h33st"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_4ksut"]
+
+[sub_resource type="Resource" id="Resource_hyu6r"]
+script = ExtResource("4_4ksut")
+flavor = Array[int]([0, 1])
+flavor_profile = 4
+health_restored = 10
+energy_restored = 10
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_h33st")
+flavor = Array[int]([0, 1])
+flavor_profile = 4
+image = ExtResource("2_asx33")
+item_name = "Leek"
+item_type = 1
+rarity = 20
+flavor_text = "A fancy kind of onion, preferred by a certain Pokemon."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_5s4to")]([SubResource("Resource_hyu6r")])
+throw_effect = Array[ExtResource("1_5s4to")]([])
+equip_effect = Array[ExtResource("1_5s4to")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 5
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

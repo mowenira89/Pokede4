@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cubt1do2it123"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_4mht5"]
+[ext_resource type="Texture2D" uid="uid://3kwqot6m38x4" path="res://images/items/mining/geode/bixite.png" id="2_ayd1m"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_0sfc7"]
+
+[resource]
+script = ExtResource("3_0sfc7")
+image = ExtResource("2_ayd1m")
+item_name = "Bixite"
+item_type = 0
+rarity = 20
+flavor_text = "A dark metallic Mineral sought after for its cubic structure"
+use_effect = Array[ExtResource("1_4mht5")]([])
+throw_effect = Array[ExtResource("1_4mht5")]([])
+equip_effect = Array[ExtResource("1_4mht5")]([])
+base_value = 45
+consumable = false
+stone = false
+wood = false

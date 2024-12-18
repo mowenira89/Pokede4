@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PlaceableItemData" load_steps=5 format=3 uid="uid://dah4x23nolvdr"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_di488"]
+[ext_resource type="Texture2D" uid="uid://d1dnx8oiu1ni2" path="res://images/machines/furnace_icon.png" id="2_0m1nw"]
+[ext_resource type="PackedScene" uid="uid://7hvpki5auleu" path="res://scenes/machines/furnace.tscn" id="3_2tkrt"]
+[ext_resource type="Script" path="res://scripts/placeable_object.gd" id="4_ju03t"]
+
+[resource]
+script = ExtResource("4_ju03t")
+path_to_scene = ExtResource("3_2tkrt")
+image = ExtResource("2_0m1nw")
+item_name = "Furnace"
+item_type = 7
+rarity = 0
+flavor_text = "A machine for turning ores into ingots. Can be fueled with charcoal, coal, or Pokemon fire."
+has_use_effect = false
+untossable = false
+unthrowable = true
+ungivable = true
+use_from_bag = false
+use_effect = Array[ExtResource("1_di488")]([])
+throw_effect = Array[ExtResource("1_di488")]([])
+equip_effect = Array[ExtResource("1_di488")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0

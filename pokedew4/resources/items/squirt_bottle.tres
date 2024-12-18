@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=3 uid="uid://bj1f72cq6brb1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_qmo2x"]
+[ext_resource type="Texture2D" uid="uid://1plhmo7m84fb" path="res://images/items/squirt-bottle.png" id="2_p1r6n"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_a2vl1"]
+[ext_resource type="Script" path="res://resources/effects/water_effect.gd" id="4_bdvu1"]
+
+[sub_resource type="Resource" id="Resource_pdkvy"]
+script = ExtResource("4_bdvu1")
+
+[resource]
+script = ExtResource("3_a2vl1")
+image = ExtResource("2_p1r6n")
+item_name = "Squirt Bottle"
+item_type = 4
+flavor_text = "A watering can shaped like a squirle."
+use_effect = Array[ExtResource("1_qmo2x")]([SubResource("Resource_pdkvy")])
+throw_effect = Array[ExtResource("1_qmo2x")]([])
+equip_effect = Array[ExtResource("1_qmo2x")]([])
+base_value = 0

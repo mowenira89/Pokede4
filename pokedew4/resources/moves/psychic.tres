@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://s0cdgvm5l8h0"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_dq4nr"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_7v0oq"]
+[ext_resource type="Script" path="res://resources/effects/apply_hidden_status.gd" id="3_ol7sj"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_w8io3"]
+
+[sub_resource type="Resource" id="Resource_uymmg"]
+script = ExtResource("2_7v0oq")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_s171x"]
+script = ExtResource("3_ol7sj")
+chance = 30
+status = 0
+
+[resource]
+script = ExtResource("4_w8io3")
+_name = "Psychic"
+type = 10
+level_learned = 44
+power = 90
+acc = 100
+move_type = 1
+energy = 15
+targ = 0
+perform_type = 1
+perform_value = 8
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_dq4nr")]([SubResource("Resource_uymmg"), SubResource("Resource_s171x")])
+passive_effect = Array[ExtResource("1_dq4nr")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 4
+depester = false

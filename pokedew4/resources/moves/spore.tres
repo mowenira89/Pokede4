@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dqws8h1bkpo8u"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_3qjue"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_btlp8"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="3_jwxi4"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_nbu61"]
+
+[sub_resource type="Resource" id="Resource_ufdhl"]
+script = ExtResource("2_btlp8")
+chance = 100
+status = 2
+
+[sub_resource type="Resource" id="Resource_u16f2"]
+script = ExtResource("3_jwxi4")
+min = 0
+max = 0
+method = 0
+min_production_time = 0
+production_time = 0
+weight = 0
+
+[resource]
+script = ExtResource("3_nbu61")
+_name = "Spore"
+type = 3
+level_learned = 0
+power = 0
+acc = 100
+move_type = 2
+energy = 5
+targ = 0
+perform_type = 4
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_3qjue")]([SubResource("Resource_ufdhl")])
+passive_effect = Array[ExtResource("1_3qjue")]([])
+produce = SubResource("Resource_u16f2")
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Puts surrounding Pokemon to sleep."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

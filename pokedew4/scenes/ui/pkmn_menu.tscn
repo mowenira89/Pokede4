@@ -1,0 +1,219 @@
+[gd_scene load_steps=13 format=3 uid="uid://d24uykbjd3myh"]
+
+[ext_resource type="Script" path="res://scripts/ui/pkmn_menu.gd" id="1_i11sb"]
+[ext_resource type="PackedScene" uid="uid://cxppscahx64us" path="res://scenes/ui/stat_screen.tscn" id="2_i66gr"]
+[ext_resource type="Theme" uid="uid://cfw6ce2bdcu7g" path="res://themes/skill_progress_bar.tres" id="3_4377m"]
+[ext_resource type="PackedScene" uid="uid://btt2cvu4eqvmi" path="res://scenes/ui/skill_box_container.tscn" id="3_scoxm"]
+[ext_resource type="Script" path="res://scripts/ui/progress_bar.gd" id="4_qkjoi"]
+
+[sub_resource type="Theme" id="Theme_to601"]
+Label/font_sizes/font_size = 30
+
+[sub_resource type="Theme" id="Theme_qovg4"]
+Button/font_sizes/font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpftt"]
+bg_color = Color(0.0313726, 0.886275, 0.117647, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gysla"]
+bg_color = Color(0.67451, 0.72549, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_quljm"]
+bg_color = Color(0.972549, 0.0235294, 0.498039, 1)
+
+[sub_resource type="Theme" id="Theme_hyl1g"]
+Button/font_sizes/font_size = 45
+
+[sub_resource type="Theme" id="Theme_vphhr"]
+Label/font_sizes/font_size = 30
+
+[node name="PKMNMenu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_to601")
+color = Color(0, 0.175291, 0.432739, 1)
+script = ExtResource("1_i11sb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0, 0.345098, 0.792157, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_qovg4")
+
+[node name="Button" type="Button" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "<"
+
+[node name="Button2" type="Button" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = ">"
+
+[node name="StatsSide" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="StatPanelIcon" type="TextureRect" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Nickname" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide"]
+layout_mode = 2
+columns = 2
+
+[node name="HP" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/GridContainer"]
+layout_mode = 2
+text = "HP "
+horizontal_alignment = 1
+
+[node name="HPBAR" type="ProgressBar" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/GridContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_lpftt")
+show_percentage = false
+
+[node name="Energy" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Energy"
+
+[node name="ENERGYBAR" type="ProgressBar" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/GridContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_gysla")
+show_percentage = false
+
+[node name="Happiness" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Hap "
+
+[node name="HAPPINESSBAR" type="ProgressBar" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/GridContainer"]
+custom_minimum_size = Vector2(400, 50)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_quljm")
+show_percentage = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="ButtonContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide"]
+layout_mode = 2
+size_flags_vertical = 2
+theme = SubResource("Theme_hyl1g")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_vphhr")
+
+[node name="Nature" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "NATURE "
+
+[node name="Level" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "LVL"
+
+[node name="HBoxContainer2" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer" instance=ExtResource("3_scoxm")]
+layout_mode = 2
+size_flags_horizontal = 4
+_stat = 6
+title = "Farm"
+
+[node name="HBoxContainer3" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer" instance=ExtResource("3_scoxm")]
+layout_mode = 2
+size_flags_horizontal = 4
+_stat = 7
+title = "Mine"
+
+[node name="HBoxContainer4" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer" instance=ExtResource("3_scoxm")]
+layout_mode = 2
+size_flags_horizontal = 4
+_stat = 8
+title = "Forage"
+
+[node name="HBoxContainer5" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer" instance=ExtResource("3_scoxm")]
+layout_mode = 2
+size_flags_horizontal = 4
+_stat = 9
+title = "Perform"
+
+[node name="HBoxContainer6" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer" instance=ExtResource("3_scoxm")]
+layout_mode = 2
+size_flags_horizontal = 4
+_stat = 10
+title = "Cook"
+
+[node name="HBoxContainer7" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer" instance=ExtResource("3_scoxm")]
+layout_mode = 2
+size_flags_horizontal = 4
+_stat = 11
+title = "Craft"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer/HBoxContainer8"]
+layout_mode = 2
+text = "Battle: "
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/StatsSide/ButtonContainer/HBoxContainer8"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+theme = ExtResource("3_4377m")
+show_percentage = false
+script = ExtResource("4_qkjoi")
+
+[node name="StatScreen" parent="." instance=ExtResource("2_i66gr")]
+visible = false
+layout_mode = 1

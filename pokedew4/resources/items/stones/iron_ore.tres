@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ci2osrmpvww2w"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ks7ik"]
+[ext_resource type="Texture2D" uid="uid://cjucqfm0augs1" path="res://images/items/mining/iron_ore.png" id="2_fiksj"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_wlrbi"]
+
+[resource]
+script = ExtResource("3_wlrbi")
+image = ExtResource("2_fiksj")
+item_name = "Iron Ore"
+item_type = 5
+rarity = 60
+flavor_text = "Burn in a furnace to produce iron ingots. "
+use_effect = Array[ExtResource("1_ks7ik")]([])
+throw_effect = Array[ExtResource("1_ks7ik")]([])
+equip_effect = Array[ExtResource("1_ks7ik")]([])
+base_value = 20
+consumable = false
+stone = false
+wood = false

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://6y7oadm2p4o4"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_rvcpi"]
+[ext_resource type="Script" path="res://resources/effects/display_message_effect.gd" id="2_otx67"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_ut13h"]
+
+[sub_resource type="Resource" id="Resource_js3vg"]
+script = ExtResource("2_otx67")
+s = "flopped around, accomplishing nothing."
+
+[resource]
+script = ExtResource("3_ut13h")
+_name = "Splash"
+type = 2
+power = 0
+acc = 0
+move_type = 2
+energy = 2
+targ = 0
+perform_type = 3
+perform_value = 1
+priority = 1
+effect = Array[ExtResource("1_rvcpi")]([SubResource("Resource_js3vg")])

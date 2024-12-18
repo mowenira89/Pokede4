@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://bocvjdp0qftys"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_evb5s"]
+[ext_resource type="Texture2D" uid="uid://c5qumvbf266qo" path="res://images/items/plump_bean.png" id="2_ey6yf"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_gu0rq"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_xsuod"]
+
+[sub_resource type="Resource" id="Resource_1u2it"]
+script = ExtResource("4_xsuod")
+flavor = Array[int]([3])
+flavor_profile = 2
+health_restored = 2
+energy_restored = 15
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_gu0rq")
+flavor = Array[int]([3])
+flavor_profile = 2
+image = ExtResource("2_ey6yf")
+item_name = "Plump Bean"
+item_type = 1
+rarity = 40
+flavor_text = "A plump, juicy bean with a dry flavor!"
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_evb5s")]([SubResource("Resource_1u2it")])
+throw_effect = Array[ExtResource("1_evb5s")]([])
+equip_effect = Array[ExtResource("1_evb5s")]([])
+base_value = 3
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 5
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

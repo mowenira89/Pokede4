@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://p812w53ybn6t"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0wyjp"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_ct1dc"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_lh3mx"]
+
+[sub_resource type="Resource" id="Resource_ikqf5"]
+script = ExtResource("2_ct1dc")
+chance = 100
+status = 2
+
+[resource]
+script = ExtResource("3_lh3mx")
+_name = "Rest"
+type = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 0
+targ = 1
+perform_type = 4
+perform_value = 0
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_0wyjp")]([SubResource("Resource_ikqf5")])
+passive_effect = Array[ExtResource("1_0wyjp")]([])
+contact = false
+sound = false
+unmissable = false
+description = "User falls asleep to recover HP and Energy."
+description_passive = "User sleeps more, until their stats are fully restored."
+recoil = 0.0

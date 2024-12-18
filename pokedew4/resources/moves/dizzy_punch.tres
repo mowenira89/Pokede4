@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://c5fca2em2ymah"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_bn6ek"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_scykn"]
+[ext_resource type="Script" path="res://resources/effects/apply_hidden_status.gd" id="3_0ryjh"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_sc8tr"]
+
+[sub_resource type="Resource" id="Resource_qfmmc"]
+script = ExtResource("2_scykn")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_xve6j"]
+script = ExtResource("3_0ryjh")
+chance = 20
+status = 0
+
+[resource]
+script = ExtResource("4_sc8tr")
+_name = "Dizzy Punch"
+type = 0
+level_learned = 22
+power = 70
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 6
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_bn6ek")]([SubResource("Resource_qfmmc"), SubResource("Resource_xve6j")])
+passive_effect = Array[ExtResource("1_bn6ek")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://my8fqjxdikqk"]
+
+[ext_resource type="Texture2D" uid="uid://ba6n0ix0ieska" path="res://images/pokemon/poliwhirl.png" id="1_2poyu"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_uibhv"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_bkjin"]
+
+[resource]
+script = ExtResource("3_bkjin")
+produce = Array[ExtResource("2_uibhv")]([])
+image = ExtResource("1_2poyu")
+species = "Poliwhirl"
+num = 61
+type = Array[int]([2])
+base_stats = {
+"attk": 65,
+"cook": 20,
+"craft": 40,
+"def": 65,
+"energy": 150,
+"farm": 25,
+"fishing": 60,
+"forage": 45,
+"hp": 65,
+"mine": 20,
+"perform": 40,
+"sattk": 50,
+"sdef": 50,
+"speed": 90
+}
+base_happiness = 50
+height = 10
+weight = 200
+base_exp = 135
+capture_rate = 120
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([6])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

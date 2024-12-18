@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BreakableData" load_steps=7 format=3 uid="uid://csh1cn6lwg3s6"]
+
+[ext_resource type="Script" path="res://resources/breakables/breakable_data.gd" id="1_2t7bc"]
+[ext_resource type="Resource" uid="uid://bm85p1jq01v6" path="res://resources/items/fiber.tres" id="1_73ist"]
+[ext_resource type="Texture2D" uid="uid://cn8ln57qog11c" path="res://images/rocks/grass5.png" id="3_d7nm6"]
+[ext_resource type="Texture2D" uid="uid://c5xmfanwsqec2" path="res://images/rocks/grass4.png" id="4_uq16r"]
+[ext_resource type="Texture2D" uid="uid://2l2vodsxfgrn" path="res://images/rocks/grass3.png" id="5_wob3h"]
+[ext_resource type="Texture2D" uid="uid://b1fvrm05p3cud" path="res://images/rocks/grass2.png" id="6_8f27l"]
+
+[resource]
+script = ExtResource("1_2t7bc")
+hp = 3
+tool_level = 1
+sprites = Array[Texture2D]([ExtResource("3_d7nm6"), ExtResource("4_uq16r"), ExtResource("5_wob3h"), ExtResource("6_8f27l")])
+tool_type = Array[int]([0, 2, 1])
+loot = ExtResource("1_73ist")

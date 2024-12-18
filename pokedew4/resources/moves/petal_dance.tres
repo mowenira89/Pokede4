@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Move" load_steps=11 format=3 uid="uid://djiota6424ftv"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_uogqu"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_aqgme"]
+[ext_resource type="Resource" uid="uid://cov54ehtox5kk" path="res://resources/moves/petal_dance2.tres" id="3_w32n0"]
+[ext_resource type="Script" path="res://scripts/buffs/outrage_type_buff.gd" id="4_q68kl"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="5_i7clq"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="6_sth4s"]
+
+[sub_resource type="Resource" id="Resource_k1fsh"]
+script = ExtResource("2_aqgme")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_sn78o"]
+script = ExtResource("4_q68kl")
+min = 2
+max = 3
+move = ExtResource("3_w32n0")
+confusion = true
+recharge = false
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_t4f0g"]
+script = ExtResource("5_i7clq")
+buff = SubResource("Resource_sn78o")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_3olmw"]
+script = ExtResource("2_aqgme")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("6_sth4s")
+_name = "Petal Dance"
+type = 3
+level_learned = 44
+power = 120
+acc = 100
+move_type = 1
+energy = 20
+targ = 0
+perform_type = 3
+perform_value = 10
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_uogqu")]([SubResource("Resource_k1fsh"), SubResource("Resource_t4f0g"), SubResource("Resource_3olmw")])
+passive_effect = Array[ExtResource("1_uogqu")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

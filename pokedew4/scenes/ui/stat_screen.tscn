@@ -1,0 +1,236 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxppscahx64us"]
+
+[ext_resource type="Theme" uid="uid://bve6wpx2nymig" path="res://themes/size40font.tres" id="1_1peaw"]
+[ext_resource type="PackedScene" uid="uid://83f0o0s2wjq4" path="res://scenes/ui/stat_box_container.tscn" id="1_qlb2r"]
+[ext_resource type="Script" path="res://scripts/ui/stat_screen.gd" id="1_xoo7o"]
+[ext_resource type="Theme" uid="uid://cfw6ce2bdcu7g" path="res://themes/skill_progress_bar.tres" id="2_8ad0j"]
+[ext_resource type="Script" path="res://scripts/ui/progress_bar.gd" id="3_xppxi"]
+[ext_resource type="PackedScene" uid="uid://btt2cvu4eqvmi" path="res://scenes/ui/skill_box_container.tscn" id="4_5b2nx"]
+[ext_resource type="Theme" uid="uid://68jyy75n57ow" path="res://themes/blue_buttons.tres" id="7_2uhw8"]
+
+[node name="StatScreen" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1peaw")
+color = Color(0.000845705, 0.111614, 0.495866, 1)
+script = ExtResource("1_xoo7o")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0, 1, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/TextureRect"]
+position = Vector2(271, 175.5)
+scale = Vector2(4, 4)
+
+[node name="BoxContainer" type="BoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BoxContainer"]
+layout_mode = 2
+
+[node name="NameTag" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Name"
+
+[node name="SpeciesTag" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "Species"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="LevelTag" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Level"
+
+[node name="NatureTag" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/BoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Nature"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="HBoxContainer11" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Stats" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats"]
+layout_mode = 2
+
+[node name="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats" instance=ExtResource("1_qlb2r")]
+layout_mode = 2
+title = "HP"
+
+[node name="HBoxContainer3" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats" instance=ExtResource("1_qlb2r")]
+layout_mode = 2
+_stat = 1
+title = "Attk"
+
+[node name="HBoxContainer4" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats" instance=ExtResource("1_qlb2r")]
+layout_mode = 2
+_stat = 2
+title = "Def"
+
+[node name="HBoxContainer5" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats" instance=ExtResource("1_qlb2r")]
+layout_mode = 2
+_stat = 3
+title = "Spattk"
+
+[node name="HBoxContainer6" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats" instance=ExtResource("1_qlb2r")]
+layout_mode = 2
+_stat = 4
+title = "Spdef"
+
+[node name="HBoxContainer7" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Stats" instance=ExtResource("1_qlb2r")]
+layout_mode = 2
+_stat = 5
+title = "Speed"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Skills" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11"]
+layout_mode = 2
+
+[node name="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills" instance=ExtResource("4_5b2nx")]
+layout_mode = 2
+_stat = 6
+title = "Farming"
+
+[node name="HBoxContainer2" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills" instance=ExtResource("4_5b2nx")]
+layout_mode = 2
+_stat = 7
+title = "Mining"
+
+[node name="HBoxContainer3" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills" instance=ExtResource("4_5b2nx")]
+layout_mode = 2
+_stat = 8
+title = "Foraging"
+
+[node name="HBoxContainer4" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills" instance=ExtResource("4_5b2nx")]
+layout_mode = 2
+_stat = 9
+title = "Performance"
+
+[node name="HBoxContainer5" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills" instance=ExtResource("4_5b2nx")]
+layout_mode = 2
+_stat = 10
+title = "Cooking"
+
+[node name="HBoxContainer6" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills" instance=ExtResource("4_5b2nx")]
+layout_mode = 2
+_stat = 11
+title = "Crafting"
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills/HBoxContainer8"]
+layout_mode = 2
+text = "Battle: "
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer11/Skills/HBoxContainer8"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+theme = ExtResource("2_8ad0j")
+show_percentage = false
+script = ExtResource("3_xppxi")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+color = Color(0, 0.109804, 0.494118, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/MarginContainer/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/MarginContainer/ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="VBOX" type="VBoxContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = ExtResource("7_2uhw8")
+theme_override_constants/separation = 10
+
+[node name="Tutor" type="Button" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBOX"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+text = "Tutor"
+
+[node name="Rename" type="Button" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBOX"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+text = "Rename"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBOX"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[connection signal="pressed" from="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBOX/Tutor" to="." method="_on_tutor_pressed"]
+[connection signal="pressed" from="MarginContainer/ColorRect/MarginContainer/HBoxContainer/VBOX/Rename" to="." method="_on_rename_pressed"]

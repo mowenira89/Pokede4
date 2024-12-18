@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=9 format=3 uid="uid://b6rc8y331shoe"]
+
+[ext_resource type="Resource" uid="uid://pcwfidx2fwj" path="res://resources/crops/aspear.tres" id="1_v2ly1"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_ohl0l"]
+[ext_resource type="Texture2D" uid="uid://7qrlyqo3b0l8" path="res://images/items/berries/Dream_Aspear_Berry_Sprite.png" id="3_nuub0"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_gurns"]
+[ext_resource type="Script" path="res://resources/effects/heal_status.gd" id="5_1e7qq"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="6_hm6gd"]
+
+[sub_resource type="Resource" id="Resource_ft4ax"]
+script = ExtResource("5_1e7qq")
+status = 3
+
+[sub_resource type="Resource" id="Resource_uc3e1"]
+script = ExtResource("6_hm6gd")
+flavor = Array[int]([])
+flavor_profile = 1
+health_restored = 0
+energy_restored = 0
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("4_gurns")
+crop = ExtResource("1_v2ly1")
+flavor = Array[int]([2])
+flavor_profile = 1
+image = ExtResource("3_nuub0")
+item_name = "aspear"
+item_type = 2
+rarity = 0
+flavor_text = "A sour berry that causes a warming sensation."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_ohl0l")]([SubResource("Resource_ft4ax"), SubResource("Resource_uc3e1")])
+throw_effect = Array[ExtResource("2_ohl0l")]([])
+equip_effect = Array[ExtResource("2_ohl0l")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 1
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

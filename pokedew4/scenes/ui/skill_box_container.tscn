@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://btt2cvu4eqvmi"]
+
+[ext_resource type="Script" path="res://scripts/ui/skill_box_container.gd" id="1_7n8if"]
+[ext_resource type="Theme" uid="uid://cfw6ce2bdcu7g" path="res://themes/skill_progress_bar.tres" id="2_wt6ty"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+script = ExtResource("1_7n8if")
+
+[node name="Stat" type="Label" parent="."]
+layout_mode = 2
+text = "HP:"
+
+[node name="StatAmount" type="Label" parent="."]
+layout_mode = 2
+text = "0"
+
+[node name="Margin" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="EV" type="Label" parent="."]
+layout_mode = 2
+text = "EV"
+
+[node name="Slash" type="Label" parent="."]
+layout_mode = 2
+text = "/"
+
+[node name="IV" type="Label" parent="."]
+layout_mode = 2
+text = "IV"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+theme = ExtResource("2_wt6ty")
+show_percentage = false
+
+[node name="level" type="Label" parent="."]
+layout_mode = 2
+text = "1"

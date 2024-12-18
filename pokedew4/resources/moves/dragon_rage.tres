@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://d2wd46rj0gsiq"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_k1xo6"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_j0724"]
+
+[resource]
+script = ExtResource("2_j0724")
+_name = "Dragon Rage"
+type = 11
+level_learned = 16
+power = 0
+acc = 0
+move_type = 1
+energy = 15
+targ = 0
+perform_type = 4
+perform_value = 3
+mining_value = 5
+priority = 1
+effect = Array[ExtResource("1_k1xo6")]([])
+passive_effect = Array[ExtResource("1_k1xo6")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 2
+water = 0
+electric = 0
+psi = 0
+depester = false

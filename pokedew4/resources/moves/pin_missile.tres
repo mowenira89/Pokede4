@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dpl8nxekgdwvt"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_rf1vd"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_51jsl"]
+[ext_resource type="Script" path="res://resources/effects/doubleslap_like_attack.gd" id="3_agacb"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_vv5p2"]
+
+[sub_resource type="Resource" id="Resource_fod80"]
+script = ExtResource("2_51jsl")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_isskq"]
+script = ExtResource("3_agacb")
+min_hits = 2
+max_hits = 5
+damage = SubResource("Resource_fod80")
+
+[resource]
+script = ExtResource("4_vv5p2")
+_name = "Pin Missile"
+type = 6
+level_learned = 16
+power = 25
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_rf1vd")]([SubResource("Resource_isskq")])
+passive_effect = Array[ExtResource("1_rf1vd")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

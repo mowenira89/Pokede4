@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=6 format=3 uid="uid://tlpufc1ehrsb"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_2jis2"]
+[ext_resource type="Resource" uid="uid://yred8c6f0lb7" path="res://resources/items/iron_ingot.tres" id="3_2xtpu"]
+[ext_resource type="Script" path="res://scripts/recipe_data.gd" id="4_dc8qe"]
+
+[sub_resource type="Resource" id="Resource_jw221"]
+metadata/__load_path__ = "res://resources/items/iron_ore.tres"
+
+[sub_resource type="Resource" id="Resource_q7wdl"]
+script = ExtResource("1_2jis2")
+data = SubResource("Resource_jw221")
+quantity = 3
+
+[resource]
+script = ExtResource("4_dc8qe")
+item = ExtResource("3_2xtpu")
+ingredients = Array[ExtResource("1_2jis2")]([SubResource("Resource_q7wdl")])
+time = 35

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://cgx00t3wpsq7l"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_t3jqn"]
+[ext_resource type="Texture2D" uid="uid://dt0oifj4qo804" path="res://images/items/forage/Cockle.png" id="2_7qxmn"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_4wixp"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_35nvj"]
+
+[sub_resource type="Resource" id="Resource_5hhyc"]
+script = ExtResource("4_35nvj")
+flavor = Array[int]([5])
+flavor_profile = 3
+health_restored = 0
+energy_restored = 5
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_4wixp")
+flavor = Array[int]([5])
+flavor_profile = 3
+image = ExtResource("2_7qxmn")
+item_name = "Cockle"
+item_type = 1
+rarity = 30
+flavor_text = "A common clam, not a Pokemon."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_t3jqn")]([SubResource("Resource_5hhyc")])
+throw_effect = Array[ExtResource("1_t3jqn")]([])
+equip_effect = Array[ExtResource("1_t3jqn")]([])
+base_value = 8
+consumable = false
+stone = false
+wood = false
+mulchable = true
+mulch_type = 7
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://cigfchjkpv1me"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_j7tr4"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_t460x"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_pn2g8"]
+
+[sub_resource type="Resource" id="Resource_3isur"]
+script = ExtResource("2_t460x")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_pn2g8")
+_name = "Ice Beam"
+type = 8
+level_learned = 35
+power = 90
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 7
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_j7tr4")]([SubResource("Resource_3isur")])
+passive_effect = Array[ExtResource("1_j7tr4")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 3
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

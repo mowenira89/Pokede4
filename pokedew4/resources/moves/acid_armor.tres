@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Move" load_steps=12 format=3 uid="uid://b38kxdxh5bogd"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_c8byj"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_sw7jd"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_b8nbb"]
+[ext_resource type="Resource" uid="uid://cyu080r5vyb2q" path="res://resources/items/acid.tres" id="4_rrdqp"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="5_q5efc"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="6_n2l4m"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="7_5w2u3"]
+
+[sub_resource type="Resource" id="Resource_x7x6j"]
+script = ExtResource("2_sw7jd")
+stage = 1
+stat = 4
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_k5l2b"]
+script = ExtResource("3_b8nbb")
+buff = SubResource("Resource_x7x6j")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_5l31g"]
+script = ExtResource("5_q5efc")
+data = ExtResource("4_rrdqp")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_wj6co"]
+script = ExtResource("6_n2l4m")
+item = SubResource("Resource_5l31g")
+min = 1
+max = 2
+method = 0
+min_production_time = 0
+production_time = 7
+weight = 0
+
+[resource]
+script = ExtResource("7_5w2u3")
+_name = "Acid Armor"
+type = 15
+level_learned = 40
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 1
+perform_type = 1
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_c8byj")]([SubResource("Resource_k5l2b")])
+passive_effect = Array[ExtResource("1_c8byj")]([])
+produce = SubResource("Resource_wj6co")
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

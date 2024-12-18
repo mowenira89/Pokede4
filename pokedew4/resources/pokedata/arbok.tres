@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://b0w42lr1bkudj"]
+
+[ext_resource type="Texture2D" uid="uid://bx1ts0j5fcxug" path="res://images/pokemon/arbok.png" id="1_ep88p"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_g4g0e"]
+
+[resource]
+script = ExtResource("2_g4g0e")
+image = ExtResource("1_ep88p")
+species = "Arbok"
+num = 24
+type = Array[int]([15])
+base_stats = {
+"attk": 95,
+"cook": 10,
+"craft": 20,
+"def": 69,
+"energy": 150,
+"farm": 30,
+"fishing": 20,
+"forage": 30,
+"hp": 60,
+"mine": 20,
+"perform": 40,
+"sattk": 65,
+"sdef": 79,
+"speed": 80
+}
+base_happiness = 70
+height = 35
+weight = 650
+base_exp = 157
+capture_rate = 70
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

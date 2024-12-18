@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Move" load_steps=11 format=3 uid="uid://o2d2n4qer2b3"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_laoov"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_lxh0v"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="3_es686"]
+[ext_resource type="Script" path="res://scripts/buffs/bind_type_buff.gd" id="4_m6ikp"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="5_olnu5"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="6_jwmau"]
+
+[sub_resource type="Resource" id="Resource_mfneq"]
+script = ExtResource("2_lxh0v")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_irwda"]
+script = ExtResource("3_es686")
+chance = 30
+status = 4
+
+[sub_resource type="Resource" id="Resource_iult1"]
+script = ExtResource("4_m6ikp")
+min_turns = 2
+max_turns = 4
+d_factor = 0
+move_name = "Fire Spin"
+cant_attack = true
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_oo0ju"]
+script = ExtResource("5_olnu5")
+buff = SubResource("Resource_iult1")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("6_jwmau")
+_name = "Fire Spin"
+type = 1
+level_learned = 26
+power = 35
+acc = 100
+move_type = 1
+energy = 15
+targ = 0
+perform_type = 1
+perform_value = 8
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_laoov")]([SubResource("Resource_mfneq"), SubResource("Resource_irwda"), SubResource("Resource_oo0ju")])
+passive_effect = Array[ExtResource("1_laoov")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Traps the opponent in a whirlwind of fire for 2 - 5 turns!"
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 3
+water = 0
+electric = 0
+psi = 0
+depester = false

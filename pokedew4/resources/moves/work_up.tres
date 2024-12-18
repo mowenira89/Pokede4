@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://d1ffsedulashe"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_hqv5p"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_3ajhu"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_87mnt"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_88h11"]
+
+[sub_resource type="Resource" id="Resource_41pcv"]
+script = ExtResource("2_3ajhu")
+stage = 1
+stat = 1
+id = "attkup"
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_rt6l7"]
+script = ExtResource("3_87mnt")
+buff = SubResource("Resource_41pcv")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_diebv"]
+script = ExtResource("2_3ajhu")
+stage = 1
+stat = 2
+id = "defup"
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_qbocn"]
+script = ExtResource("3_87mnt")
+buff = SubResource("Resource_diebv")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_88h11")
+_name = "Work Up"
+type = 9
+power = 0
+acc = 0
+move_type = 2
+energy = 10
+targ = 1
+perform_type = 5
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_hqv5p")]([SubResource("Resource_rt6l7"), SubResource("Resource_qbocn")])
+passive_effect = Array[ExtResource("1_hqv5p")]([])
+contact = false
+sound = false
+unmissable = true
+description = ""
+description_passive = ""
+recoil = 0.0

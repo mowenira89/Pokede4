@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dhaioy3g336tn"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_omik8"]
+[ext_resource type="Texture2D" uid="uid://fi68deech38i" path="res://images/items/forage/artifact_sword_2.png" id="2_vbtt1"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_034po"]
+
+[resource]
+script = ExtResource("3_034po")
+image = ExtResource("2_vbtt1")
+item_name = "Ancient Sword"
+item_type = 6
+rarity = 1
+flavor_text = "An ancient artifact of a Vallean battle!"
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_omik8")]([])
+throw_effect = Array[ExtResource("1_omik8")]([])
+equip_effect = Array[ExtResource("1_omik8")]([])
+base_value = 1000
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

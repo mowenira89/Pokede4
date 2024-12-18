@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://cefkpglvxb5ro"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_xud3h"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_a51tc"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_rcjvb"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_lxhhe"]
+
+[sub_resource type="Resource" id="Resource_5bg2n"]
+script = ExtResource("2_a51tc")
+stage = 1
+stat = 1
+id = "attkup"
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_l3dwo"]
+script = ExtResource("3_rcjvb")
+buff = SubResource("Resource_5bg2n")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_lxhhe")
+_name = "Sword Dance"
+type = 0
+power = 0
+acc = 100
+move_type = 2
+energy = 5
+targ = 1
+perform_type = 3
+perform_value = 7
+priority = 1
+effect = Array[ExtResource("1_xud3h")]([SubResource("Resource_l3dwo")])
+passive_effect = Array[ExtResource("1_xud3h")]([])
+contact = false
+sound = false
+unmissable = false
+description = "A sacred pokedance that raises the user's attack."
+description_passive = ""

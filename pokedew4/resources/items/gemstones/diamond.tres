@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d3rx0r65whbnq"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_oq6dw"]
+[ext_resource type="Texture2D" uid="uid://ktnl70c5fakd" path="res://images/items/mining/diamond.png" id="2_ci2uf"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_5jnxq"]
+
+[resource]
+script = ExtResource("3_5jnxq")
+image = ExtResource("2_ci2uf")
+item_name = "Diamond"
+item_type = 5
+rarity = 5
+flavor_text = "A gemstome loved most of all by the inhabitants of Sinnoh."
+use_effect = Array[ExtResource("1_oq6dw")]([])
+throw_effect = Array[ExtResource("1_oq6dw")]([])
+equip_effect = Array[ExtResource("1_oq6dw")]([])
+base_value = 1000
+consumable = false

@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="Food" load_steps=8 format=3 uid="uid://dp4l6yk2j3xgi"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_3sruo"]
+[ext_resource type="Texture2D" uid="uid://dp3utk2w84oxf" path="res://images/items/go_go_milk.png" id="2_mo8pk"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_87iie"]
+[ext_resource type="Script" path="res://resources/effects/heal_all_status.gd" id="4_8fylj"]
+[ext_resource type="Script" path="res://resources/effects/change_energy.gd" id="5_kf84d"]
+
+[sub_resource type="Resource" id="Resource_ac5fc"]
+script = ExtResource("4_8fylj")
+
+[sub_resource type="Resource" id="Resource_5ftmt"]
+script = ExtResource("5_kf84d")
+amount = 50
+
+[resource]
+script = ExtResource("3_87iie")
+flavor = Array[int]([1, 5])
+flavor_profile = 0
+image = ExtResource("2_mo8pk")
+item_name = "Go Go Milk"
+item_type = 1
+rarity = 90
+flavor_text = "Milk of the Gogoat, can be made into an incredible cheese! Heals all status ailments and restores energy!"
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+use_effect = Array[ExtResource("1_3sruo")]([SubResource("Resource_ac5fc"), SubResource("Resource_5ftmt")])
+throw_effect = Array[ExtResource("1_3sruo")]([])
+equip_effect = Array[ExtResource("1_3sruo")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false

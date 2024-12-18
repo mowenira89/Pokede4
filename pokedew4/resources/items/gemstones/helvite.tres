@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cyn8bdj1fnrl0"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ih8ta"]
+[ext_resource type="Texture2D" uid="uid://frnjg1cgjdp3" path="res://images/items/mining/geode/helvite.png" id="2_l6pbu"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_khobp"]
+
+[resource]
+script = ExtResource("3_khobp")
+image = ExtResource("2_l6pbu")
+item_name = "Helvite"
+item_type = 5
+rarity = 1
+flavor_text = "It is believed that helvite invented Helvetica font and named it after itself!"
+use_effect = Array[ExtResource("1_ih8ta")]([])
+throw_effect = Array[ExtResource("1_ih8ta")]([])
+equip_effect = Array[ExtResource("1_ih8ta")]([])
+base_value = 500
+consumable = false
+stone = false
+wood = false

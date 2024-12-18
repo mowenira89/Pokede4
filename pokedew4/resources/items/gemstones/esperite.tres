@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://7dvnf1mnweef"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_rsrli"]
+[ext_resource type="Texture2D" uid="uid://dvqa8m30kkmut" path="res://images/items/mining/geode/esperite.png" id="2_kwvft"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_robcy"]
+
+[resource]
+script = ExtResource("3_robcy")
+image = ExtResource("2_kwvft")
+item_name = "Esperite"
+item_type = 5
+rarity = 40
+flavor_text = "A common crystal enjoyed by a certain Pokemon."
+use_effect = Array[ExtResource("1_rsrli")]([])
+throw_effect = Array[ExtResource("1_rsrli")]([])
+equip_effect = Array[ExtResource("1_rsrli")]([])
+base_value = 10
+consumable = false
+stone = false
+wood = false

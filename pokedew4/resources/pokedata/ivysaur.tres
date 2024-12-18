@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=19 format=3 uid="uid://uv7inpaigc5a"]
+
+[ext_resource type="Texture2D" uid="uid://c8qlpwgaqqwak" path="res://images/pokemon/ivysaur.png" id="1_enwmr"]
+[ext_resource type="Resource" uid="uid://cblqqcsa1ov48" path="res://resources/moves/tackle.tres" id="2_2i0f5"]
+[ext_resource type="Resource" uid="uid://crw0qhm53v7af" path="res://resources/moves/bind.tres" id="3_0sjrb"]
+[ext_resource type="Resource" uid="uid://cajqrx34aueh4" path="res://resources/moves/vine_whip.tres" id="4_dr2d8"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="5_t4hdm"]
+[ext_resource type="Resource" uid="uid://kwcs8cxp2kbj" path="res://resources/moves/stun_spore.tres" id="5_x8rr6"]
+[ext_resource type="Resource" uid="uid://ba82c8xqblqgl" path="res://resources/moves/sleep_powder.tres" id="6_a6264"]
+[ext_resource type="Resource" uid="uid://dj1bvp5ysqa2j" path="res://resources/moves/poison_powder.tres" id="7_y3c7g"]
+[ext_resource type="Resource" uid="uid://d13f4vmoq0q0o" path="res://resources/moves/leech_seed.tres" id="8_l33a0"]
+[ext_resource type="Resource" uid="uid://bdi14diokt55r" path="res://resources/moves/razor_wind.tres" id="9_0k352"]
+[ext_resource type="Resource" uid="uid://dsr6qdmkap7xc" path="res://resources/moves/growth.tres" id="10_gm01s"]
+[ext_resource type="Resource" uid="uid://flwwhpsxkfnl" path="res://resources/moves/growl.tres" id="11_ey7m3"]
+[ext_resource type="Resource" uid="uid://b5h8edceyck8a" path="res://resources/moves/razor_leaf.tres" id="12_moam7"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="13_8cb2v"]
+[ext_resource type="Resource" uid="uid://d0cdn1ihmtl4y" path="res://resources/moves/sweet_scent.tres" id="13_w41u0"]
+[ext_resource type="Resource" uid="uid://cp7w67ck8etwb" path="res://resources/moves/seed_bomb.tres" id="14_1dtc0"]
+[ext_resource type="Resource" uid="uid://brlh6kfw23xd7" path="res://resources/moves/solar_beam.tres" id="15_yuy4t"]
+[ext_resource type="Resource" uid="uid://51238im0yb30" path="res://resources/moves/synthesis.tres" id="16_likym"]
+
+[resource]
+script = ExtResource("5_t4hdm")
+produce = Array[ExtResource("13_8cb2v")]([])
+rarity = 10
+image = ExtResource("1_enwmr")
+species = "Ivysaur"
+num = 2
+type = Array[int]([3, 15])
+base_stats = {
+"attk": 62,
+"cook": 10,
+"craft": 55,
+"def": 63,
+"energy": 200,
+"farm": 60,
+"fishing": 24,
+"forage": 65,
+"hp": 60,
+"mine": 20,
+"perform": 29,
+"sattk": 80,
+"sdef": 80,
+"speed": 60
+}
+base_happiness = 50
+height = 10
+weight = 130
+base_exp = 142
+capture_rate = 45
+abilities = Array[String](["Chlorophyll"])
+moves = {
+0: ExtResource("3_0sjrb"),
+1: ExtResource("2_2i0f5"),
+2: ExtResource("11_ey7m3"),
+5: ExtResource("4_dr2d8"),
+6: ExtResource("5_x8rr6"),
+7: ExtResource("6_a6264"),
+8: ExtResource("7_y3c7g"),
+15: ExtResource("8_l33a0"),
+20: ExtResource("12_moam7"),
+29: ExtResource("10_gm01s"),
+30: ExtResource("9_0k352"),
+40: ExtResource("13_w41u0"),
+45: ExtResource("14_1dtc0"),
+50: ExtResource("15_yuy4t"),
+55: ExtResource("16_likym")
+}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

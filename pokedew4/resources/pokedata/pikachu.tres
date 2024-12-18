@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://bhcgedjh77oly"]
+
+[ext_resource type="Texture2D" uid="uid://bvl6ju280suc2" path="res://images/pokemon/pikachu.png" id="1_cpl1d"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_afsxp"]
+
+[resource]
+script = ExtResource("2_afsxp")
+image = ExtResource("1_cpl1d")
+species = "Pikachu"
+num = 25
+type = Array[int]([4])
+base_stats = {
+"attk": 55,
+"cook": 20,
+"craft": 20,
+"def": 40,
+"energy": 150,
+"farm": 30,
+"fishing": 19,
+"forage": 50,
+"hp": 35,
+"mine": 5,
+"perform": 50,
+"sattk": 50,
+"sdef": 50,
+"speed": 90
+}
+base_happiness = 50
+height = 4
+weight = 60
+base_exp = 112
+capture_rate = 190
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([1])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 10

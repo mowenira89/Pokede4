@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://bj3kpxjvtptmc"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ra1eb"]
+[ext_resource type="Texture2D" uid="uid://drfnqm80sh6h8" path="res://images/items/tools/old_pick.png" id="2_frisq"]
+[ext_resource type="Script" path="res://scripts/tool_data.gd" id="3_86tif"]
+
+[resource]
+script = ExtResource("3_86tif")
+tool_type = 1
+tool_level = 1
+damage = 1
+image = ExtResource("2_frisq")
+item_name = "Old Pickaxe"
+item_type = 4
+rarity = 0
+flavor_text = "An old pickaxe inherited from your grandfather."
+has_use_effect = false
+untossable = true
+unthrowable = true
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_ra1eb")]([])
+throw_effect = Array[ExtResource("1_ra1eb")]([])
+equip_effect = Array[ExtResource("1_ra1eb")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

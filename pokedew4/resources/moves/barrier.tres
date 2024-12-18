@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://bve5p4u72unal"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_u3qnv"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_bee05"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_d1g6t"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_g2kyy"]
+
+[sub_resource type="Resource" id="Resource_4v2nr"]
+script = ExtResource("2_bee05")
+stage = 2
+stat = 2
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_bujai"]
+script = ExtResource("3_d1g6t")
+buff = SubResource("Resource_4v2nr")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_g2kyy")
+_name = "Barrier"
+type = 10
+level_learned = 40
+power = 0
+acc = 0
+move_type = 2
+energy = 10
+targ = 1
+perform_type = 1
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_u3qnv")]([SubResource("Resource_bujai")])
+passive_effect = Array[ExtResource("1_u3qnv")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Prevents mine collapses."
+jaw_move = false

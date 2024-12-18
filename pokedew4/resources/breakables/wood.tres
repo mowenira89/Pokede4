@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BreakableData" load_steps=6 format=3 uid="uid://dckkqx0fvdnof"]
+
+[ext_resource type="Resource" uid="uid://0hkif6dt6iqb" path="res://resources/items/wood_oak.tres" id="1_32yng"]
+[ext_resource type="Script" path="res://resources/breakables/breakable_data.gd" id="1_e8n5n"]
+[ext_resource type="Texture2D" uid="uid://de5tf3qvowc51" path="res://images/rocks/wood.png" id="2_ob451"]
+[ext_resource type="Texture2D" uid="uid://dk0w4t8recerq" path="res://images/rocks/197484.png" id="4_6t6sa"]
+[ext_resource type="Texture2D" uid="uid://d2qby5n1ybct1" path="res://images/rocks/1974842.png" id="5_nde58"]
+
+[resource]
+script = ExtResource("1_e8n5n")
+hp = 3
+tool_level = 1
+sprites = Array[Texture2D]([ExtResource("2_ob451"), ExtResource("4_6t6sa"), ExtResource("5_nde58")])
+tool_type = Array[int]([0])
+loot = ExtResource("1_32yng")

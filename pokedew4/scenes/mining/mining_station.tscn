@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://ds227f73m5ta3"]
+
+[ext_resource type="Texture2D" uid="uid://djdnwdfbxha0v" path="res://images/mining_station.png" id="1_2mfu7"]
+[ext_resource type="Script" path="res://scenes/mining/mining_station.gd" id="1_62ssp"]
+[ext_resource type="PackedScene" uid="uid://d22fdji8t8srt" path="res://scenes/ui/chest_ui.tscn" id="4_opmgx"]
+[ext_resource type="Script" path="res://scripts/placeable_mine.gd" id="4_qn3i1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_78jxi"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkxwx"]
+size = Vector2(128, 60)
+
+[node name="MiningStation" type="Node2D" node_paths=PackedStringArray("placeable", "chest")]
+y_sort_enabled = true
+script = ExtResource("1_62ssp")
+placeable = NodePath("Node2D")
+chest = NodePath("Chest")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-30, 15)
+scale = Vector2(2, 2)
+texture = ExtResource("1_2mfu7")
+
+[node name="Chest" parent="." instance=ExtResource("4_opmgx")]
+visible = false
+
+[node name="Node2D" type="Node2D" parent="." node_paths=PackedStringArray("collision_seeker", "collider")]
+position = Vector2(-31, 35)
+script = ExtResource("4_qn3i1")
+collision_seeker = NodePath("Area2D")
+collider = NodePath("../StaticBody2D/CollisionShape2D")
+
+[node name="Area2D" type="Area2D" parent="Node2D" groups=["Obstruction"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource("RectangleShape2D_78jxi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-31, 1)
+shape = SubResource("RectangleShape2D_nkxwx")
+disabled = true

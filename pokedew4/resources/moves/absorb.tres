@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://bekgjak8eqdt5"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5pv2a"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_n041u"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_2x2sc"]
+
+[sub_resource type="Resource" id="Resource_nbyfo"]
+script = ExtResource("2_n041u")
+high_crit = false
+recoil = 0.0
+recovered = 0.5
+
+[resource]
+script = ExtResource("3_2x2sc")
+_name = "Absorb"
+type = 3
+level_learned = 20
+power = 20
+acc = 100
+move_type = 1
+energy = 3
+targ = 0
+perform_type = 4
+perform_value = 0
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_5pv2a")]([SubResource("Resource_nbyfo")])
+passive_effect = Array[ExtResource("1_5pv2a")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

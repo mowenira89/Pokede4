@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=8 format=3 uid="uid://d04uu33bbmop5"]
+
+[ext_resource type="Texture2D" uid="uid://cxd1k578ls1ww" path="res://images/pokemon/muk.png" id="1_e630w"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_m5kny"]
+[ext_resource type="Resource" uid="uid://bsebu41vry4ou" path="res://resources/items/poison.tres" id="3_1rnr0"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="4_gebxt"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="5_tteb7"]
+
+[sub_resource type="Resource" id="Resource_sup8c"]
+script = ExtResource("4_gebxt")
+data = ExtResource("3_1rnr0")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_jpyn1"]
+script = ExtResource("2_m5kny")
+item = SubResource("Resource_sup8c")
+min = 4
+max = 10
+method = 1
+min_production_time = 30
+production_time = 50
+weight = 10
+
+[resource]
+script = ExtResource("5_tteb7")
+produce = Array[ExtResource("2_m5kny")]([SubResource("Resource_jpyn1")])
+rarity = 0
+image = ExtResource("1_e630w")
+species = ""
+num = 0
+type = Array[int]([15])
+base_stats = {
+"attk": 105,
+"cook": 10,
+"craft": 10,
+"def": 75,
+"energy": 140,
+"farm": 1,
+"fishing": 10,
+"forage": 10,
+"hp": 105,
+"mine": 15,
+"perform": 10,
+"sattk": 65,
+"sdef": 100,
+"speed": 50
+}
+base_happiness = 70
+height = 12
+weight = 300
+base_exp = 175
+capture_rate = 75
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([13])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=7 format=3 uid="uid://xb02ahoy1olw"]
+
+[ext_resource type="Resource" uid="uid://cot532i8g0ald" path="res://resources/crops/cheri.tres" id="1_plldj"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_qw61i"]
+[ext_resource type="Texture2D" uid="uid://b8f6hjyro7ykr" path="res://images/items/berries/Dream_Cheri_Berry_Sprite.png" id="3_fw5vb"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_evcyd"]
+[ext_resource type="Script" path="res://resources/effects/heal_status.gd" id="5_f5128"]
+
+[sub_resource type="Resource" id="Resource_yfeei"]
+script = ExtResource("5_f5128")
+status = 1
+
+[resource]
+script = ExtResource("4_evcyd")
+crop = ExtResource("1_plldj")
+flavor = Array[int]([0])
+flavor_profile = 1
+image = ExtResource("3_fw5vb")
+item_name = "Cheri"
+item_type = 2
+rarity = 0
+flavor_text = "A small, spicy berry with anti-paralysis properties."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_qw61i")]([SubResource("Resource_yfeei")])
+throw_effect = Array[ExtResource("2_qw61i")]([])
+equip_effect = Array[ExtResource("2_qw61i")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

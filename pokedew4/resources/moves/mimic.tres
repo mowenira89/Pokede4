@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://birxmicj6pfr4"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_sk30i"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_slcjh"]
+
+[resource]
+script = ExtResource("2_slcjh")
+_name = "Mimic"
+type = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 5
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_sk30i")]([])
+passive_effect = Array[ExtResource("1_sk30i")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+recoil = 0.0

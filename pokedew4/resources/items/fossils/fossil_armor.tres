@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://vgh8k7gc70cf"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_x1vmr"]
+[ext_resource type="Texture2D" uid="uid://byh7haww41h85" path="res://images/items/mining/artifacts/93px-Dream_Armor_Fossil_Sprite.png" id="2_v4eke"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_i1pjx"]
+
+[resource]
+script = ExtResource("3_i1pjx")
+image = ExtResource("2_v4eke")
+item_name = "Armor Fossil"
+item_type = 6
+rarity = 10
+flavor_text = "Fossilized remains of a heavily armored ancient Pokemon."
+use_effect = Array[ExtResource("1_x1vmr")]([])
+throw_effect = Array[ExtResource("1_x1vmr")]([])
+equip_effect = Array[ExtResource("1_x1vmr")]([])
+base_value = 500
+consumable = false
+stone = false
+wood = false

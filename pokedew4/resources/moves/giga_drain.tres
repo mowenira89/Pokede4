@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://bwblojhsmw8vj"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_3sctv"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_es8cc"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_o1qjc"]
+
+[sub_resource type="Resource" id="Resource_ig0mb"]
+script = ExtResource("2_es8cc")
+high_crit = false
+recoil = 0.0
+recovered = 0.5
+
+[resource]
+script = ExtResource("3_o1qjc")
+_name = "Giga Drain"
+type = 3
+level_learned = 36
+power = 80
+acc = 100
+move_type = 1
+energy = 20
+targ = 0
+perform_type = 4
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_3sctv")]([SubResource("Resource_ig0mb")])
+passive_effect = Array[ExtResource("1_3sctv")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

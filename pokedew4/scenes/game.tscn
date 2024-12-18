@@ -1,0 +1,160 @@
+[gd_scene load_steps=22 format=3 uid="uid://t8tj63mwqde6"]
+
+[ext_resource type="PackedScene" uid="uid://dvwi7ff1pqwt0" path="res://scenes/levels/level1.tscn" id="1_3h8gl"]
+[ext_resource type="Script" path="res://scripts/states/state_machine.gd" id="1_i2e13"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_kseci"]
+[ext_resource type="PackedScene" uid="uid://dbdo6beuody0p" path="res://scenes/ui/clock.tscn" id="2_2do84"]
+[ext_resource type="Script" path="res://scripts/states/main_states/normal.gd" id="2_yj5bb"]
+[ext_resource type="Script" path="res://scripts/states/main_states/battle.gd" id="5_c0eyi"]
+[ext_resource type="Script" path="res://scripts/states/main_states/menu_state.gd" id="5_s4op3"]
+[ext_resource type="PackedScene" uid="uid://2thrbmp4ebgl" path="res://scenes/ui/main_menu.tscn" id="6_qmf32"]
+[ext_resource type="Script" path="res://scenes/menu_manager.gd" id="7_l86y1"]
+[ext_resource type="PackedScene" uid="uid://cl3berewcaiji" path="res://scenes/ui/hotbar.tscn" id="7_m0xs6"]
+[ext_resource type="Script" path="res://scripts/states/mining.gd" id="8_46lib"]
+[ext_resource type="PackedScene" uid="uid://dyvsyy6f0pcw6" path="res://scenes/ui/stat_bars.tscn" id="9_nhe8l"]
+[ext_resource type="PackedScene" uid="uid://cg8htco1og2mt" path="res://scenes/ui/message.tscn" id="10_dmguw"]
+[ext_resource type="Texture2D" uid="uid://d8c7xqqpuiol" path="res://images/ui/menu_box_1.png" id="12_do1fm"]
+[ext_resource type="PackedScene" uid="uid://d24uykbjd3myh" path="res://scenes/ui/pkmn_menu.tscn" id="13_clglp"]
+[ext_resource type="PackedScene" uid="uid://cchxoff4xxnj1" path="res://scenes/ui/inv_screen.tscn" id="16_npvos"]
+[ext_resource type="Script" path="res://scripts/weather.gd" id="17_5p6v6"]
+[ext_resource type="Script" path="res://scripts/ui/instruction_panel.gd" id="18_206rj"]
+[ext_resource type="PackedScene" uid="uid://b78qa14tyuwrp" path="res://scenes/ui/crafting_menu.tscn" id="18_h1pr5"]
+[ext_resource type="PackedScene" uid="uid://b25lq174jutkd" path="res://scenes/ui/poke_command_window.tscn" id="19_rciat"]
+[ext_resource type="Script" path="res://scripts/ui/notice_holder.gd" id="20_27cny"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_kseci")
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("1_i2e13")
+
+[node name="Normal" type="Node" parent="StateMachine"]
+script = ExtResource("2_yj5bb")
+
+[node name="Battle" type="Node" parent="StateMachine"]
+script = ExtResource("5_c0eyi")
+
+[node name="Menu" type="Node" parent="StateMachine"]
+script = ExtResource("5_s4op3")
+
+[node name="Mining" type="Node" parent="StateMachine"]
+script = ExtResource("8_46lib")
+
+[node name="Level1" parent="." instance=ExtResource("1_3h8gl")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_l86y1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Clock" parent="CanvasLayer/VBoxContainer" instance=ExtResource("2_2do84")]
+layout_mode = 2
+
+[node name="Money" type="NinePatchRect" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("12_do1fm")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/VBoxContainer/Money"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Money/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "P"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Menu" parent="CanvasLayer/VBoxContainer" instance=ExtResource("6_qmf32")]
+visible = false
+layout_mode = 2
+
+[node name="Hotbar" parent="CanvasLayer" instance=ExtResource("7_m0xs6")]
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("9_nhe8l")]
+
+[node name="PKMNMenu" parent="CanvasLayer" instance=ExtResource("13_clglp")]
+visible = false
+mode = 1
+
+[node name="InvScreen" parent="CanvasLayer" node_paths=PackedStringArray("message") instance=ExtResource("16_npvos")]
+visible = false
+message = NodePath("../Message")
+
+[node name="Message" parent="CanvasLayer" instance=ExtResource("10_dmguw")]
+visible = false
+offset_top = -250.0
+
+[node name="InstructionPanel" type="Panel" parent="CanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(500, 100)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+script = ExtResource("18_206rj")
+
+[node name="Label" type="Label" parent="CanvasLayer/InstructionPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+
+[node name="CraftingMenu" parent="CanvasLayer" instance=ExtResource("18_h1pr5")]
+visible = false
+
+[node name="CommandWindow" parent="CanvasLayer" instance=ExtResource("19_rciat")]
+offset_left = -203.0
+offset_top = -492.0
+offset_right = -3.0
+offset_bottom = -192.0
+
+[node name="NoticeHolder" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("20_27cny")
+
+[node name="Weather" type="Node" parent="."]
+script = ExtResource("17_5p6v6")
+
+[node name="Rain" type="AnimatedSprite2D" parent="."]
+
+[node name="Sun" type="AnimatedSprite2D" parent="."]

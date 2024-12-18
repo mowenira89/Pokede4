@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bucp2o3uxvrnl"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_v4pk1"]
+[ext_resource type="Texture2D" uid="uid://br7h60ax2wjar" path="res://images/items/mining/geode/alamite.png" id="2_3i4my"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_tlkvy"]
+
+[resource]
+script = ExtResource("3_tlkvy")
+image = ExtResource("2_3i4my")
+item_name = "Alamite"
+item_type = 0
+rarity = 25
+flavor_text = "Its distinctive fluorescence makes it a favorite among rock collectors"
+use_effect = Array[ExtResource("1_v4pk1")]([])
+throw_effect = Array[ExtResource("1_v4pk1")]([])
+equip_effect = Array[ExtResource("1_v4pk1")]([])
+base_value = 50
+consumable = false
+stone = false
+wood = false

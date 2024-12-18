@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://0ly1fymfr2c7"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_xtj4s"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_4qhci"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_g0cj2"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_f1ytg"]
+
+[sub_resource type="Resource" id="Resource_jcap0"]
+script = ExtResource("2_g0cj2")
+stage = 1
+stat = 16
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_aer3i"]
+script = ExtResource("3_f1ytg")
+buff = SubResource("Resource_jcap0")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("2_4qhci")
+_name = "Double Team"
+type = 0
+level_learned = 38
+power = 0
+acc = 0
+move_type = 2
+energy = 20
+targ = 1
+perform_type = 3
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_xtj4s")]([SubResource("Resource_aer3i")])
+passive_effect = Array[ExtResource("1_xtj4s")]([])
+contact = false
+sound = false
+unmissable = true
+description = "The pokemon vibrates its molecules until there is an afterimage."
+description_passive = "Doubles work speed."
+jaw_move = false

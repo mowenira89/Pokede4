@@ -1,0 +1,64 @@
+[gd_resource type="Resource" script_class="Move" load_steps=12 format=3 uid="uid://xdci3dqtnf3k"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_hhcn3"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_f07bd"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_2s7tv"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="3_p87xo"]
+[ext_resource type="Resource" uid="uid://bsebu41vry4ou" path="res://resources/items/poison.tres" id="4_k425o"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="5_k34jg"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="6_pf2t7"]
+
+[sub_resource type="Resource" id="Resource_vdnm5"]
+script = ExtResource("2_f07bd")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_p2doq"]
+script = ExtResource("3_p87xo")
+chance = 30
+status = 0
+
+[sub_resource type="Resource" id="Resource_hhevw"]
+script = ExtResource("5_k34jg")
+data = ExtResource("4_k425o")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_hj3vr"]
+script = ExtResource("6_pf2t7")
+item = SubResource("Resource_hhevw")
+min = 2
+max = 4
+method = 0
+min_production_time = 2
+production_time = 6
+weight = 0
+
+[resource]
+script = ExtResource("3_2s7tv")
+_name = "Sludge"
+type = 15
+level_learned = 22
+power = 65
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 4
+perform_value = 0
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_hhcn3")]([SubResource("Resource_vdnm5"), SubResource("Resource_p2doq")])
+passive_effect = Array[ExtResource("1_hhcn3")]([])
+produce = SubResource("Resource_hj3vr")
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = false

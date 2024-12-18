@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://d13f4vmoq0q0o"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_6wqk3"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_bh5n4"]
+
+[resource]
+script = ExtResource("3_bh5n4")
+_name = "Leech Seed"
+type = 3
+level_learned = 16
+power = 0
+acc = 100
+move_type = 2
+energy = 5
+targ = 0
+perform_type = 0
+perform_value = 0
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_6wqk3")]([])
+passive_effect = Array[ExtResource("1_6wqk3")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Seeds the enemy, damaging them, and recovering hp from them."
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MulchData" load_steps=6 format=3 uid="uid://i1ui1biysql5"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_7mbxm"]
+[ext_resource type="Texture2D" uid="uid://bxlylom3c7nml" path="res://images/items/mulch/Bag_Boost_Mulch_Sprite.png" id="2_mwi7y"]
+[ext_resource type="Script" path="res://scripts/mulch_data.gd" id="3_gnfup"]
+[ext_resource type="Script" path="res://resources/effects/mulch_effect.gd" id="4_87mo3"]
+
+[sub_resource type="Resource" id="Resource_8m0ot"]
+script = ExtResource("4_87mo3")
+
+[resource]
+script = ExtResource("3_gnfup")
+mulch = 5
+lasting_time = 90
+growth_boost = 2
+pesticide = 0
+moisture_retention = -1
+berry_boost = 2
+mutation_chance = 0
+happines_boost = 0
+image = ExtResource("2_mwi7y")
+item_name = "Boost Mulch"
+item_type = 9
+rarity = 50
+flavor_text = "This mulch makes plants grow faster and more berries, but dried out soil faster."
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+use_effect = Array[ExtResource("1_7mbxm")]([SubResource("Resource_8m0ot")])
+throw_effect = Array[ExtResource("1_7mbxm")]([])
+equip_effect = Array[ExtResource("1_7mbxm")]([])
+base_value = 20
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 5
+fuel = false
+fuel_amount = 0

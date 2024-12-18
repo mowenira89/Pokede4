@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://byvfyfstdtsbx"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_jiysp"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_e04bn"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_ib4ls"]
+
+[sub_resource type="Resource" id="Resource_swfwf"]
+script = ExtResource("2_e04bn")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_ib4ls")
+_name = "Magical Leaf"
+type = 3
+level_learned = 24
+power = 60
+acc = 0
+move_type = 1
+energy = 15
+targ = 0
+perform_type = 1
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_jiysp")]([SubResource("Resource_swfwf")])
+passive_effect = Array[ExtResource("1_jiysp")]([])
+contact = false
+sound = false
+unmissable = true
+description = "Attacks with leaves of magical energy. "
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

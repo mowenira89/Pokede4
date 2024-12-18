@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ids0tnaq6vcn"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_27rav"]
+[ext_resource type="Texture2D" uid="uid://dnkh7jyodk7y6" path="res://images/items/mining/shards/Mine_Blue_Shard.png" id="2_as4n8"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_gi1hl"]
+
+[resource]
+script = ExtResource("3_gi1hl")
+image = ExtResource("2_as4n8")
+item_name = "Blue Shard"
+item_type = 5
+rarity = 1
+flavor_text = "A shard of ancient technology, somehow found locked underground."
+use_effect = Array[ExtResource("1_27rav")]([])
+throw_effect = Array[ExtResource("1_27rav")]([])
+equip_effect = Array[ExtResource("1_27rav")]([])
+base_value = 10
+consumable = false
+stone = false
+wood = false

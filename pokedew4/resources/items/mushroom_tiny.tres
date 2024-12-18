@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://byqsebr3uxl2r"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_dykkw"]
+[ext_resource type="Texture2D" uid="uid://b5ordf40jhuti" path="res://images/items/mushroom-tiny.png" id="2_qpkuj"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_ne3ry"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_twt0r"]
+
+[sub_resource type="Resource" id="Resource_tbuyu"]
+script = ExtResource("4_twt0r")
+flavor = Array[int]([4])
+flavor_profile = 1
+health_restored = 2
+energy_restored = 2
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_ne3ry")
+flavor = Array[int]([4])
+flavor_profile = 1
+image = ExtResource("2_qpkuj")
+item_name = "Tiny Mushroom"
+item_type = 1
+rarity = 80
+flavor_text = "A small, flavorless shroom enjoyed by some. Tastes better when cooked."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_dykkw")]([SubResource("Resource_tbuyu")])
+throw_effect = Array[ExtResource("1_dykkw")]([])
+equip_effect = Array[ExtResource("1_dykkw")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

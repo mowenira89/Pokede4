@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://d07g6ka8evgfe"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ugfaf"]
+[ext_resource type="Texture2D" uid="uid://ddmak88517tjp" path="res://images/items/tools/old_hoe.png" id="2_ci2jj"]
+[ext_resource type="Script" path="res://scripts/tool_data.gd" id="3_o0m1i"]
+
+[resource]
+script = ExtResource("3_o0m1i")
+tool_type = 2
+tool_level = 1
+damage = 1
+image = ExtResource("2_ci2jj")
+item_name = "Old Hoe"
+item_type = 4
+rarity = 0
+flavor_text = "An old hoe inherited from your grandfather."
+has_use_effect = false
+untossable = true
+unthrowable = true
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_ugfaf")]([])
+throw_effect = Array[ExtResource("1_ugfaf")]([])
+equip_effect = Array[ExtResource("1_ugfaf")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

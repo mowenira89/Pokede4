@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bdrt01ma7q2dp"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_y6fdv"]
+[ext_resource type="Texture2D" uid="uid://c5mfgxgg714sn" path="res://images/items/mining/geode/fluorapatite.png" id="2_npabm"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_i080u"]
+
+[resource]
+script = ExtResource("3_i080u")
+image = ExtResource("2_npabm")
+item_name = "Fluorapatite"
+item_type = 5
+rarity = 90
+flavor_text = "Small amounts are found in human teeth. "
+use_effect = Array[ExtResource("1_y6fdv")]([])
+throw_effect = Array[ExtResource("1_y6fdv")]([])
+equip_effect = Array[ExtResource("1_y6fdv")]([])
+base_value = 10
+consumable = false
+stone = false
+wood = false

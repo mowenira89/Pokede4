@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dsr6qdmkap7xc"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_eys66"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_65eee"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_fl7b1"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_x1vtl"]
+
+[sub_resource type="Resource" id="Resource_jladp"]
+script = ExtResource("2_65eee")
+stage = 2
+stat = 0
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_phjrm"]
+script = ExtResource("3_fl7b1")
+buff = SubResource("Resource_jladp")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_x1vtl")
+_name = "Growth"
+type = 3
+level_learned = 16
+power = 0
+acc = 100
+move_type = 2
+energy = 10
+targ = 1
+perform_type = 3
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_eys66")]([SubResource("Resource_phjrm")])
+passive_effect = Array[ExtResource("1_eys66")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Greatly increases special attack."
+description_passive = "Increases growth rate of nearby crops while farming."
+jaw_move = false

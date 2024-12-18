@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://cueaf73qjl862"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_xw55f"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_75ga4"]
+[ext_resource type="Script" path="res://scripts/buffs/flinch.gd" id="3_1cmmw"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_hm0iv"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_gonns"]
+
+[sub_resource type="Resource" id="Resource_o0is2"]
+script = ExtResource("2_75ga4")
+high_crit = true
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_gsuie"]
+script = ExtResource("3_1cmmw")
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_37xrm"]
+script = ExtResource("4_gonns")
+buff = SubResource("Resource_gsuie")
+chance = 30
+targ = 0
+
+[resource]
+script = ExtResource("3_hm0iv")
+_name = "Skull Bash"
+type = 0
+level_learned = 0
+power = 130
+acc = 100
+move_type = 0
+energy = 20
+targ = 0
+perform_type = 0
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_xw55f")]([SubResource("Resource_o0is2"), SubResource("Resource_37xrm")])
+passive_effect = Array[ExtResource("1_xw55f")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = false

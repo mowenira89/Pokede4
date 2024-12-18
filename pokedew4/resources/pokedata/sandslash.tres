@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://ibqwpqpa0gdj"]
+
+[ext_resource type="Texture2D" uid="uid://dn3whtbo6ndsf" path="res://images/pokemon/sandslash.png" id="1_f5bp2"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_pu02w"]
+
+[resource]
+script = ExtResource("2_pu02w")
+image = ExtResource("1_f5bp2")
+species = "Sandslash"
+num = 27
+type = Array[int]([5])
+base_stats = {
+"attk": 100,
+"cook": 40,
+"craft": 50,
+"def": 110,
+"energy": 200,
+"farm": 40,
+"fishing": 10,
+"forage": 70,
+"hp": 75,
+"mine": 80,
+"perform": 30,
+"sattk": 45,
+"sdef": 55,
+"speed": 65
+}
+base_happiness = 50
+height = 6
+weight = 120
+base_exp = 60
+capture_rate = 255
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

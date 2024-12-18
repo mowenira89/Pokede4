@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://c5nowud7hjhpu"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_1kvwb"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_b73sx"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_pv8ye"]
+
+[sub_resource type="Resource" id="Resource_a0xj0"]
+script = ExtResource("2_b73sx")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_pv8ye")
+_name = "Rock Throw"
+type = 7
+level_learned = 14
+power = 50
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 2
+mining_value = 2
+priority = 1
+effect = Array[ExtResource("1_1kvwb")]([SubResource("Resource_a0xj0")])
+passive_effect = Array[ExtResource("1_1kvwb")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Reduces likelihood of mine collapse."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

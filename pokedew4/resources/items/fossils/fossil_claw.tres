@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://1y0i5b3yy8rw"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_7vhgc"]
+[ext_resource type="Texture2D" uid="uid://ckkb8c02adgil" path="res://images/items/mining/artifacts/97px-Dream_Claw_Fossil_Sprite.png" id="2_75r3o"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_p66jo"]
+
+[resource]
+script = ExtResource("3_p66jo")
+image = ExtResource("2_75r3o")
+item_name = "Claw Fossil"
+item_type = 5
+rarity = 10
+flavor_text = "Fossilized remains of a pokemon with massive claws!"
+use_effect = Array[ExtResource("1_7vhgc")]([])
+throw_effect = Array[ExtResource("1_7vhgc")]([])
+equip_effect = Array[ExtResource("1_7vhgc")]([])
+base_value = 500
+consumable = false
+stone = false
+wood = false

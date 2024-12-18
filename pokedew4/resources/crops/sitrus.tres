@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://bdhaspm4o8mm7"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_as6ry"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_tr107"]
+[ext_resource type="Texture2D" uid="uid://sn5v2ppmdlf3" path="res://images/crops/batch1/SitrusTreeTallerIII.png" id="3_f1dd4"]
+[ext_resource type="Texture2D" uid="uid://du5wo7it3lajh" path="res://images/crops/batch1/SitrusTreeBloomIII.png" id="4_o4vj8"]
+[ext_resource type="Texture2D" uid="uid://b772c41l4sdvv" path="res://images/crops/batch1/SitrusTreeBerryIII.png" id="5_mh0l0"]
+
+[resource]
+script = ExtResource("2_tr107")
+_name = "Sitrus"
+growth_time = 110
+growth_speed = 2
+sprites = Array[Texture2D]([ExtResource("3_f1dd4"), ExtResource("4_o4vj8"), ExtResource("5_mh0l0")])
+pest_rate = 5
+pests = Array[ExtResource("1_as6ry")]([])
+min_berries = 3
+max_barries = 5
+thirst = 5
+is_herb = false

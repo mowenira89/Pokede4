@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Immunity" load_steps=2 format=3 uid="uid://chu1s0nyckixl"]
+
+[ext_resource type="Script" path="res://scripts/abilities/immunity.gd" id="1_nt1df"]
+
+[resource]
+script = ExtResource("1_nt1df")
+immunity = Array[int]([2])
+ability_name = "Insomnia"
+desc = "This Pokemon sleeps less than it should and never in battle."
+passive_desc = ""

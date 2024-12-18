@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://bsu6rdh2csaax"]
+
+[ext_resource type="Texture2D" uid="uid://lofk00p0l1mn" path="res://images/pokemon/weedle.png" id="1_vrvl0"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_bxyn4"]
+
+[resource]
+script = ExtResource("2_bxyn4")
+image = ExtResource("1_vrvl0")
+species = "Weedle"
+num = 13
+type = Array[int]([6])
+base_stats = {
+"attk": 35,
+"cook": 2,
+"craft": 3,
+"def": 30,
+"energy": 90,
+"farm": 10,
+"fishing": 3,
+"forage": 30,
+"hp": 40,
+"mine": 1,
+"perform": 30,
+"sattk": 20,
+"sdef": 20,
+"speed": 50
+}
+base_happiness = 70
+height = 3
+weight = 32
+base_exp = 39
+capture_rate = 255
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://cr2jn0auyek6j"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_uo0gg"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_rb6mk"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_qusgi"]
+[ext_resource type="Script" path="res://resources/effects/proportionate_damage.gd" id="4_g326h"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_kej72"]
+
+[sub_resource type="Resource" id="Resource_8ib4q"]
+script = ExtResource("2_rb6mk")
+stage = 10
+stat = 1
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_3vloa"]
+script = ExtResource("3_qusgi")
+buff = SubResource("Resource_8ib4q")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_ptl3n"]
+script = ExtResource("4_g326h")
+rate = 0.5
+
+[resource]
+script = ExtResource("5_kej72")
+_name = "Belly Drum"
+type = 0
+level_learned = 30
+power = 0
+acc = 0
+move_type = 2
+energy = 5
+targ = 1
+perform_type = 2
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_uo0gg")]([SubResource("Resource_3vloa"), SubResource("Resource_ptl3n")])
+passive_effect = Array[ExtResource("1_uo0gg")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

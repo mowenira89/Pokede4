@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="RecipeData" load_steps=6 format=3 uid="uid://dfwg6joalq4h0"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_hoxb6"]
+[ext_resource type="Resource" uid="uid://0hkif6dt6iqb" path="res://resources/items/wood_oak.tres" id="2_rpbec"]
+[ext_resource type="Resource" uid="uid://dwhv0e4t7vbl" path="res://resources/items/charcoal.tres" id="3_qmvq1"]
+[ext_resource type="Script" path="res://scripts/recipe_data.gd" id="4_lucby"]
+
+[sub_resource type="Resource" id="Resource_1l8yx"]
+script = ExtResource("1_hoxb6")
+data = ExtResource("2_rpbec")
+quantity = 10
+
+[resource]
+script = ExtResource("4_lucby")
+item = ExtResource("3_qmvq1")
+ingredients = Array[ExtResource("1_hoxb6")]([SubResource("Resource_1l8yx")])
+time = 15

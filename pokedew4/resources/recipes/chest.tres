@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CraftableData" load_steps=7 format=3 uid="uid://y0qjgp53wndc"]
+
+[ext_resource type="Resource" uid="uid://c3c7dk3tcscsq" path="res://resources/items/chest.tres" id="1_swpkn"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_4ssue"]
+[ext_resource type="Resource" uid="uid://0hkif6dt6iqb" path="res://resources/items/wood_oak.tres" id="3_mxuu5"]
+[ext_resource type="Resource" uid="uid://bm85p1jq01v6" path="res://resources/items/fiber.tres" id="4_wdjgp"]
+[ext_resource type="Script" path="res://scripts/craftable_data.gd" id="5_5kmcg"]
+
+[sub_resource type="Resource" id="Resource_vrj7d"]
+script = ExtResource("2_4ssue")
+data = ExtResource("1_swpkn")
+quantity = 1
+
+[resource]
+script = ExtResource("5_5kmcg")
+cat = 0
+item = SubResource("Resource_vrj7d")
+materials = {
+ExtResource("3_mxuu5"): 20,
+ExtResource("4_wdjgp"): 5
+}
+craft_points = 3
+craft_level = 1
+combination_recipe = false
+exp = 5

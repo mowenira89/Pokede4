@@ -1,0 +1,75 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=20 format=3 uid="uid://ddluhjrpqdn2s"]
+
+[ext_resource type="Texture2D" uid="uid://5puqbqvi5d03" path="res://images/pokemon/bulbasaur.png" id="1_ng664"]
+[ext_resource type="Resource" uid="uid://cblqqcsa1ov48" path="res://resources/moves/tackle.tres" id="2_cw5u4"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_sy76j"]
+[ext_resource type="Resource" uid="uid://crw0qhm53v7af" path="res://resources/moves/bind.tres" id="3_fogx7"]
+[ext_resource type="Resource" uid="uid://cajqrx34aueh4" path="res://resources/moves/vine_whip.tres" id="4_vo64u"]
+[ext_resource type="Resource" uid="uid://d13f4vmoq0q0o" path="res://resources/moves/leech_seed.tres" id="5_cqhs6"]
+[ext_resource type="Resource" uid="uid://flwwhpsxkfnl" path="res://resources/moves/growl.tres" id="6_007le"]
+[ext_resource type="Resource" uid="uid://dsr6qdmkap7xc" path="res://resources/moves/growth.tres" id="7_l1t4p"]
+[ext_resource type="Resource" uid="uid://dx2oqfkiihn5m" path="res://resources/moves/stomp.tres" id="8_5u5m8"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="8_260sw"]
+[ext_resource type="Resource" uid="uid://b5h8edceyck8a" path="res://resources/moves/razor_leaf.tres" id="9_31iuk"]
+[ext_resource type="Resource" uid="uid://bdi14diokt55r" path="res://resources/moves/razor_wind.tres" id="10_ebhcr"]
+[ext_resource type="Resource" uid="uid://brlh6kfw23xd7" path="res://resources/moves/solar_beam.tres" id="11_0war2"]
+[ext_resource type="Resource" uid="uid://dj1bvp5ysqa2j" path="res://resources/moves/poison_powder.tres" id="12_c8yum"]
+[ext_resource type="Resource" uid="uid://kwcs8cxp2kbj" path="res://resources/moves/stun_spore.tres" id="13_h0i46"]
+[ext_resource type="Resource" uid="uid://ba82c8xqblqgl" path="res://resources/moves/sleep_powder.tres" id="14_5f4dp"]
+[ext_resource type="Resource" uid="uid://d0cdn1ihmtl4y" path="res://resources/moves/sweet_scent.tres" id="15_xraga"]
+[ext_resource type="Resource" uid="uid://51238im0yb30" path="res://resources/moves/synthesis.tres" id="16_32s8q"]
+[ext_resource type="Resource" uid="uid://cp7w67ck8etwb" path="res://resources/moves/seed_bomb.tres" id="17_m2k8f"]
+
+[resource]
+script = ExtResource("2_sy76j")
+produce = Array[ExtResource("8_260sw")]([])
+rarity = 0
+image = ExtResource("1_ng664")
+species = "Bulbasaur"
+num = 1
+type = Array[int]([3, 15])
+base_stats = {
+"attk": 49,
+"cook": 10,
+"craft": 45,
+"def": 49,
+"energy": 100,
+"farm": 65,
+"fishing": 20,
+"forage": 45,
+"hp": 45,
+"mine": 15,
+"perform": 45,
+"sattk": 65,
+"sdef": 65,
+"speed": 45
+}
+base_happiness = 50
+height = 7
+weight = 69
+base_exp = 64
+capture_rate = 45
+abilities = Array[String](["Chlorophyll"])
+moves = {
+0: ExtResource("2_cw5u4"),
+1: ExtResource("3_fogx7"),
+2: ExtResource("4_vo64u"),
+3: ExtResource("6_007le"),
+18: ExtResource("5_cqhs6"),
+25: ExtResource("7_l1t4p"),
+27: ExtResource("14_5f4dp"),
+28: ExtResource("13_h0i46"),
+29: ExtResource("12_c8yum"),
+30: ExtResource("8_5u5m8"),
+32: ExtResource("15_xraga"),
+36: ExtResource("9_31iuk"),
+40: ExtResource("10_ebhcr"),
+44: ExtResource("17_m2k8f"),
+50: ExtResource("11_0war2"),
+52: ExtResource("16_32s8q")
+}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 0

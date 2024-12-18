@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://0m12nkvdea3x"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_b5vfs"]
+[ext_resource type="Texture2D" uid="uid://c3s4gxdxn12rx" path="res://images/items/egg.png" id="2_l4epk"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_a3mpb"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_1sblv"]
+
+[sub_resource type="Resource" id="Resource_0nqs1"]
+script = ExtResource("4_1sblv")
+flavor = Array[int]([5])
+flavor_profile = 1
+health_restored = 0
+energy_restored = 5
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_a3mpb")
+flavor = Array[int]([5])
+flavor_profile = 1
+image = ExtResource("2_l4epk")
+item_name = "Edible Egg"
+item_type = 1
+rarity = 0
+flavor_text = "An egg produced by some Pokemon that is edible!"
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_b5vfs")]([SubResource("Resource_0nqs1")])
+throw_effect = Array[ExtResource("1_b5vfs")]([])
+equip_effect = Array[ExtResource("1_b5vfs")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

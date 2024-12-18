@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://chl8flj4oshty"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_w5dxm"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_yry7l"]
+[ext_resource type="Script" path="res://resources/effects/doubleslap_like_attack.gd" id="3_60ygb"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_0orul"]
+
+[sub_resource type="Resource" id="Resource_q1vmx"]
+script = ExtResource("2_yry7l")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_xanld"]
+script = ExtResource("3_60ygb")
+min_hits = 2
+max_hits = 5
+damage = SubResource("Resource_q1vmx")
+
+[resource]
+script = ExtResource("4_0orul")
+_name = "Fury Swipes"
+type = 0
+level_learned = 12
+power = 18
+acc = 80
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_w5dxm")]([SubResource("Resource_xanld")])
+passive_effect = Array[ExtResource("1_w5dxm")]([])
+contact = true
+sound = false
+unmissable = false
+description = "The Pokemon attacks with furious claws! Hits 2 - 5 times."
+description_passive = ""
+jaw_move = false

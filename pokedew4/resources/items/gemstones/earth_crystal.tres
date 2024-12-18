@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dy1uonnju30pr"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_y6j86"]
+[ext_resource type="Texture2D" uid="uid://bbvfpomnibc56" path="res://images/items/mining/earth_crystal.png" id="2_mxc35"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_fjnnp"]
+
+[resource]
+script = ExtResource("3_fjnnp")
+image = ExtResource("2_mxc35")
+item_name = "Earth Crystal"
+item_type = 5
+rarity = 40
+flavor_text = "Solidified essense of the earth itself!"
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_y6j86")]([])
+throw_effect = Array[ExtResource("1_y6j86")]([])
+equip_effect = Array[ExtResource("1_y6j86")]([])
+base_value = 30
+consumable = false
+stone = false
+wood = false
+mulchable = true
+mulch_type = 4
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

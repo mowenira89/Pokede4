@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://bxksj70tp3bql"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_exjjf"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_oyhee"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_pda8f"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_4fgbx"]
+
+[sub_resource type="Resource" id="Resource_b8eku"]
+script = ExtResource("2_oyhee")
+stage = 1
+stat = 2
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_76f4g"]
+script = ExtResource("3_pda8f")
+buff = SubResource("Resource_b8eku")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_4fgbx")
+_name = "Witdraw"
+type = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 5
+targ = 1
+perform_type = 4
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_exjjf")]([SubResource("Resource_76f4g")])
+passive_effect = Array[ExtResource("1_exjjf")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+recoil = 0.0

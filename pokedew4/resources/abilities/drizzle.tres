@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Change_Weather_Ability" load_steps=2 format=3 uid="uid://cx3ilh5kbtj22"]
+
+[ext_resource type="Script" path="res://scripts/abilities/weather_change_ability.gd" id="1_plvwx"]
+
+[resource]
+script = ExtResource("1_plvwx")
+change_weather_to = 2
+ability_name = ""
+desc = "This Pokemon makes it rain whenever they want!"
+passive_desc = ""

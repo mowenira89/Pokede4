@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://cq2qe44y733xa"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_6x2r8"]
+[ext_resource type="Script" path="res://resources/effects/exact_damage.gd" id="2_6afa5"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_2ukoq"]
+
+[sub_resource type="Resource" id="Resource_u6wgq"]
+script = ExtResource("2_6afa5")
+damage = 0
+by_level = false
+ohko = true
+
+[resource]
+script = ExtResource("3_2ukoq")
+_name = "Fissure"
+type = 5
+level_learned = 40
+power = 0
+acc = 30
+move_type = 0
+energy = 30
+targ = 0
+perform_type = 4
+perform_value = 5
+mining_value = 10
+priority = 1
+effect = Array[ExtResource("1_6x2r8")]([SubResource("Resource_u6wgq")])
+passive_effect = Array[ExtResource("1_6x2r8")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

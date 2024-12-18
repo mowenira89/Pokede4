@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=7 format=3 uid="uid://dp5x7n8u3lg55"]
+
+[ext_resource type="Resource" uid="uid://ci6fp8ndf1apc" path="res://resources/crops/leppa.tres" id="1_y6il6"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_k4vto"]
+[ext_resource type="Texture2D" uid="uid://diiniapcoygeh" path="res://images/items/berries/Dream_Leppa_Berry_Sprite.png" id="3_5tiok"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_0nw82"]
+[ext_resource type="Script" path="res://resources/effects/change_energy.gd" id="5_x0jwx"]
+
+[sub_resource type="Resource" id="Resource_dsho1"]
+script = ExtResource("5_x0jwx")
+amount = 15
+
+[resource]
+script = ExtResource("4_0nw82")
+crop = ExtResource("1_y6il6")
+flavor = Array[int]([4, 5])
+flavor_profile = 1
+image = ExtResource("3_5tiok")
+item_name = "Leppa"
+item_type = 2
+rarity = 0
+flavor_text = "A nutty, energizing berry with a bitter exterior.. "
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_k4vto")]([SubResource("Resource_dsho1")])
+throw_effect = Array[ExtResource("2_k4vto")]([])
+equip_effect = Array[ExtResource("2_k4vto")]([])
+base_value = 7
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

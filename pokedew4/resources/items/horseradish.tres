@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://bcnaq8fkhrij6"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_xefj4"]
+[ext_resource type="Texture2D" uid="uid://4yonoihf45hs" path="res://images/items/horseraddish.png" id="2_28bp3"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_icfca"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_g8ohr"]
+
+[sub_resource type="Resource" id="Resource_ivx3x"]
+script = ExtResource("4_g8ohr")
+flavor = Array[int]([])
+flavor_profile = 5
+health_restored = 0
+energy_restored = 10
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_icfca")
+flavor = Array[int]([0, 4])
+flavor_profile = 5
+image = ExtResource("2_28bp3")
+item_name = "Horseradish"
+item_type = 6
+rarity = 50
+flavor_text = "A pungent herb, used to give dishes a distinctive flavor."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_xefj4")]([SubResource("Resource_ivx3x")])
+throw_effect = Array[ExtResource("1_xefj4")]([])
+equip_effect = Array[ExtResource("1_xefj4")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 2
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

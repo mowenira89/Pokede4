@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Move" load_steps=11 format=3 uid="uid://dr8gq6pm60jiu"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_y43c5"]
+[ext_resource type="Resource" uid="uid://bad5rviwyadkd" path="res://resources/moves/sky_attack2.tres" id="2_ycgb5"]
+[ext_resource type="Script" path="res://scripts/buffs/charge_attack.gd" id="3_ro7lk"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_ov8ai"]
+[ext_resource type="Script" path="res://scripts/buffs/invulnerable.gd" id="5_8ncrp"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="6_7duhc"]
+
+[sub_resource type="Resource" id="Resource_pdwuv"]
+script = ExtResource("3_ro7lk")
+move = ExtResource("2_ycgb5")
+s = "flew up high!"
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_n4bbn"]
+script = ExtResource("4_ov8ai")
+buff = SubResource("Resource_pdwuv")
+chance = 100
+targ = 1
+
+[sub_resource type="Resource" id="Resource_o8si1"]
+script = ExtResource("5_8ncrp")
+status = 4
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_gg3yu"]
+script = ExtResource("4_ov8ai")
+buff = SubResource("Resource_o8si1")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("6_7duhc")
+_name = "Sky Attack"
+type = 16
+level_learned = 28
+power = 140
+acc = 100
+move_type = 0
+energy = 20
+targ = 0
+perform_type = 0
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_y43c5")]([SubResource("Resource_n4bbn"), SubResource("Resource_gg3yu")])
+passive_effect = Array[ExtResource("1_y43c5")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = true

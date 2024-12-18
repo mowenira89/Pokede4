@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=7 format=3 uid="uid://ombdu2jcryqv"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_waogj"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_d8kqj"]
+[ext_resource type="Resource" uid="uid://bu10is8ycwklu" path="res://resources/pokedata/caterpie.tres" id="2_semvt"]
+[ext_resource type="Texture2D" uid="uid://bqu8je1n3l4vd" path="res://images/crops/batch1/PechaTreeTallerIII.png" id="3_7ptfa"]
+[ext_resource type="Texture2D" uid="uid://c6l3buniui4de" path="res://images/crops/batch1/PechaTreeBloomIII.png" id="4_gjy33"]
+[ext_resource type="Texture2D" uid="uid://flkqsmqs1i7q" path="res://images/crops/batch1/PechaTreeBerryIII.png" id="5_la7gs"]
+
+[resource]
+script = ExtResource("2_d8kqj")
+_name = "Pecha"
+growth_time = 120
+growth_speed = 3
+sprites = Array[Texture2D]([ExtResource("3_7ptfa"), ExtResource("4_gjy33"), ExtResource("5_la7gs")])
+pest_rate = 3
+pests = Array[ExtResource("1_waogj")]([ExtResource("2_semvt")])
+min_berries = 4
+max_barries = 6
+thirst = 4
+is_herb = false

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c733mldbsn4c7"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_10k8j"]
+[ext_resource type="Texture2D" uid="uid://fva27587jm76" path="res://images/items/mining/geode/jamborite.png" id="2_v4ovb"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_sq5cu"]
+
+[resource]
+script = ExtResource("3_sq5cu")
+image = ExtResource("2_v4ovb")
+item_name = "Jamborite"
+item_type = 0
+rarity = 30
+flavor_text = "The crystals are so tightly packed it almost looks fuzzy. Once thought to be a cousin of Solrock."
+use_effect = Array[ExtResource("1_10k8j")]([])
+throw_effect = Array[ExtResource("1_10k8j")]([])
+equip_effect = Array[ExtResource("1_10k8j")]([])
+base_value = 30
+consumable = false
+stone = false
+wood = false

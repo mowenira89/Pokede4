@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dsehbp8t0hyog"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_r3duh"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_xx82b"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_siftv"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_dgfsl"]
+
+[sub_resource type="Resource" id="Resource_vn0gy"]
+script = ExtResource("2_xx82b")
+stage = -2
+stat = 1
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_kncbv"]
+script = ExtResource("3_siftv")
+buff = SubResource("Resource_vn0gy")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_dgfsl")
+_name = "Charm"
+type = 0
+level_learned = 16
+power = 0
+acc = 100
+move_type = 2
+energy = 2
+targ = 0
+perform_type = 6
+perform_value = 9
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_r3duh")]([SubResource("Resource_kncbv")])
+passive_effect = Array[ExtResource("1_r3duh")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Lowers opponent attack with charm and guile.."
+description_passive = "Increases performance value of all other moves."
+jaw_move = false

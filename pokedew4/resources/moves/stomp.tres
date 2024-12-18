@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://dx2oqfkiihn5m"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0dug8"]
+[ext_resource type="Script" path="res://scripts/buffs/flinch.gd" id="2_vrgxv"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="3_ioc84"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_thy7v"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_c6ml7"]
+
+[sub_resource type="Resource" id="Resource_wxfrt"]
+script = ExtResource("2_vrgxv")
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_kq1he"]
+script = ExtResource("3_thy7v")
+buff = SubResource("Resource_wxfrt")
+chance = 30
+targ = 0
+
+[sub_resource type="Resource" id="Resource_xc812"]
+script = ExtResource("3_ioc84")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("4_c6ml7")
+_name = "Stomp"
+type = 0
+level_learned = 22
+power = 65
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 3
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_0dug8")]([SubResource("Resource_kq1he"), SubResource("Resource_xc812")])
+passive_effect = Array[ExtResource("1_0dug8")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

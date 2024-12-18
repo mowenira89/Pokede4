@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://t4udxmr0xola"]
+
+[ext_resource type="Texture2D" uid="uid://ymfwubmds1nx" path="res://images/pokemon/squirtle.png" id="1_v8vuh"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_kvpou"]
+
+[resource]
+script = ExtResource("2_kvpou")
+image = ExtResource("1_v8vuh")
+species = "Squirtle"
+num = 7
+type = Array[int]([2])
+base_stats = {
+"attk": 48,
+"cook": 10,
+"craft": 25,
+"def": 65,
+"energy": 100,
+"farm": 30,
+"fishing": 60,
+"forage": 20,
+"hp": 44,
+"mine": 20,
+"perform": 40,
+"sattk": 50,
+"sdef": 64,
+"speed": 43
+}
+base_happiness = 50
+height = 5
+weight = 90
+base_exp = 63
+capture_rate = 45
+abilities = Array[String](["Rain Dish"])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 0

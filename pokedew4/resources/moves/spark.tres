@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://c4p16dvqokc3l"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_fsqm4"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_6s82q"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="3_kdu6w"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_wdip0"]
+
+[sub_resource type="Resource" id="Resource_m1kd8"]
+script = ExtResource("2_6s82q")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_5luv7"]
+script = ExtResource("3_kdu6w")
+chance = 30
+status = 1
+
+[resource]
+script = ExtResource("4_wdip0")
+_name = "Spark"
+type = 4
+level_learned = 16
+power = 50
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_fsqm4")]([SubResource("Resource_m1kd8"), SubResource("Resource_5luv7")])
+passive_effect = Array[ExtResource("1_fsqm4")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 2
+psi = 0
+depester = false

@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://83f0o0s2wjq4"]
+
+[ext_resource type="Script" path="res://scripts/ui/stat_box_container.gd" id="1_gety4"]
+
+[node name="HBoxContainer" type="HBoxContainer"]
+size_flags_horizontal = 3
+script = ExtResource("1_gety4")
+
+[node name="Stat" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "HP:"
+
+[node name="StatAmount" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "0"
+
+[node name="Margin" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="EV" type="Label" parent="."]
+layout_mode = 2
+text = "EV"
+
+[node name="Slash" type="Label" parent="."]
+layout_mode = 2
+text = "/"
+
+[node name="IV" type="Label" parent="."]
+layout_mode = 2
+text = "IV"

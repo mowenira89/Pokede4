@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="MulchData" load_steps=5 format=3 uid="uid://djtxtf87o67qv"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_xu5m0"]
+[ext_resource type="Script" path="res://scripts/mulch_data.gd" id="2_iq65v"]
+[ext_resource type="Script" path="res://resources/effects/mulch_effect.gd" id="3_elx1f"]
+
+[sub_resource type="Resource" id="Resource_my0ja"]
+script = ExtResource("3_elx1f")
+
+[resource]
+script = ExtResource("2_iq65v")
+mulch = 2
+lasting_time = 100
+growth_boost = 0
+pesticide = 0
+moisture_retention = 1
+berry_boost = 0
+mutation_chance = -10
+happines_boost = 2
+item_name = ""
+item_type = 0
+rarity = 80
+flavor_text = "This mulch provides stability to a plant, making it happier."
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+use_effect = Array[ExtResource("1_xu5m0")]([SubResource("Resource_my0ja")])
+throw_effect = Array[ExtResource("1_xu5m0")]([])
+equip_effect = Array[ExtResource("1_xu5m0")]([])
+base_value = 20
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 2
+fuel = false
+fuel_amount = 0

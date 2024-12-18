@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://b3qyuc4bhw021"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_wenug"]
+[ext_resource type="Texture2D" uid="uid://yit8e26x77tj" path="res://images/items/spice_berry.png" id="2_jj7s8"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_6o1eb"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_16834"]
+
+[sub_resource type="Resource" id="Resource_wqbo2"]
+script = ExtResource("4_16834")
+flavor = Array[int]([0])
+flavor_profile = 4
+health_restored = 5
+energy_restored = 15
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_6o1eb")
+flavor = Array[int]([0])
+flavor_profile = 4
+image = ExtResource("2_jj7s8")
+item_name = "Spice Berry"
+item_type = 1
+rarity = 30
+flavor_text = "A spicy berry native to the wilds of Vallea."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_wenug")]([SubResource("Resource_wqbo2")])
+throw_effect = Array[ExtResource("1_wenug")]([])
+equip_effect = Array[ExtResource("1_wenug")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 6
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

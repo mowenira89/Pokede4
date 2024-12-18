@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://ci6fp8ndf1apc"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_vlank"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_ut08e"]
+[ext_resource type="Texture2D" uid="uid://ckutuyrxkn6sn" path="res://images/crops/batch1/LeppaTreeTallerIII.png" id="3_8pbfp"]
+[ext_resource type="Texture2D" uid="uid://blgf2r443vphn" path="res://images/crops/batch1/LeppaTreeBloomIII.png" id="4_wtowb"]
+[ext_resource type="Texture2D" uid="uid://bgjn7y41yjia3" path="res://images/crops/batch1/LeppaTreeBerryIII.png" id="5_yudu3"]
+
+[resource]
+script = ExtResource("2_ut08e")
+_name = "Leppa"
+growth_time = 120
+growth_speed = 5
+sprites = Array[Texture2D]([ExtResource("3_8pbfp"), ExtResource("4_wtowb"), ExtResource("5_yudu3")])
+pest_rate = 30
+pests = Array[ExtResource("1_vlank")]([])
+min_berries = 5
+max_barries = 10
+thirst = 3
+is_herb = false

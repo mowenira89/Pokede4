@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ddslbn5t0qwfh"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0nwhn"]
+[ext_resource type="Texture2D" uid="uid://co5230xrlmymd" path="res://images/items/mining/jade.png" id="2_kwj43"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_hv80w"]
+
+[resource]
+script = ExtResource("3_hv80w")
+image = ExtResource("2_kwj43")
+item_name = "Jade"
+item_type = 5
+rarity = 10
+flavor_text = "A rare gemstone valued for jewelry."
+use_effect = Array[ExtResource("1_0nwhn")]([])
+throw_effect = Array[ExtResource("1_0nwhn")]([])
+equip_effect = Array[ExtResource("1_0nwhn")]([])
+base_value = 200
+consumable = false
+stone = false
+wood = false

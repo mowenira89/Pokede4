@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://bo1grc036kjhf"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_c04iu"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_tqf3m"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_4sf34"]
+
+[sub_resource type="Resource" id="Resource_a85uo"]
+script = ExtResource("2_tqf3m")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_4sf34")
+_name = "Power Whip"
+type = 3
+level_learned = 28
+power = 120
+acc = 85
+move_type = 0
+energy = 20
+targ = 0
+perform_type = 0
+perform_value = 3
+mining_value = 5
+priority = 1
+effect = Array[ExtResource("1_c04iu")]([SubResource("Resource_a85uo")])
+passive_effect = Array[ExtResource("1_c04iu")]([])
+contact = true
+sound = false
+unmissable = false
+description = "Attacks powerfully with a tail or limb."
+description_passive = "Increases ability to fend off pests."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

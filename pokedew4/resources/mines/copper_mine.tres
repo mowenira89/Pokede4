@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="MineProfile" load_steps=21 format=3 uid="uid://c711prklpimit"]
+
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="1_v7p12"]
+[ext_resource type="Resource" uid="uid://cxymfu6atfrdj" path="res://resources/items/stones/copper_ore.tres" id="2_nyuad"]
+[ext_resource type="Resource" uid="uid://baxw602ildc75" path="res://resources/items/gemstones/jasper.tres" id="3_fyokc"]
+[ext_resource type="Resource" uid="uid://bvmw2jywdwvbr" path="res://resources/items/gemstones/amber.tres" id="4_0605q"]
+[ext_resource type="Resource" uid="uid://vgh8k7gc70cf" path="res://resources/items/fossils/fossil_armor.tres" id="6_3phpd"]
+[ext_resource type="Resource" uid="uid://dp0qbqqxk4tiq" path="res://resources/items/stones/geode.tres" id="6_dpamx"]
+[ext_resource type="Resource" uid="uid://0sy4vxhwrgbj" path="res://resources/items/quartz.tres" id="6_ghot8"]
+[ext_resource type="Resource" uid="uid://o3bqrced8v20" path="res://resources/items/gemstones/aerinite.tres" id="7_cusep"]
+[ext_resource type="Resource" uid="uid://34tortu4w6jp" path="res://resources/items/fossils/dome_fossil.tres" id="7_ldktt"]
+[ext_resource type="Resource" uid="uid://u1m8jlfea8rd" path="res://resources/items/fossils/ancient_skull.tres" id="8_j2prw"]
+[ext_resource type="Script" path="res://scenes/mining/scripts/mine_profile.gd" id="8_nl7is"]
+[ext_resource type="Resource" uid="uid://bucp2o3uxvrnl" path="res://resources/items/gemstones/alamite.tres" id="8_yk23u"]
+[ext_resource type="Resource" uid="uid://dv6yp6iudprxv" path="res://resources/items/stones/limestone.tres" id="9_0fp67"]
+[ext_resource type="Resource" uid="uid://d1ox5errj0a3j" path="res://resources/items/gemstones/aquamarine.tres" id="9_rjboo"]
+[ext_resource type="Resource" uid="uid://djhnyjkyjt7d1" path="res://resources/items/gemstones/nugget.tres" id="10_7lbgf"]
+[ext_resource type="Resource" uid="uid://4oa0eicbc2v5" path="res://resources/items/stones/slate.tres" id="10_a7hie"]
+[ext_resource type="Resource" uid="uid://clw4f345vwn26" path="res://resources/items/stones/granite.tres" id="11_wyu4p"]
+[ext_resource type="Resource" uid="uid://c5xjod0lq61ko" path="res://resources/items/yellow_shard.tres" id="14_fepw0"]
+[ext_resource type="Resource" uid="uid://2kf28ohgbsmu" path="res://resources/items/stones/marble.tres" id="15_805v5"]
+[ext_resource type="Resource" uid="uid://cwract22tot2a" path="res://resources/items/stones/basalt.tres" id="16_0yht2"]
+
+[resource]
+script = ExtResource("8_nl7is")
+stones1 = Array[ExtResource("1_v7p12")]([ExtResource("9_0fp67"), ExtResource("10_a7hie"), ExtResource("11_wyu4p")])
+common1 = Array[ExtResource("1_v7p12")]([ExtResource("2_nyuad"), ExtResource("2_nyuad"), ExtResource("3_fyokc"), ExtResource("4_0605q")])
+rare1 = Array[ExtResource("1_v7p12")]([ExtResource("6_dpamx"), ExtResource("2_nyuad"), ExtResource("2_nyuad"), ExtResource("6_ghot8")])
+common2 = Array[ExtResource("1_v7p12")]([ExtResource("2_nyuad"), ExtResource("2_nyuad"), ExtResource("6_dpamx"), ExtResource("4_0605q")])
+rare2 = Array[ExtResource("1_v7p12")]([ExtResource("7_cusep"), ExtResource("8_yk23u"), ExtResource("9_rjboo"), ExtResource("10_7lbgf"), ExtResource("2_nyuad"), ExtResource("2_nyuad")])
+stones3 = Array[ExtResource("1_v7p12")]([ExtResource("15_805v5"), ExtResource("11_wyu4p"), ExtResource("16_0yht2")])
+common3 = Array[ExtResource("1_v7p12")]([ExtResource("4_0605q"), ExtResource("2_nyuad"), ExtResource("6_dpamx"), ExtResource("2_nyuad")])
+rare3 = Array[ExtResource("1_v7p12")]([ExtResource("2_nyuad"), ExtResource("9_rjboo"), ExtResource("14_fepw0"), ExtResource("6_dpamx"), ExtResource("9_rjboo")])
+fossil3 = Array[ExtResource("1_v7p12")]([ExtResource("6_3phpd"), ExtResource("7_ldktt"), ExtResource("8_j2prw")])

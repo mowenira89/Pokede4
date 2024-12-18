@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://snu2dga8o06g"]
+
+[ext_resource type="Texture2D" uid="uid://ps1e4hyln21d" path="res://images/pokemon/vulpix.png" id="1_8th3v"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_e006d"]
+
+[resource]
+script = ExtResource("2_e006d")
+image = ExtResource("1_8th3v")
+species = "Vulpix"
+num = 37
+type = Array[int]([1])
+base_stats = {
+"attk": 41,
+"cook": 30,
+"craft": 20,
+"def": 40,
+"energy": 100,
+"farm": 20,
+"fishing": 10,
+"forage": 40,
+"hp": 38,
+"mine": 2,
+"perform": 50,
+"sattk": 50,
+"sdef": 65,
+"speed": 65
+}
+base_happiness = 50
+height = 6
+weight = 99
+base_exp = 60
+capture_rate = 190
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([12])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

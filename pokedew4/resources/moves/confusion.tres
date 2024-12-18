@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://tbr64y8da0t3"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5wmge"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_v4iph"]
+[ext_resource type="Script" path="res://resources/effects/apply_hidden_status.gd" id="3_jhlta"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_uul3k"]
+
+[sub_resource type="Resource" id="Resource_wkbiy"]
+script = ExtResource("2_v4iph")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_ykiqy"]
+script = ExtResource("3_jhlta")
+chance = 30
+status = 0
+
+[resource]
+script = ExtResource("3_uul3k")
+_name = "Confusion"
+type = 10
+level_learned = 16
+power = 50
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 1
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_5wmge")]([SubResource("Resource_wkbiy"), SubResource("Resource_ykiqy")])
+passive_effect = Array[ExtResource("1_5wmge")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Improves the value of magic type performances."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 2
+depester = false

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ctlveg17wbcjx"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_7ggjv"]
+[ext_resource type="Texture2D" uid="uid://7wn5gl3vhfab" path="res://images/items/mining/geode/dolomite.png" id="2_gemsc"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_cbjer"]
+
+[resource]
+script = ExtResource("3_cbjer")
+image = ExtResource("2_gemsc")
+item_name = "Dolomite"
+item_type = 5
+rarity = 10
+flavor_text = "It's dolomite, babee!"
+use_effect = Array[ExtResource("1_7ggjv")]([])
+throw_effect = Array[ExtResource("1_7ggjv")]([])
+equip_effect = Array[ExtResource("1_7ggjv")]([])
+base_value = 200
+consumable = false
+stone = false
+wood = false

@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://co5ihtsxcp71g"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ittmv"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_ymv18"]
+[ext_resource type="Script" path="res://scripts/buffs/flinch.gd" id="3_6wq8f"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_8j4b3"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_g8euj"]
+
+[sub_resource type="Resource" id="Resource_h5xws"]
+script = ExtResource("2_ymv18")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_yurh2"]
+script = ExtResource("3_6wq8f")
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_7hlpn"]
+script = ExtResource("4_8j4b3")
+buff = SubResource("Resource_yurh2")
+chance = 30
+targ = 0
+
+[resource]
+script = ExtResource("4_g8euj")
+_name = "Rolling Kick"
+type = 9
+level_learned = 16
+power = 60
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 5
+mining_value = 5
+priority = 1
+effect = Array[ExtResource("1_ittmv")]([SubResource("Resource_h5xws"), SubResource("Resource_7hlpn")])
+passive_effect = Array[ExtResource("1_ittmv")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

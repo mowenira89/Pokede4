@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="Move" load_steps=12 format=3 uid="uid://dok8ptj8noi50"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_qjm7l"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_lxtds"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="3_ivywp"]
+[ext_resource type="Resource" uid="uid://bsebu41vry4ou" path="res://resources/items/poison.tres" id="4_3lvgu"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="5_76epr"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="6_hcmo5"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="7_0f647"]
+
+[sub_resource type="Resource" id="Resource_kn6oo"]
+script = ExtResource("2_lxtds")
+chance = 50
+status = 0
+
+[sub_resource type="Resource" id="Resource_ys5oj"]
+script = ExtResource("3_ivywp")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_q46jq"]
+script = ExtResource("5_76epr")
+data = ExtResource("4_3lvgu")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_vvghw"]
+script = ExtResource("6_hcmo5")
+item = SubResource("Resource_q46jq")
+min = 1
+max = 1
+method = 0
+min_production_time = 0
+production_time = 5
+weight = 100
+
+[resource]
+script = ExtResource("7_0f647")
+_name = "Poison Sting"
+type = 15
+level_learned = 12
+power = 15
+acc = 100
+move_type = 0
+energy = 5
+targ = 0
+perform_type = 0
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_qjm7l")]([SubResource("Resource_kn6oo"), SubResource("Resource_ys5oj")])
+passive_effect = Array[ExtResource("1_qjm7l")]([])
+produce = SubResource("Resource_vvghw")
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

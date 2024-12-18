@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://y2ewihyb530s"]
+
+[ext_resource type="Texture2D" uid="uid://ddiv2vf3g8qpv" path="res://images/pokemon/beedrill.png" id="1_w5c02"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_limoh"]
+
+[resource]
+script = ExtResource("2_limoh")
+image = ExtResource("1_w5c02")
+species = "Beedrill"
+num = 15
+type = Array[int]([6])
+base_stats = {
+"attk": 95,
+"cook": 10,
+"craft": 30,
+"def": 40,
+"energy": 250,
+"farm": 20,
+"fishing": 17,
+"forage": 60,
+"hp": 65,
+"mine": 20,
+"perform": 60,
+"sattk": 45,
+"sdef": 80,
+"speed": 75
+}
+base_happiness = 70
+height = 10
+weight = 295
+base_exp = 178
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

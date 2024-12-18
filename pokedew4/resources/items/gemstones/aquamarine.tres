@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://d1ox5errj0a3j"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_7601h"]
+[ext_resource type="Texture2D" uid="uid://cjiiqw1ub0wjs" path="res://images/items/mining/aquamarine.png" id="2_s7qpa"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_qlt3g"]
+
+[resource]
+script = ExtResource("3_qlt3g")
+image = ExtResource("2_s7qpa")
+item_name = "Aquamarine"
+item_type = 5
+rarity = 20
+flavor_text = "A light blue variety of beryl."
+use_effect = Array[ExtResource("1_7601h")]([])
+throw_effect = Array[ExtResource("1_7601h")]([])
+equip_effect = Array[ExtResource("1_7601h")]([])
+base_value = 250
+consumable = false

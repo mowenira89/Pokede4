@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="PlaceableItemData" load_steps=5 format=3 uid="uid://c3c7dk3tcscsq"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_cogb1"]
+[ext_resource type="Texture2D" uid="uid://clt4q2hl5rfd3" path="res://images/Chest.png" id="2_3j456"]
+[ext_resource type="PackedScene" uid="uid://dqdorg81ht0ux" path="res://scenes/chest.tscn" id="3_nto5e"]
+[ext_resource type="Script" path="res://scripts/placeable_object.gd" id="4_jj6j6"]
+
+[resource]
+script = ExtResource("4_jj6j6")
+path_to_scene = ExtResource("3_nto5e")
+image = ExtResource("2_3j456")
+item_name = "Chest"
+item_type = 7
+rarity = 0
+flavor_text = "An item for holding your other items."
+has_use_effect = false
+untossable = false
+unthrowable = true
+ungivable = true
+use_from_bag = false
+use_effect = Array[ExtResource("1_cogb1")]([])
+throw_effect = Array[ExtResource("1_cogb1")]([])
+equip_effect = Array[ExtResource("1_cogb1")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0

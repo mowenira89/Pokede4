@@ -1,0 +1,59 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=8 format=3 uid="uid://dqmln2jnwqr8j"]
+
+[ext_resource type="Texture2D" uid="uid://c4gavxp8phfhv" path="res://images/pokemon/oddish.png" id="1_3fqvj"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_ti877"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_wo6vq"]
+[ext_resource type="Resource" uid="uid://c720civif822i" path="res://resources/items/forage/oddish_leaf.tres" id="3_abqtw"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="4_b35gh"]
+
+[sub_resource type="Resource" id="Resource_aa5ul"]
+script = ExtResource("4_b35gh")
+data = ExtResource("3_abqtw")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_tvael"]
+script = ExtResource("2_wo6vq")
+item = SubResource("Resource_aa5ul")
+min = 2
+max = 4
+method = 1
+min_production_time = 0
+production_time = 40
+weight = 10
+
+[resource]
+script = ExtResource("2_ti877")
+produce = Array[ExtResource("2_wo6vq")]([SubResource("Resource_tvael")])
+rarity = 0
+image = ExtResource("1_3fqvj")
+species = "Oddish"
+num = 43
+type = Array[int]([3, 15])
+base_stats = {
+"attk": 50,
+"cook": 10,
+"craft": 15,
+"def": 55,
+"energy": 80,
+"farm": 60,
+"fishing": 20,
+"forage": 40,
+"hp": 45,
+"mine": 10,
+"perform": 30,
+"sattk": 75,
+"sdef": 65,
+"speed": 30
+}
+base_happiness = 50
+height = 5
+weight = 54
+base_exp = 64
+capture_rate = 255
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([9])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

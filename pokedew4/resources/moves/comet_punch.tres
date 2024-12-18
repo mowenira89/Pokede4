@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://cc8plpb0su4nq"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0em07"]
+[ext_resource type="Script" path="res://resources/effects/doubleslap_like_attack.gd" id="2_ccuhc"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_f7826"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_0lbkv"]
+
+[sub_resource type="Resource" id="Resource_208tl"]
+script = ExtResource("2_f7826")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_hofij"]
+script = ExtResource("2_ccuhc")
+min_hits = 2
+max_hits = 5
+damage = SubResource("Resource_208tl")
+
+[resource]
+script = ExtResource("4_0lbkv")
+_name = "Comet Punch"
+type = 0
+level_learned = 20
+power = 18
+acc = 85
+move_type = 0
+energy = 7
+targ = 0
+perform_type = 0
+perform_value = 6
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_0em07")]([SubResource("Resource_hofij")])
+passive_effect = Array[ExtResource("1_0em07")]([])
+contact = true
+sound = false
+unmissable = false
+description = "Damages opponent 2 - 5 times."
+description_passive = "Doubles stone output when mining."
+jaw_move = false

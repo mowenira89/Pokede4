@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Sturdy" load_steps=2 format=3 uid="uid://cnspasl8s37or"]
+
+[ext_resource type="Script" path="res://scripts/abilities/sturdy.gd" id="1_7b7jf"]
+
+[resource]
+script = ExtResource("1_7b7jf")
+ability_name = "Sturdy"
+desc = "This Pokemon will hold on when hit with a OHKO!"
+passive_desc = ""

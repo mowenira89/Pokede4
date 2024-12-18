@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://i8jf2ef0jun"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_4id5b"]
+[ext_resource type="Texture2D" uid="uid://cidrtpjtoaeeq" path="res://images/items/mining/geode/hematite.png" id="2_gubkn"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_mre23"]
+
+[resource]
+script = ExtResource("3_mre23")
+image = ExtResource("2_gubkn")
+item_name = "Hematite"
+item_type = 5
+rarity = 10
+flavor_text = "An iron-based Mineral with interesting magnetic properties. Powers up electric type Pokemon!"
+use_effect = Array[ExtResource("1_4id5b")]([])
+throw_effect = Array[ExtResource("1_4id5b")]([])
+equip_effect = Array[ExtResource("1_4id5b")]([])
+base_value = 100
+consumable = false
+stone = false
+wood = false

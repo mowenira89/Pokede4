@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://cqrcehbhd7ck3"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_bxmn7"]
+[ext_resource type="Texture2D" uid="uid://7tbyas0duwjj" path="res://images/items/mining/artifacts/skull.png" id="2_6g08o"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_voiie"]
+
+[resource]
+script = ExtResource("3_voiie")
+image = ExtResource("2_6g08o")
+item_name = "Skull Fossil"
+item_type = 5
+rarity = 10
+flavor_text = "Fossil of an unfamiliar creature."
+use_effect = Array[ExtResource("1_bxmn7")]([])
+throw_effect = Array[ExtResource("1_bxmn7")]([])
+equip_effect = Array[ExtResource("1_bxmn7")]([])
+base_value = 500
+consumable = false
+stone = false
+wood = false

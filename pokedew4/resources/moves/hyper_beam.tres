@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://clmfllvysxyji"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_wki64"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_3nxin"]
+[ext_resource type="Script" path="res://scripts/buffs/recharge.gd" id="3_wh7ui"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_xgqvv"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_8h56i"]
+
+[sub_resource type="Resource" id="Resource_7hsf4"]
+script = ExtResource("2_3nxin")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_nbj6p"]
+script = ExtResource("3_wh7ui")
+string = ""
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_c3j8m"]
+script = ExtResource("4_xgqvv")
+buff = SubResource("Resource_nbj6p")
+chance = 100
+targ = 1
+
+[resource]
+script = ExtResource("5_8h56i")
+_name = "Hyper Beam"
+type = 0
+level_learned = 45
+power = 150
+acc = 100
+move_type = 1
+energy = 20
+targ = 0
+perform_type = 7
+perform_value = 7
+mining_value = 7
+priority = 1
+effect = Array[ExtResource("1_wki64")]([SubResource("Resource_7hsf4"), SubResource("Resource_c3j8m")])
+passive_effect = Array[ExtResource("1_wki64")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

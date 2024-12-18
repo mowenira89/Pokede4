@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=7 format=3 uid="uid://bhn2vwxrsv2nr"]
+
+[ext_resource type="Resource" uid="uid://dft6oblgxpgxf" path="res://resources/crops/chesto.tres" id="1_n2g3r"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_mhgvf"]
+[ext_resource type="Texture2D" uid="uid://bgsrtva87gnjp" path="res://images/items/berries/Dream_Chesto_Berry_Sprite.png" id="3_d4wl2"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_tnp0x"]
+[ext_resource type="Script" path="res://resources/effects/heal_status.gd" id="5_ldkjb"]
+
+[sub_resource type="Resource" id="Resource_irlea"]
+script = ExtResource("5_ldkjb")
+status = 2
+
+[resource]
+script = ExtResource("4_tnp0x")
+crop = ExtResource("1_n2g3r")
+flavor = Array[int]([3])
+flavor_profile = 1
+image = ExtResource("3_d4wl2")
+item_name = "Cheri"
+item_type = 2
+rarity = 0
+flavor_text = "A hard-fleshed, nutty berry with stimulant properties. "
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_mhgvf")]([SubResource("Resource_irlea")])
+throw_effect = Array[ExtResource("2_mhgvf")]([])
+equip_effect = Array[ExtResource("2_mhgvf")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

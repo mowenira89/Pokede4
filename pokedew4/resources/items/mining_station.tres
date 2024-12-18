@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="PlaceableItemData" load_steps=5 format=3 uid="uid://d0nvdmn2uel2q"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_1gory"]
+[ext_resource type="Texture2D" uid="uid://djdnwdfbxha0v" path="res://images/mining_station.png" id="2_f0va4"]
+[ext_resource type="PackedScene" uid="uid://ds227f73m5ta3" path="res://scenes/mining/mining_station.tscn" id="3_57j31"]
+[ext_resource type="Script" path="res://scripts/placeable_object.gd" id="4_inye8"]
+
+[resource]
+script = ExtResource("4_inye8")
+path_to_scene = ExtResource("3_57j31")
+image = ExtResource("2_f0va4")
+item_name = "Mining Station"
+item_type = 7
+rarity = 0
+flavor_text = "Needed for a Pokemon to properly dig a mine."
+has_use_effect = false
+untossable = false
+unthrowable = true
+ungivable = true
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_1gory")]([])
+throw_effect = Array[ExtResource("1_1gory")]([])
+equip_effect = Array[ExtResource("1_1gory")]([])
+base_value = 0
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

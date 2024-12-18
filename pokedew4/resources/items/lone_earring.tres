@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Food" load_steps=4 format=3 uid="uid://0uplrmec7chj"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_aq3fw"]
+[ext_resource type="Texture2D" uid="uid://xmgu1ujsd0k0" path="res://images/items/Bag_Lone_Earring_Sprite.png" id="2_87vh0"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_q671r"]
+
+[resource]
+script = ExtResource("3_q671r")
+flavor = Array[int]([])
+flavor_profile = 0
+image = ExtResource("2_87vh0")
+item_name = "Lone Earring"
+item_type = 6
+rarity = 5
+flavor_text = "A lost pearl earring that can be sold cheaply."
+use_effect = Array[ExtResource("1_aq3fw")]([])
+throw_effect = Array[ExtResource("1_aq3fw")]([])
+equip_effect = Array[ExtResource("1_aq3fw")]([])
+base_value = 40
+consumable = false

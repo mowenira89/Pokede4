@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=7 format=3 uid="uid://dtf07dtpexjcb"]
+
+[ext_resource type="Texture2D" uid="uid://cb4btcx003jse" path="res://images/pokemon/pidgeot.png" id="1_udg22"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_lbkyg"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_ld284"]
+[ext_resource type="Resource" uid="uid://v6ctubsgt2ir" path="res://resources/produce/shed_pretty_feather.tres" id="3_rrw81"]
+[ext_resource type="Resource" uid="uid://cy4c8mx22cuu5" path="res://resources/produce/shed_muscle_feather.tres" id="4_pxy0l"]
+[ext_resource type="Resource" uid="uid://dgeb1dnntwajl" path="res://resources/produce/shed_speed_feather.tres" id="5_whlmu"]
+
+[resource]
+script = ExtResource("2_lbkyg")
+produce = Array[ExtResource("2_ld284")]([ExtResource("3_rrw81"), ExtResource("4_pxy0l"), ExtResource("5_whlmu")])
+image = ExtResource("1_udg22")
+species = "Pidgeot"
+num = 18
+type = Array[int]([16, 0])
+base_stats = {
+"attk": 80,
+"cook": 15,
+"craft": 20,
+"def": 75,
+"energy": 200,
+"farm": 15,
+"fishing": 99,
+"forage": 100,
+"hp": 90,
+"mine": 15,
+"perform": 90,
+"sattk": 70,
+"sdef": 70,
+"speed": 120
+}
+base_happiness = 70
+height = 15
+weight = 395
+base_exp = 216
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Immunity" load_steps=2 format=3 uid="uid://din4v1bqty0nv"]
+
+[ext_resource type="Script" path="res://scripts/abilities/immunity.gd" id="1_3ua8a"]
+
+[resource]
+script = ExtResource("1_3ua8a")
+immunity = Array[int]([1])
+ability_name = "Limber"
+desc = "This Pokemon's limber body makes it immune to paralysis and makes it better at dancing."
+passive_desc = ""

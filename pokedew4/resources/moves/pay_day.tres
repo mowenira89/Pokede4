@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dolipyubchw48"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_0udtg"]
+[ext_resource type="Script" path="res://scripts/buffs/recharge.gd" id="2_54iit"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_tbktq"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_mb0em"]
+
+[sub_resource type="Resource" id="Resource_erdu4"]
+script = ExtResource("2_54iit")
+string = "was distracted by imaginary gold!"
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_r4qjm"]
+script = ExtResource("3_tbktq")
+buff = SubResource("Resource_erdu4")
+chance = 40
+targ = 1
+
+[resource]
+script = ExtResource("4_mb0em")
+_name = "Pay Day"
+type = 0
+level_learned = 12
+power = 40
+acc = 10
+move_type = 0
+energy = 5
+targ = 0
+perform_type = 1
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_0udtg")]([SubResource("Resource_r4qjm")])
+passive_effect = Array[ExtResource("1_0udtg")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Scatters illusionary gold around, distracting the greedy enemy!"
+description_passive = "Producing coins from behnid Pokemon's ears is somehow still entertaining!"
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

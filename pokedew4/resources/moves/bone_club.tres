@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://dnj3rba7x6ayw"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_u8k8o"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_wvi6n"]
+[ext_resource type="Script" path="res://scripts/buffs/flinch.gd" id="3_i7ewg"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_2uv4v"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_mexob"]
+
+[sub_resource type="Resource" id="Resource_5gfjs"]
+script = ExtResource("2_wvi6n")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_ukpkt"]
+script = ExtResource("3_i7ewg")
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_h05sa"]
+script = ExtResource("4_2uv4v")
+buff = SubResource("Resource_ukpkt")
+chance = 30
+targ = 0
+
+[resource]
+script = ExtResource("5_mexob")
+_name = "Bone Club"
+type = 5
+level_learned = 30
+power = 65
+acc = 85
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 4
+mining_value = 3
+priority = 1
+effect = Array[ExtResource("1_u8k8o")]([SubResource("Resource_5gfjs"), SubResource("Resource_h05sa")])
+passive_effect = Array[ExtResource("1_u8k8o")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

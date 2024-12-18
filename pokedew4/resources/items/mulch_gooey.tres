@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="MulchData" load_steps=6 format=3 uid="uid://b34sk2fp217lx"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_fo7ou"]
+[ext_resource type="Texture2D" uid="uid://cmgc3km7es7i7" path="res://images/items/mulch/Bag_Gooey_Mulch_Sprite.png" id="2_ea534"]
+[ext_resource type="Script" path="res://scripts/mulch_data.gd" id="3_wpnar"]
+[ext_resource type="Script" path="res://resources/effects/mulch_effect.gd" id="4_34v7v"]
+
+[sub_resource type="Resource" id="Resource_rys4s"]
+script = ExtResource("4_34v7v")
+
+[resource]
+script = ExtResource("3_wpnar")
+mulch = 3
+lasting_time = 120
+growth_boost = 0
+pesticide = -50
+moisture_retention = 0
+berry_boost = 0
+mutation_chance = 0
+happines_boost = 0
+image = ExtResource("2_ea534")
+item_name = "Gooey Mulch"
+item_type = 9
+rarity = 90
+flavor_text = "This mulch effectively keeps pests away!"
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+use_effect = Array[ExtResource("1_fo7ou")]([SubResource("Resource_rys4s")])
+throw_effect = Array[ExtResource("1_fo7ou")]([])
+equip_effect = Array[ExtResource("1_fo7ou")]([])
+base_value = 20
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 3
+fuel = false
+fuel_amount = 0

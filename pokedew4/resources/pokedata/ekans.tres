@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://wj1gl2k17ufy"]
+
+[ext_resource type="Texture2D" uid="uid://deve4xkv8827e" path="res://images/pokemon/ekans.png" id="1_uxeuq"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_ff654"]
+
+[resource]
+script = ExtResource("2_ff654")
+image = ExtResource("1_uxeuq")
+species = "Ekans"
+num = 23
+type = Array[int]([15])
+base_stats = {
+"attk": 60,
+"cook": 10,
+"craft": 6,
+"def": 44,
+"energy": 100,
+"farm": 10,
+"fishing": 10,
+"forage": 20,
+"hp": 35,
+"mine": 10,
+"perform": 10,
+"sattk": 40,
+"sdef": 54,
+"speed": 55
+}
+base_happiness = 70
+height = 20
+weight = 69
+base_exp = 58
+capture_rate = 255
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

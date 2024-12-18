@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://pqdmok4dnixg"]
+
+[ext_resource type="Texture2D" uid="uid://brb8d4ygkbxas" path="res://images/pokemon/butterfree.png" id="1_sbn0n"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_ig7js"]
+
+[resource]
+script = ExtResource("2_ig7js")
+image = ExtResource("1_sbn0n")
+species = "Buterfree"
+num = 12
+type = Array[int]([6, 10])
+base_stats = {
+"attk": 45,
+"cook": 20,
+"craft": 30,
+"def": 50,
+"energy": 200,
+"farm": 50,
+"fishing": 20,
+"forage": 50,
+"hp": 60,
+"mine": 10,
+"perform": 100,
+"sattk": 90,
+"sdef": 80,
+"speed": 70
+}
+base_happiness = 50
+height = 11
+weight = 320
+base_exp = 198
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

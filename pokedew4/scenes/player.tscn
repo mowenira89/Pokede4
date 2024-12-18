@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://8ev56moheq06"]
+
+[ext_resource type="Texture2D" uid="uid://ds2dhln4k7prw" path="res://images/Hat_man/Hat_man1.png" id="1_7y564"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_33kyx"]
+[ext_resource type="Texture2D" uid="uid://wu57ocpr3xh" path="res://images/Hat_man/Hat_man2.png" id="2_knq0x"]
+[ext_resource type="Texture2D" uid="uid://w42uf5nkbo83" path="res://images/Hat_man/Hat_man3.png" id="3_s2dwd"]
+[ext_resource type="Texture2D" uid="uid://bnqd687vvvyxn" path="res://images/Hat_man/Hat_man4.png" id="4_3fh10"]
+[ext_resource type="Texture2D" uid="uid://weogs8fl6vrj" path="res://images/ui/cursor.png" id="6_rmhwo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_udqq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7y564")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_knq0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s2dwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3fh10")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wtq50"]
+radius = 19.2354
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylb24"]
+size = Vector2(41, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvrk2"]
+size = Vector2(192, 192)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+y_sort_enabled = true
+script = ExtResource("1_33kyx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_udqq0")
+animation = &"walk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 24)
+shape = SubResource("CircleShape2D_wtq50")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.8, 0.8)
+
+[node name="Cursor" type="Sprite2D" parent="."]
+texture = ExtResource("6_rmhwo")
+
+[node name="Area2D" type="Area2D" parent="Cursor"]
+
+[node name="CursorCollider" type="CollisionShape2D" parent="Cursor/Area2D"]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_ylb24")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wvrk2")
+
+[node name="equipped" type="Sprite2D" parent="."]
+position = Vector2(0, -92)
+
+[connection signal="body_entered" from="Cursor/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Cursor/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

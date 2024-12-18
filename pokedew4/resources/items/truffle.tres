@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://dnpc5cttoj6j0"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_nr1hc"]
+[ext_resource type="Texture2D" uid="uid://g37qkyepq4se" path="res://images/items/truffle.png" id="2_vy277"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_w3ewg"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_lxept"]
+
+[sub_resource type="Resource" id="Resource_ghop4"]
+script = ExtResource("4_lxept")
+flavor = Array[int]([1, 5])
+flavor_profile = 9
+health_restored = 5
+energy_restored = 10
+happiness_bonus = 4
+
+[resource]
+script = ExtResource("3_w3ewg")
+flavor = Array[int]([1, 5])
+flavor_profile = 9
+image = ExtResource("2_vy277")
+item_name = "Truffle"
+item_type = 1
+rarity = 1
+flavor_text = "A rare mushroom found more easily by certain Pokemon."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_nr1hc")]([SubResource("Resource_ghop4")])
+throw_effect = Array[ExtResource("1_nr1hc")]([])
+equip_effect = Array[ExtResource("1_nr1hc")]([])
+base_value = 50
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 4
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

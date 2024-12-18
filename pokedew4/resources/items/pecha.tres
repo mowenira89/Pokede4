@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=7 format=3 uid="uid://bcnfixbmrcegb"]
+
+[ext_resource type="Resource" uid="uid://ombdu2jcryqv" path="res://resources/crops/pecha.tres" id="1_l2j8b"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_whyml"]
+[ext_resource type="Texture2D" uid="uid://dao2iwx0qga2g" path="res://images/items/berries/Dream_Pecha_Berry_Sprite.png" id="3_3xw11"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_ugyng"]
+[ext_resource type="Script" path="res://resources/effects/heal_status.gd" id="5_cc5nt"]
+
+[sub_resource type="Resource" id="Resource_68j34"]
+script = ExtResource("5_cc5nt")
+status = 0
+
+[resource]
+script = ExtResource("4_ugyng")
+crop = ExtResource("1_l2j8b")
+flavor = Array[int]([1])
+flavor_profile = 1
+image = ExtResource("3_3xw11")
+item_name = "Pecha"
+item_type = 2
+rarity = 0
+flavor_text = "A sweet fruit with light, juicy flesh and general antidote properties. "
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_whyml")]([SubResource("Resource_68j34")])
+throw_effect = Array[ExtResource("2_whyml")]([])
+equip_effect = Array[ExtResource("2_whyml")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

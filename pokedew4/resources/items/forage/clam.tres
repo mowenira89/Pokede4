@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://esjawam1qdem"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_gne7b"]
+[ext_resource type="Texture2D" uid="uid://dga7a1dubisgs" path="res://images/items/forage/clam_shell.png" id="2_eb3cx"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_56dkm"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_7mem3"]
+
+[sub_resource type="Resource" id="Resource_3lepr"]
+script = ExtResource("4_7mem3")
+flavor = Array[int]([5])
+flavor_profile = 4
+health_restored = 0
+energy_restored = 10
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_56dkm")
+flavor = Array[int]([5])
+flavor_profile = 4
+image = ExtResource("2_eb3cx")
+item_name = "Clam"
+item_type = 1
+rarity = 100
+flavor_text = "There's a chewy little guy in there... good thing he's not a Pokemon..."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_gne7b")]([SubResource("Resource_3lepr")])
+throw_effect = Array[ExtResource("1_gne7b")]([])
+equip_effect = Array[ExtResource("1_gne7b")]([])
+base_value = 0
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 7
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

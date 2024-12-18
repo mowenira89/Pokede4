@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://c0ay0igxqpjgi"]
+
+[ext_resource type="Texture2D" uid="uid://ber7fb34goky3" path="res://images/pokemon/slowbro.png" id="1_4ufx2"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_5vnhb"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_57ruw"]
+
+[resource]
+script = ExtResource("3_57ruw")
+produce = Array[ExtResource("2_5vnhb")]([])
+image = ExtResource("1_4ufx2")
+species = "Slowbro"
+num = 80
+type = Array[int]([2, 10])
+base_stats = {
+"attk": 75,
+"cook": 50,
+"craft": 50,
+"def": 119,
+"energy": 100,
+"farm": 30,
+"fishing": 70,
+"forage": 50,
+"hp": 95,
+"mine": 30,
+"perform": 50,
+"sattk": 199,
+"sdef": 80,
+"speed": 30
+}
+base_happiness = 50
+height = 16
+weight = 785
+base_exp = 172
+capture_rate = 75
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([0, 6])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

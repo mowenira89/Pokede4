@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://gtpl388n6xce"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_t00ku"]
+[ext_resource type="Texture2D" uid="uid://cpys8i5miq7gj" path="res://images/items/tools/super_axe.png" id="2_msysc"]
+[ext_resource type="Script" path="res://scripts/tool_data.gd" id="3_j2jf7"]
+
+[resource]
+script = ExtResource("3_j2jf7")
+tool_type = 0
+tool_level = 3
+damage = 4
+image = ExtResource("2_msysc")
+item_name = "Super Axe"
+item_type = 4
+rarity = 0
+flavor_text = "A superior axe made of metoric metal!"
+has_use_effect = false
+untossable = true
+unthrowable = true
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_t00ku")]([])
+throw_effect = Array[ExtResource("1_t00ku")]([])
+equip_effect = Array[ExtResource("1_t00ku")]([])
+base_value = 30
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

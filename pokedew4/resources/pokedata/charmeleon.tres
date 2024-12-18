@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://4vrudgqmubjb"]
+
+[ext_resource type="Texture2D" uid="uid://ckawif4x46evm" path="res://images/pokemon/charmeleon.png" id="1_p2f8y"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_50gbn"]
+
+[resource]
+script = ExtResource("2_50gbn")
+image = ExtResource("1_p2f8y")
+species = "Charmeleon"
+num = 5
+type = Array[int]([1])
+base_stats = {
+"attk": 64,
+"cook": 50,
+"craft": 50,
+"def": 58,
+"energy": 200,
+"farm": 10,
+"fishing": 10,
+"forage": 35,
+"hp": 58,
+"mine": 20,
+"perform": 55,
+"sattk": 80,
+"sdef": 65,
+"speed": 80
+}
+base_happiness = 50
+height = 11
+weight = 190
+base_exp = 142
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 0

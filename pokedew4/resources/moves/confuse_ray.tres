@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://b0o3xt21am3h8"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_1gyia"]
+[ext_resource type="Script" path="res://resources/effects/apply_hidden_status.gd" id="2_cfrca"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_uj7is"]
+
+[sub_resource type="Resource" id="Resource_2e126"]
+script = ExtResource("2_cfrca")
+chance = 100
+status = 0
+
+[resource]
+script = ExtResource("3_uj7is")
+_name = "Confuse Ray"
+type = 0
+level_learned = 13
+power = 0
+acc = 55
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 4
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_1gyia")]([SubResource("Resource_2e126")])
+passive_effect = Array[ExtResource("1_1gyia")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 1
+depester = false

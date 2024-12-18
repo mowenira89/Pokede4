@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://buqioav0w6tgf"]
+
+[ext_resource type="Texture2D" uid="uid://c6sfk4tnyjtvx" path="res://images/pokemon/mrmime.png" id="1_88ayk"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_2nv31"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_vy4l6"]
+
+[resource]
+script = ExtResource("3_vy4l6")
+produce = Array[ExtResource("2_2nv31")]([])
+image = ExtResource("1_88ayk")
+species = "Mr. Mime"
+num = 0
+type = Array[int]([10, 14])
+base_stats = {
+"attk": 45,
+"cook": 70,
+"craft": 75,
+"def": 65,
+"energy": 150,
+"farm": 40,
+"fishing": 20,
+"forage": 40,
+"hp": 40,
+"mine": 15,
+"perform": 100,
+"sattk": 100,
+"sdef": 120,
+"speed": 90
+}
+base_happiness = 161
+height = 13
+weight = 545
+base_exp = 161
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([2])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 25

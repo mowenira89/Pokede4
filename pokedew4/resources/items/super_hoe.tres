@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://dedmmi2bt0deo"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_oba2v"]
+[ext_resource type="Texture2D" uid="uid://cwkpdpr42qi18" path="res://images/items/tools/super_hoe.png" id="2_dyykf"]
+[ext_resource type="Script" path="res://scripts/tool_data.gd" id="3_dma3o"]
+
+[resource]
+script = ExtResource("3_dma3o")
+tool_type = 2
+tool_level = 3
+damage = 4
+image = ExtResource("2_dyykf")
+item_name = "Super Hoe"
+item_type = 4
+rarity = 0
+flavor_text = "A superior hoe made of meteoric metal."
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_oba2v")]([])
+throw_effect = Array[ExtResource("1_oba2v")]([])
+equip_effect = Array[ExtResource("1_oba2v")]([])
+base_value = 40
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

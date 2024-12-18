@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="Move" load_steps=6 format=3 uid="uid://brgk4b1evnads"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_8nk5x"]
+[ext_resource type="Script" path="res://resources/effects/change_weather.gd" id="2_0d3wf"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_sptk4"]
+
+[sub_resource type="Resource" id="Resource_jc8by"]
+script = ExtResource("2_0d3wf")
+weather = 1
+
+[sub_resource type="Resource" id="Resource_4rrx5"]
+script = ExtResource("2_0d3wf")
+weather = 1
+
+[resource]
+script = ExtResource("3_sptk4")
+_name = "Sunny Day"
+type = 1
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 1
+perform_type = 1
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_8nk5x")]([SubResource("Resource_jc8by")])
+passive_effect = Array[ExtResource("1_8nk5x")]([SubResource("Resource_4rrx5")])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+recoil = 0.0

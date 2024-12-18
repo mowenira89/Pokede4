@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=3 uid="uid://k5ccyi071s5r"]
+
+[ext_resource type="Script" path="res://scripts/crafting_game.gd" id="1_w5yta"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojyk0"]
+bg_color = Color(0.849861, 0.459525, 0.579107, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhv1u"]
+bg_color = Color(0.430175, 0.68185, 0.217231, 1)
+
+[node name="Control" type="Panel"]
+custom_minimum_size = Vector2(1300, 600)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -650.0
+offset_top = -300.0
+offset_right = 650.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w5yta")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ojyk0")
+theme_override_styles/fill = SubResource("StyleBoxFlat_rhv1u")
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "E"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Press the corresponding key to craft "
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

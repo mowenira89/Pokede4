@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=7 format=3 uid="uid://c0x031aakm7au"]
+
+[ext_resource type="Resource" uid="uid://bgjio1ohfhqik" path="res://resources/crops/rawst.tres" id="1_dxpoc"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_5cfl6"]
+[ext_resource type="Texture2D" uid="uid://dqseopmoxapdm" path="res://images/items/berries/Dream_Rawst_Berry_Sprite.png" id="3_4ebmq"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_gwjj4"]
+[ext_resource type="Script" path="res://resources/effects/heal_status.gd" id="5_3ju84"]
+
+[sub_resource type="Resource" id="Resource_3s280"]
+script = ExtResource("5_3ju84")
+status = 4
+
+[resource]
+script = ExtResource("4_gwjj4")
+crop = ExtResource("1_dxpoc")
+flavor = Array[int]([4])
+flavor_profile = 1
+image = ExtResource("3_4ebmq")
+item_name = "Rawst"
+item_type = 2
+rarity = 0
+flavor_text = "A bitter fruit with tough flesh and a salving property."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_5cfl6")]([SubResource("Resource_3s280")])
+throw_effect = Array[ExtResource("2_5cfl6")]([])
+equip_effect = Array[ExtResource("2_5cfl6")]([])
+base_value = 5
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 6
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

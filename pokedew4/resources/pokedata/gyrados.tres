@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=5 format=3 uid="uid://cs8r2dvo4prmy"]
+
+[ext_resource type="Texture2D" uid="uid://dwm8nn1su14yy" path="res://images/pokemon/gyrados.png" id="1_kqex6"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_tj0sa"]
+[ext_resource type="Resource" uid="uid://qc440qcyspv0" path="res://resources/produce/dragon_scale.tres" id="3_4t4jy"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="4_w8y2s"]
+
+[resource]
+script = ExtResource("4_w8y2s")
+produce = Array[ExtResource("2_tj0sa")]([ExtResource("3_4t4jy")])
+image = ExtResource("1_kqex6")
+species = "Gyrados"
+num = 130
+type = Array[int]([2, 11])
+base_stats = {
+"attk": 125,
+"cook": 1,
+"craft": 10,
+"def": 79,
+"energy": 250,
+"farm": 4,
+"fishing": 90,
+"forage": 20,
+"hp": 95,
+"mine": 50,
+"perform": 25,
+"sattk": 60,
+"sdef": 100,
+"speed": 81
+}
+base_happiness = 50
+height = 65
+weight = 2350
+base_exp = 189
+capture_rate = 45
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([7, 13])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 5

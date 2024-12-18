@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Move" load_steps=10 format=3 uid="uid://d152h43eqjsi6"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_23kvk"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_p0rgf"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_0knxs"]
+[ext_resource type="Resource" uid="uid://bsebu41vry4ou" path="res://resources/items/poison.tres" id="3_tj5jm"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="4_tct2q"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="5_xo2s1"]
+
+[sub_resource type="Resource" id="Resource_alix2"]
+script = ExtResource("2_p0rgf")
+chance = 30
+status = 0
+
+[sub_resource type="Resource" id="Resource_beqce"]
+script = ExtResource("4_tct2q")
+data = ExtResource("3_tj5jm")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_ton72"]
+script = ExtResource("5_xo2s1")
+item = SubResource("Resource_beqce")
+min = 4
+max = 8
+method = 0
+min_production_time = 4
+production_time = 8
+weight = 0
+
+[resource]
+script = ExtResource("3_0knxs")
+_name = "Sludge Bomb"
+type = 15
+level_learned = 44
+power = 90
+acc = 100
+move_type = 1
+energy = 15
+targ = 0
+perform_type = 4
+perform_value = 0
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_23kvk")]([SubResource("Resource_alix2")])
+passive_effect = Array[ExtResource("1_23kvk")]([])
+produce = SubResource("Resource_ton72")
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = false

@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://d0h7xji4h34mo"]
+
+[ext_resource type="Texture2D" uid="uid://dcxir1jw7yn7k" path="res://images/pokemon/metapod.png" id="1_og6jw"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_4cvyi"]
+
+[resource]
+script = ExtResource("2_4cvyi")
+image = ExtResource("1_og6jw")
+species = "Metapod"
+num = 11
+type = Array[int]([6])
+base_stats = {
+"attk": 20,
+"cook": 1,
+"craft": 1,
+"def": 55,
+"energy": 50,
+"farm": 1,
+"fishing": 1,
+"forage": 1,
+"hp": 50,
+"mine": 1,
+"perform": 2,
+"sattk": 25,
+"sdef": 25,
+"speed": 30
+}
+base_happiness = 50
+height = 7
+weight = 99
+base_exp = 72
+capture_rate = 120
+abilities = Array[String](["Shed Skin"])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

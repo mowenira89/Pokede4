@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Entity" load_steps=3 format=3 uid="uid://dbnoo2wd2v85r"]
+
+[ext_resource type="Texture2D" uid="uid://ds2dhln4k7prw" path="res://images/Hat_man/Hat_man1.png" id="1_hqen2"]
+[ext_resource type="Script" path="res://scripts/entity.gd" id="1_lj04p"]
+
+[resource]
+script = ExtResource("1_lj04p")
+image = ExtResource("1_hqen2")
+species = "human"
+num = 0
+type = Array[int]([0])
+base_stats = {
+"attk": 20,
+"cook": 20,
+"craft": 20,
+"def": 20,
+"energy": 100,
+"farm": 20,
+"fishing": 20,
+"forage": 20,
+"hp": 70,
+"mine": 20,
+"perform": 20,
+"sattk": 20,
+"sdef": 20,
+"speed": 20
+}
+base_happiness = 50
+height = 0
+weight = 0
+base_exp = 0
+capture_rate = 0
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 0

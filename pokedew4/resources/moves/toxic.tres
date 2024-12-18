@@ -1,0 +1,65 @@
+[gd_resource type="Resource" script_class="Move" load_steps=14 format=3 uid="uid://b8lek8g6i7a72"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_gnd8j"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_3tlkt"]
+[ext_resource type="Script" path="res://scripts/buffs/poison.gd" id="3_s7x1l"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_e583b"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_8ll5m"]
+[ext_resource type="Resource" uid="uid://bsebu41vry4ou" path="res://resources/items/poison.tres" id="5_mmq5x"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="6_8ciuq"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="7_s3etu"]
+
+[sub_resource type="Resource" id="Resource_gi8um"]
+script = ExtResource("2_3tlkt")
+chance = 100
+status = 0
+
+[sub_resource type="Resource" id="Resource_27ua5"]
+script = ExtResource("3_s7x1l")
+stage = 1
+id = ""
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_wufes"]
+script = ExtResource("4_e583b")
+buff = SubResource("Resource_27ua5")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_n7yqy"]
+script = ExtResource("6_8ciuq")
+data = ExtResource("5_mmq5x")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_mt6o5"]
+script = ExtResource("7_s3etu")
+item = SubResource("Resource_n7yqy")
+min = 3
+max = 6
+method = 0
+production_time = 3
+weight = 0
+
+[resource]
+script = ExtResource("5_8ll5m")
+_name = "Toxic"
+type = 15
+power = 0
+acc = 90
+move_type = 2
+energy = 8
+targ = 0
+perform_type = 4
+perform_value = 10
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_gnd8j")]([SubResource("Resource_gi8um"), SubResource("Resource_wufes")])
+passive_effect = Array[ExtResource("1_gnd8j")]([])
+produce = SubResource("Resource_mt6o5")
+contact = false
+sound = false
+unmissable = false
+description = "Badly poisons the opponent."
+description_passive = "Generates poison."
+recoil = 0.0

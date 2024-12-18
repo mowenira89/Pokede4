@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=6 format=3 uid="uid://c0ch83u1sdx76"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ie1rb"]
+[ext_resource type="Texture2D" uid="uid://dqjw2we2mgyhs" path="res://images/items/tools/good_pick.png" id="2_d8neu"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_njsof"]
+[ext_resource type="Script" path="res://resources/effects/tool_effect.gd" id="4_lggxs"]
+
+[sub_resource type="Resource" id="Resource_4t2xe"]
+script = ExtResource("4_lggxs")
+tool_type = 1
+tool_level = 2
+damage = 2
+
+[resource]
+script = ExtResource("3_njsof")
+image = ExtResource("2_d8neu")
+item_name = "Good Pickaxe"
+item_type = 4
+flavor_text = "A good pickaxe made by a good blacksmith."
+use_effect = Array[ExtResource("1_ie1rb")]([SubResource("Resource_4t2xe")])
+throw_effect = Array[ExtResource("1_ie1rb")]([])
+equip_effect = Array[ExtResource("1_ie1rb")]([])
+base_value = 0
+consumable = false

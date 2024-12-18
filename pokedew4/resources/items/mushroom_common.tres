@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://cub5a7idc6imj"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_hi5rw"]
+[ext_resource type="Texture2D" uid="uid://dafxpoc8joboj" path="res://images/items/mushroom-common.png" id="2_g7hm6"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_01g5i"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_8dtfw"]
+
+[sub_resource type="Resource" id="Resource_ynkm7"]
+script = ExtResource("4_8dtfw")
+flavor = Array[int]([4])
+flavor_profile = 1
+health_restored = 2
+energy_restored = 3
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_01g5i")
+flavor = Array[int]([4])
+flavor_profile = 1
+image = ExtResource("2_g7hm6")
+item_name = "Common Mushroom"
+item_type = 1
+rarity = 80
+flavor_text = "A common mushroom."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_hi5rw")]([SubResource("Resource_ynkm7")])
+throw_effect = Array[ExtResource("1_hi5rw")]([])
+equip_effect = Array[ExtResource("1_hi5rw")]([])
+base_value = 5
+consumable = false
+stone = false
+wood = false
+mulchable = true
+mulch_type = 2
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

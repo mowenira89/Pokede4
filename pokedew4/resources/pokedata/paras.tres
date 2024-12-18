@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://blhbtx00qo005"]
+
+[ext_resource type="Texture2D" uid="uid://he1jp5ntc0mj" path="res://images/pokemon/paras.png" id="1_kgr24"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_w4tbw"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_xnlu1"]
+
+[resource]
+script = ExtResource("3_xnlu1")
+produce = Array[ExtResource("2_w4tbw")]([])
+image = ExtResource("1_kgr24")
+species = "Paras"
+num = 46
+type = Array[int]([])
+base_stats = {
+"attk": 70,
+"cook": 3,
+"craft": 3,
+"def": 55,
+"energy": 100,
+"farm": 35,
+"fishing": 10,
+"forage": 35,
+"hp": 35,
+"mine": 2,
+"perform": 10,
+"sattk": 45,
+"sdef": 55,
+"speed": 25
+}
+base_happiness = 70
+height = 3
+weight = 54
+base_exp = 57
+capture_rate = 190
+abilities = Array[String]([])
+moves = {}
+egg_moves = [null, null]
+egg_group = Array[int]([9, 5])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

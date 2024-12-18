@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://ck2xkp7julgk0"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_1aoct"]
+[ext_resource type="Texture2D" uid="uid://cr3elbuauxglc" path="res://images/items/huckleberry.png" id="2_gfoja"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_ja32x"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_bdytm"]
+
+[sub_resource type="Resource" id="Resource_71bb1"]
+script = ExtResource("4_bdytm")
+flavor = Array[int]([1])
+flavor_profile = 4
+health_restored = 3
+energy_restored = 10
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_ja32x")
+flavor = Array[int]([1])
+flavor_profile = 4
+image = ExtResource("2_gfoja")
+item_name = "Huckleberry"
+item_type = 1
+rarity = 30
+flavor_text = "A berry native to a foreign land, which can barely do anything."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_1aoct")]([SubResource("Resource_71bb1")])
+throw_effect = Array[ExtResource("1_1aoct")]([])
+equip_effect = Array[ExtResource("1_1aoct")]([])
+base_value = 7
+consumable = true
+stone = false
+wood = false
+mulchable = false
+mulch_type = 6
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

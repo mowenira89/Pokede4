@@ -1,0 +1,154 @@
+[gd_scene load_steps=11 format=3 uid="uid://rdrf5c80u6tj"]
+
+[ext_resource type="Script" path="res://scripts/ui/battle_ui.gd" id="1_54bn8"]
+[ext_resource type="Texture2D" uid="uid://dy57b8nn5bgrt" path="res://images/battlebg.png" id="2_7d7vw"]
+[ext_resource type="Script" path="res://scenes/ui/battle_state_machine.gd" id="3_jrtxe"]
+[ext_resource type="Script" path="res://scripts/states/battle_start.gd" id="4_f1wtn"]
+[ext_resource type="Script" path="res://scripts/states/player_turn.gd" id="5_4a37w"]
+[ext_resource type="Script" path="res://scripts/states/enemy_turn.gd" id="6_nkvda"]
+[ext_resource type="Script" path="res://scripts/states/between_turns.gd" id="7_a7t5h"]
+[ext_resource type="PackedScene" uid="uid://cg8htco1og2mt" path="res://scenes/ui/message.tscn" id="8_p4pho"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0w5q3"]
+bg_color = Color(0.368627, 0.631373, 0.921569, 1)
+
+[sub_resource type="Theme" id="Theme_6tgw3"]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/font_sizes/font_size = 35
+Button/styles/normal = SubResource("StyleBoxFlat_0w5q3")
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_54bn8")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_7d7vw")
+
+[node name="PlayerSprite" type="Sprite2D" parent="TextureRect"]
+position = Vector2(1568, 480)
+scale = Vector2(3, 3)
+
+[node name="EnemySprite" type="Sprite2D" parent="TextureRect"]
+position = Vector2(300, 488)
+scale = Vector2(3, 3)
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -530.0
+offset_right = -30.0
+offset_bottom = 200.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "HP:"
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "EXP:"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 250)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -250.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = SubResource("Theme_6tgw3")
+color = Color(0.220655, 0.383079, 0.771669, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -600.0
+grow_horizontal = 0
+grow_vertical = 2
+color = Color(0, 0.262745, 0.384314, 0.796078)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="GridContainer" type="GridContainer" parent="ColorRect/ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="Fight" type="Button" parent="ColorRect/ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "FIGHT"
+
+[node name="PKMN" type="Button" parent="ColorRect/ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "PKMN"
+
+[node name="Bag" type="Button" parent="ColorRect/ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "BAG"
+
+[node name="Run" type="Button" parent="ColorRect/ColorRect/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "RUN"
+
+[node name="StateMachine" type="Node" parent="."]
+script = ExtResource("3_jrtxe")
+
+[node name="BattleStart" type="Node" parent="StateMachine"]
+script = ExtResource("4_f1wtn")
+
+[node name="PlayerTurn" type="Node" parent="StateMachine"]
+script = ExtResource("5_4a37w")
+
+[node name="EnemyTurn" type="Node" parent="StateMachine"]
+script = ExtResource("6_nkvda")
+
+[node name="BetweenTurn" type="Node" parent="StateMachine"]
+script = ExtResource("7_a7t5h")
+
+[node name="Message" parent="." instance=ExtResource("8_p4pho")]
+visible = false
+offset_top = -20.0
+
+[connection signal="pressed" from="ColorRect/ColorRect/MarginContainer/GridContainer/Run" to="." method="_on_run_pressed"]

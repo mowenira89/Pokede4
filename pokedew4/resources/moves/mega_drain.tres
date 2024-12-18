@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://bg01f5uo4jok2"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_2whtl"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="2_65tmk"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_w5jly"]
+
+[sub_resource type="Resource" id="Resource_gwbbw"]
+script = ExtResource("2_w5jly")
+high_crit = false
+recoil = 0.0
+recovered = 0.5
+
+[resource]
+script = ExtResource("2_65tmk")
+_name = "Mega Drain"
+type = 3
+level_learned = 22
+power = 40
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 4
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_2whtl")]([SubResource("Resource_gwbbw")])
+passive_effect = Array[ExtResource("1_2whtl")]([])
+contact = false
+sound = false
+unmissable = false
+description = "Drains energy and health from the opponent pokemon."
+description_passive = "Recovers energyfrom surrounding crops."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

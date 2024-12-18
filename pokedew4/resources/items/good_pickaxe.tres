@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="ToolData" load_steps=4 format=3 uid="uid://chic87elos5cl"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_n8c71"]
+[ext_resource type="Texture2D" uid="uid://dqjw2we2mgyhs" path="res://images/items/tools/good_pick.png" id="2_yo41w"]
+[ext_resource type="Script" path="res://scripts/tool_data.gd" id="3_r8mxb"]
+
+[resource]
+script = ExtResource("3_r8mxb")
+tool_type = 1
+tool_level = 2
+damage = 2
+image = ExtResource("2_yo41w")
+item_name = "Good Pickaxe"
+item_type = 4
+rarity = 0
+flavor_text = "A good quality pickaxe made by a skilled blacksmith."
+has_use_effect = false
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = false
+unstackable = false
+use_effect = Array[ExtResource("1_n8c71")]([])
+throw_effect = Array[ExtResource("1_n8c71")]([])
+equip_effect = Array[ExtResource("1_n8c71")]([])
+base_value = 15
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

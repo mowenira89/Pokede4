@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://cuyul4tkeb56y"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_m5hnd"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_4kraq"]
+[ext_resource type="Script" path="res://scripts/buffs/bind_type_buff.gd" id="3_ixed6"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_benj2"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_nhilr"]
+
+[sub_resource type="Resource" id="Resource_4qt8b"]
+script = ExtResource("2_4kraq")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_04vhl"]
+script = ExtResource("3_ixed6")
+min_turns = 2
+max_turns = 5
+d_factor = 0
+move_name = "Clamp"
+cant_attack = false
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_qf3fw"]
+script = ExtResource("4_benj2")
+buff = SubResource("Resource_04vhl")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("5_nhilr")
+_name = "Clamp"
+type = 2
+level_learned = 0
+power = 35
+acc = 55
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_m5hnd")]([SubResource("Resource_4qt8b"), SubResource("Resource_qf3fw")])
+passive_effect = Array[ExtResource("1_m5hnd")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = "Assists with crafting."
+jaw_move = false

@@ -1,0 +1,45 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://crw0qhm53v7af"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_mxkb4"]
+[ext_resource type="Script" path="res://scripts/buffs/bind_type_buff.gd" id="2_tvegm"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_kgx8d"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_iyxhx"]
+
+[sub_resource type="Resource" id="Resource_jurx1"]
+script = ExtResource("2_tvegm")
+min_turns = 2
+max_turns = 5
+d_factor = 0
+move_name = "Bind"
+cant_attack = false
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_egabk"]
+script = ExtResource("3_kgx8d")
+buff = SubResource("Resource_jurx1")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("5_iyxhx")
+_name = "Bind"
+type = 0
+level_learned = 0
+power = 15
+acc = 85
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 4
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_mxkb4")]([SubResource("Resource_egabk")])
+passive_effect = Array[ExtResource("1_mxkb4")]([])
+contact = true
+sound = false
+unmissable = false
+description = "Damages opponent 2 - 5 turns and prevents their escape."
+description_passive = ""
+jaw_move = false

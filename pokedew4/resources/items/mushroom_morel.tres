@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="Food" load_steps=8 format=3 uid="uid://c5elk5go5lm25"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_wy8j2"]
+[ext_resource type="Texture2D" uid="uid://busemj52u7kjb" path="res://images/items/mushroom-morel.png" id="2_qs7id"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_a2jwy"]
+[ext_resource type="Script" path="res://scripts/buffs/poison.gd" id="4_ruumm"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="5_4fck3"]
+
+[sub_resource type="Resource" id="Resource_5oqi3"]
+script = ExtResource("4_ruumm")
+stage = 1
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_05tqi"]
+script = ExtResource("5_4fck3")
+buff = SubResource("Resource_5oqi3")
+flavor = Array[int]([4])
+flavor_profile = 3
+health_restored = -20
+energy_restored = -10
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_a2jwy")
+flavor = Array[int]([4])
+flavor_profile = 3
+image = ExtResource("2_qs7id")
+item_name = "Morel Mushroom"
+item_type = 1
+rarity = 10
+flavor_text = "A meaty, honeycomb fungus, toxic if eaten raw."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_wy8j2")]([SubResource("Resource_05tqi")])
+throw_effect = Array[ExtResource("1_wy8j2")]([])
+equip_effect = Array[ExtResource("1_wy8j2")]([])
+base_value = 20
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 5
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

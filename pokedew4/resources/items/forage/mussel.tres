@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://du70o8lpbvbuw"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ji0uh"]
+[ext_resource type="Texture2D" uid="uid://lurc7ay4d76r" path="res://images/items/mussel.png" id="2_iutfi"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_btr5r"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_1q0y7"]
+
+[sub_resource type="Resource" id="Resource_enoqg"]
+script = ExtResource("4_1q0y7")
+flavor = Array[int]([5])
+flavor_profile = 2
+health_restored = 0
+energy_restored = 5
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_btr5r")
+flavor = Array[int]([5])
+flavor_profile = 2
+image = ExtResource("2_iutfi")
+item_name = "Mussel"
+item_type = 1
+rarity = 50
+flavor_text = "Not for flexing."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_ji0uh")]([SubResource("Resource_enoqg")])
+throw_effect = Array[ExtResource("1_ji0uh")]([])
+equip_effect = Array[ExtResource("1_ji0uh")]([])
+base_value = 5
+consumable = false
+stone = false
+wood = false
+mulchable = true
+mulch_type = 3
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://qyqpg6u7xdch"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_uuykx"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_aquny"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="3_87nd7"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_te8wo"]
+
+[sub_resource type="Resource" id="Resource_1qaho"]
+script = ExtResource("2_aquny")
+chance = 30
+status = 4
+
+[sub_resource type="Resource" id="Resource_ydrgf"]
+script = ExtResource("3_87nd7")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("4_te8wo")
+_name = "Flame Burst"
+type = 0
+level_learned = 20
+power = 70
+acc = 100
+move_type = 1
+energy = 10
+targ = 0
+perform_type = 7
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_uuykx")]([SubResource("Resource_1qaho"), SubResource("Resource_ydrgf")])
+passive_effect = Array[ExtResource("1_uuykx")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 2
+water = 0
+electric = 0
+psi = 0
+depester = false

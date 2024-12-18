@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Move" load_steps=10 format=3 uid="uid://difi3n32tccpm"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_mbqni"]
+[ext_resource type="Resource" uid="uid://c7xnt3e3m4ouk" path="res://resources/moves/outrage.tres" id="2_78dqh"]
+[ext_resource type="Script" path="res://scripts/buffs/outrage_type_buff.gd" id="3_n7dfw"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_17l2q"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="5_hm42d"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="6_fsd30"]
+
+[sub_resource type="Resource" id="Resource_ffa4r"]
+script = ExtResource("3_n7dfw")
+min = 1
+max = 2
+move = ExtResource("2_78dqh")
+confusion = true
+recharge = false
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_0ue7a"]
+script = ExtResource("4_17l2q")
+buff = SubResource("Resource_ffa4r")
+chance = 100
+targ = 1
+
+[sub_resource type="Resource" id="Resource_eqxm7"]
+script = ExtResource("5_hm42d")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("6_fsd30")
+_name = "Outrage"
+type = 11
+level_learned = 44
+power = 120
+acc = 100
+move_type = 0
+energy = 25
+targ = 0
+perform_type = 4
+perform_value = 10
+mining_value = 10
+priority = 1
+effect = Array[ExtResource("1_mbqni")]([SubResource("Resource_0ue7a"), SubResource("Resource_eqxm7")])
+passive_effect = Array[ExtResource("1_mbqni")]([])
+contact = true
+sound = false
+unmissable = false
+description = "Outraged, the Pokemon launches an all out assault!"
+description_passive = "The Pokemon's rage can break walls of stone!"
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

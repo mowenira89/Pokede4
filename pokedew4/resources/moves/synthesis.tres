@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://51238im0yb30"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_ban5j"]
+[ext_resource type="Script" path="res://resources/effects/heal_by_percent.gd" id="2_kgjbq"]
+[ext_resource type="Script" path="res://resources/effects/apply_passive_buff.gd" id="3_0a2i4"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_bivpj"]
+
+[sub_resource type="Resource" id="Resource_0spof"]
+script = ExtResource("2_kgjbq")
+percentage = 0.25
+
+[sub_resource type="Resource" id="Resource_76oat"]
+script = ExtResource("3_0a2i4")
+id = "synthesis"
+
+[resource]
+script = ExtResource("3_bivpj")
+_name = "Synthesis"
+type = 3
+level_learned = 0
+power = 0
+acc = 100
+move_type = 2
+energy = 5
+targ = 1
+perform_type = 1
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_ban5j")]([SubResource("Resource_0spof")])
+passive_effect = Array[ExtResource("1_ban5j")]([SubResource("Resource_76oat")])
+contact = false
+sound = false
+unmissable = false
+description = "Recovers health and energy, more during the day."
+description_passive = "Recover more energy during the day."
+jaw_move = false

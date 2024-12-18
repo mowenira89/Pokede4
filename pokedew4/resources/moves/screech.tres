@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://1yvep2icsd0x"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_llcy4"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_v75mw"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_hkrf3"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_j1pg4"]
+
+[sub_resource type="Resource" id="Resource_ap2ue"]
+script = ExtResource("2_v75mw")
+stage = -2
+stat = 2
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_yvhv3"]
+script = ExtResource("3_hkrf3")
+buff = SubResource("Resource_ap2ue")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_j1pg4")
+_name = "Screech"
+type = 0
+level_learned = 22
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 4
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_llcy4")]([SubResource("Resource_yvhv3")])
+passive_effect = Array[ExtResource("1_llcy4")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

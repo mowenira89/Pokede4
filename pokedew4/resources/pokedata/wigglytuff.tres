@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://bvdso5djtci1u"]
+
+[ext_resource type="Texture2D" uid="uid://crbou4nc814sf" path="res://images/pokemon/wigglytuff.png" id="1_b3wbx"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_46xg5"]
+
+[resource]
+script = ExtResource("2_46xg5")
+image = ExtResource("1_b3wbx")
+species = "Wigglytuff"
+num = 0
+type = Array[int]([14])
+base_stats = {
+"attk": 70,
+"cook": 40,
+"craft": 40,
+"def": 45,
+"energy": 200,
+"farm": 30,
+"fishing": 30,
+"forage": 50,
+"hp": 140,
+"mine": 10,
+"perform": 90,
+"sattk": 85,
+"sdef": 50,
+"speed": 45
+}
+base_happiness = 50
+height = 10
+weight = 120
+base_exp = 218
+capture_rate = 50
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([1])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 10

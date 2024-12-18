@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://doj2vqkmq7wlo"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_jsxnu"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_377u5"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_qglc6"]
+
+[sub_resource type="Resource" id="Resource_crei4"]
+script = ExtResource("2_377u5")
+chance = 100
+status = 2
+
+[resource]
+script = ExtResource("3_qglc6")
+_name = "Lovely Kiss"
+type = 0
+power = 0
+acc = 100
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 6
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_jsxnu")]([SubResource("Resource_crei4")])
+passive_effect = Array[ExtResource("1_jsxnu")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+recoil = 0.0

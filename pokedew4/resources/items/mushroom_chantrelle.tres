@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://uamfb0w2eli4"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_tjsxd"]
+[ext_resource type="Texture2D" uid="uid://bxjtki2d84r5t" path="res://images/items/mushroom-chanterelle.png" id="2_nnmal"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_3msro"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_udk4s"]
+
+[sub_resource type="Resource" id="Resource_tufju"]
+script = ExtResource("4_udk4s")
+flavor = Array[int]([])
+flavor_profile = 5
+health_restored = 3
+energy_restored = 3
+happiness_bonus = 1
+
+[resource]
+script = ExtResource("3_3msro")
+flavor = Array[int]([0])
+flavor_profile = 5
+image = ExtResource("2_nnmal")
+item_name = "Chantrelle Mushroom"
+item_type = 1
+rarity = 10
+flavor_text = "Meaty, funnel shaped fungus, favored by gourmands."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_tjsxd")]([SubResource("Resource_tufju")])
+throw_effect = Array[ExtResource("1_tjsxd")]([])
+equip_effect = Array[ExtResource("1_tjsxd")]([])
+base_value = 40
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 3
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b7cjar5t6un1b"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_suktd"]
+[ext_resource type="Texture2D" uid="uid://pfp7ttdes3r5" path="res://images/items/feather_health.png" id="2_oxgtn"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_prh0p"]
+
+[resource]
+script = ExtResource("3_prh0p")
+image = ExtResource("2_oxgtn")
+item_name = "Health Feather"
+item_type = 0
+rarity = 2
+flavor_text = "A feather from a healthy birdy. Slightly increases health."
+use_effect = Array[ExtResource("1_suktd")]([])
+throw_effect = Array[ExtResource("1_suktd")]([])
+equip_effect = Array[ExtResource("1_suktd")]([])
+base_value = 20
+consumable = true

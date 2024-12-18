@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://c008jdjfghmg1"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_742ov"]
+[ext_resource type="Texture2D" uid="uid://bmlrj3a707dag" path="res://images/items/mining/geode/obsidian.png" id="2_1b3xj"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_5jewr"]
+
+[resource]
+script = ExtResource("3_5jewr")
+image = ExtResource("2_1b3xj")
+item_name = "Obsidian"
+item_type = 5
+rarity = 50
+flavor_text = "Made of equal parts lava and water."
+use_effect = Array[ExtResource("1_742ov")]([])
+throw_effect = Array[ExtResource("1_742ov")]([])
+equip_effect = Array[ExtResource("1_742ov")]([])
+base_value = 25
+consumable = false
+stone = false
+wood = false

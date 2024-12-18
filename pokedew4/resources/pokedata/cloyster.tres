@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=9 format=3 uid="uid://d4dh3lidqsgrl"]
+
+[ext_resource type="Texture2D" uid="uid://dunktjotv71m8" path="res://images/pokemon/cloyster.png" id="1_75kp3"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_unbi5"]
+[ext_resource type="Resource" uid="uid://bpu6kg8p2ukbw" path="res://resources/produce/pearl.tres" id="3_wuhys"]
+[ext_resource type="Resource" path="res://resources/items/pearl_big.tres" id="4_a828x"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="5_4uhf0"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="6_y3emj"]
+
+[sub_resource type="Resource" id="Resource_f1wj0"]
+script = ExtResource("5_4uhf0")
+data = ExtResource("4_a828x")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_3slee"]
+script = ExtResource("2_unbi5")
+item = SubResource("Resource_f1wj0")
+min = 1
+max = 1
+method = 1
+production_time = 150
+weight = 1
+
+[resource]
+script = ExtResource("6_y3emj")
+produce = Array[ExtResource("2_unbi5")]([ExtResource("3_wuhys"), SubResource("Resource_3slee")])
+image = ExtResource("1_75kp3")
+species = "Cloyster"
+num = 91
+type = Array[int]([2])
+base_stats = {
+"attk": 95,
+"cook": 1,
+"craft": 1,
+"def": 180,
+"energy": 150,
+"farm": 1,
+"fishing": 50,
+"forage": 15,
+"hp": 50,
+"mine": 1,
+"perform": 10,
+"sattk": 85,
+"sdef": 45,
+"speed": 70
+}
+base_happiness = 50
+height = 15
+weight = 1325
+base_exp = 184
+capture_rate = 60
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([8])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

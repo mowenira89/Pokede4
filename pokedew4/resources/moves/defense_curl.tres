@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://0m3qrr1qdexp"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_l1rbq"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_1ruxs"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_7iujp"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_beu78"]
+
+[sub_resource type="Resource" id="Resource_y2m2t"]
+script = ExtResource("2_1ruxs")
+stage = 1
+stat = 2
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_fw0b8"]
+script = ExtResource("3_7iujp")
+buff = SubResource("Resource_y2m2t")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_beu78")
+_name = "Defense Curl"
+type = 0
+level_learned = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 4
+targ = 1
+perform_type = 0
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_l1rbq")]([SubResource("Resource_fw0b8")])
+passive_effect = Array[ExtResource("1_l1rbq")]([])
+contact = false
+sound = false
+unmissable = true
+description = "Curls up tightly in a ball, increasing defense. "
+description_passive = ""
+jaw_move = false

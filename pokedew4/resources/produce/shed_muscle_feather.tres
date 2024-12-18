@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Produce" load_steps=5 format=3 uid="uid://cy4c8mx22cuu5"]
+
+[ext_resource type="Resource" uid="uid://b4mw4bmsa0y3y" path="res://resources/items/feather_muscle.tres" id="1_pnqha"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_8rx3p"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="3_cpspo"]
+
+[sub_resource type="Resource" id="Resource_2i7cx"]
+script = ExtResource("2_8rx3p")
+data = ExtResource("1_pnqha")
+quantity = 0
+
+[resource]
+script = ExtResource("3_cpspo")
+item = SubResource("Resource_2i7cx")
+min = 1
+max = 1
+method = 1
+min_production_time = 80
+production_time = 150
+weight = 2

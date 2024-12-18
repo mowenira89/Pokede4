@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://bu10is8ycwklu"]
+
+[ext_resource type="Texture2D" uid="uid://d3d4xf5mcol5r" path="res://images/pokemon/caterpie.png" id="1_agbu6"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_0kp3l"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_qj02w"]
+
+[resource]
+script = ExtResource("2_0kp3l")
+produce = Array[ExtResource("2_qj02w")]([])
+rarity = 0
+image = ExtResource("1_agbu6")
+species = "Caterpie"
+num = 10
+type = Array[int]([6])
+base_stats = {
+"attk": 30,
+"cook": 1,
+"craft": 10,
+"def": 35,
+"energy": 60,
+"farm": 8,
+"fishing": 3,
+"forage": 30,
+"hp": 45,
+"mine": 1,
+"perform": 30,
+"sattk": 20,
+"sdef": 20,
+"speed": 45
+}
+base_happiness = 50
+height = 3
+weight = 29
+base_exp = 39
+capture_rate = 255
+abilities = Array[String](["Shield Dust", "Run Away"])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

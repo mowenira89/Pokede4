@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://bgjio1ohfhqik"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_3kjba"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_wnftc"]
+[ext_resource type="Texture2D" uid="uid://bcp1oklboalmq" path="res://images/crops/batch1/RawstTreeTallerIII.png" id="3_66bv3"]
+[ext_resource type="Texture2D" uid="uid://bn53skqmvhvu5" path="res://images/crops/batch1/RawstTreeBloomIII.png" id="4_sayii"]
+[ext_resource type="Texture2D" uid="uid://dmvl8cumfrth0" path="res://images/crops/batch1/RawstTreeBerryIII.png" id="5_jumrx"]
+
+[resource]
+script = ExtResource("2_wnftc")
+_name = "Rawst"
+growth_time = 90
+growth_speed = 5
+sprites = Array[Texture2D]([ExtResource("3_66bv3"), ExtResource("4_sayii"), ExtResource("5_jumrx")])
+pest_rate = 3
+pests = Array[ExtResource("1_3kjba")]([])
+min_berries = 2
+max_barries = 5
+thirst = 1
+is_herb = false

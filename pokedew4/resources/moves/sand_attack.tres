@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://765lvfv1lre"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_mf8ww"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_3ecwm"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_wsu1m"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_p8t6a"]
+
+[sub_resource type="Resource" id="Resource_l88ow"]
+script = ExtResource("2_3ecwm")
+stage = -1
+stat = 15
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_o4dmt"]
+script = ExtResource("3_wsu1m")
+buff = SubResource("Resource_l88ow")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_p8t6a")
+_name = "Sand Attack"
+type = 0
+power = 0
+acc = 0
+move_type = 2
+energy = 5
+targ = 0
+perform_type = 4
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_mf8ww")]([SubResource("Resource_o4dmt")])
+passive_effect = Array[ExtResource("1_mf8ww")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+recoil = 0.0

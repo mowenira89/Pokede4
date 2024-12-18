@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://dlmea78qbw2yx"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_1latd"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_7btlu"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="3_p554s"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_csx0r"]
+
+[sub_resource type="Resource" id="Resource_6qooe"]
+script = ExtResource("2_7btlu")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_6vje3"]
+script = ExtResource("3_p554s")
+chance = 10
+status = 0
+
+[resource]
+script = ExtResource("5_csx0r")
+_name = "Fire Punch"
+type = 1
+level_learned = 26
+power = 75
+acc = 100
+move_type = 0
+energy = 15
+targ = 0
+perform_type = 0
+perform_value = 6
+mining_value = 4
+priority = 1
+effect = Array[ExtResource("1_1latd")]([SubResource("Resource_6qooe"), SubResource("Resource_6vje3")])
+passive_effect = Array[ExtResource("1_1latd")]([])
+contact = true
+sound = false
+unmissable = false
+description = "10% chance to burn opponent."
+description_passive = "Smelts uncovered ores into ingots."
+jaw_move = false
+ice = 0
+fire = 1
+water = 0
+electric = 0
+psi = 0
+depester = false

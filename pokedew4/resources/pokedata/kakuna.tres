@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://dyvjmu2hav207"]
+
+[ext_resource type="Texture2D" uid="uid://ccwbvvvpoie3p" path="res://images/pokemon/kakuna.png" id="1_grqwi"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_touec"]
+
+[resource]
+script = ExtResource("2_touec")
+image = ExtResource("1_grqwi")
+species = "Kakuna"
+num = 14
+type = Array[int]([6])
+base_stats = {
+"attk": 25,
+"cook": 1,
+"craft": 1,
+"def": 50,
+"energy": 70,
+"farm": 1,
+"fishing": 1,
+"forage": 1,
+"hp": 45,
+"mine": 1,
+"perform": 10,
+"sattk": 25,
+"sdef": 25,
+"speed": 35
+}
+base_happiness = 70
+height = 6
+weight = 100
+base_exp = 72
+capture_rate = 120
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 15

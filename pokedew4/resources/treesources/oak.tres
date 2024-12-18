@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Treesource" load_steps=10 format=3 uid="uid://cp2e3g0wo06m3"]
+
+[ext_resource type="Texture2D" uid="uid://pfxlin4xh5l0" path="res://images/trees/oak_tree/seed.png" id="1_64raj"]
+[ext_resource type="Texture2D" uid="uid://bp6vgi0g4ythy" path="res://images/trees/oak_tree/immature1.png" id="2_u5bgq"]
+[ext_resource type="Texture2D" uid="uid://ql83jqtipwp3" path="res://images/trees/oak_tree/immature2.png" id="3_g16em"]
+[ext_resource type="Texture2D" uid="uid://c0fc57kklqcs1" path="res://images/trees/oak_tree/immature3.png" id="4_vcqb6"]
+[ext_resource type="Texture2D" uid="uid://bfegqudcy4by3" path="res://images/trees/oak_tree/mature.png" id="5_8mm7h"]
+[ext_resource type="Script" path="res://resources/treesource.gd" id="8_afbka"]
+[ext_resource type="Resource" uid="uid://riees02k3j27" path="res://resources/items/sap.tres" id="8_ghdme"]
+[ext_resource type="Texture2D" uid="uid://bdhp3m25o4lwh" path="res://images/trees/oak_tree/stump.png" id="8_go3dk"]
+[ext_resource type="Resource" uid="uid://0hkif6dt6iqb" path="res://resources/items/wood_oak.tres" id="14_jf3lm"]
+
+[resource]
+script = ExtResource("8_afbka")
+immature_sprites = Array[Texture2D]([ExtResource("1_64raj"), ExtResource("2_u5bgq"), ExtResource("3_g16em"), ExtResource("4_vcqb6")])
+mature_sprites = Array[Texture2D]([ExtResource("5_8mm7h")])
+stumps = Array[Texture2D]([ExtResource("8_go3dk")])
+growth_time = 1
+hp = 7
+stump_hp = 5
+tool_level = 1
+seed = "oak_acorn"
+resin = ExtResource("8_ghdme")
+wood = ExtResource("14_jf3lm")
+min_wood = 4
+max_wood = 10

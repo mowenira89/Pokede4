@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://d0cdn1ihmtl4y"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_4ichc"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_apjww"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_iu4ph"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_grcd6"]
+
+[sub_resource type="Resource" id="Resource_xt000"]
+script = ExtResource("2_apjww")
+stage = -1
+stat = 16
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_e3mi8"]
+script = ExtResource("3_iu4ph")
+buff = SubResource("Resource_xt000")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_grcd6")
+_name = "Sweet Scent"
+type = 0
+power = 0
+acc = 100
+move_type = 2
+energy = 3
+targ = 0
+perform_type = 3
+perform_value = 8
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_4ichc")]([SubResource("Resource_e3mi8")])
+passive_effect = Array[ExtResource("1_4ichc")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

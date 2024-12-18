@@ -1,0 +1,33 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://ljmyvlaibqid"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_a4nfr"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_3u6mb"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_nmk6r"]
+
+[sub_resource type="Resource" id="Resource_sciga"]
+script = ExtResource("2_3u6mb")
+chance = 100
+status = 2
+
+[resource]
+script = ExtResource("3_nmk6r")
+_name = "Grass Whistle"
+type = 3
+level_learned = 22
+power = 0
+acc = 55
+move_type = 2
+energy = 1
+targ = 0
+perform_type = 2
+perform_value = 7
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_a4nfr")]([SubResource("Resource_sciga")])
+passive_effect = Array[ExtResource("1_a4nfr")]([])
+contact = false
+sound = true
+unmissable = false
+description = "The pokemon whistles a tune that can put others to sleep."
+description_passive = "The pokemon whistles a tune that might put others to sleep."
+jaw_move = false

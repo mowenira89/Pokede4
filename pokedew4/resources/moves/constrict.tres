@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://drrrer5mi4h5u"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_l1pyv"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_05014"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="3_ka0uf"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_lkged"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_lbenu"]
+
+[sub_resource type="Resource" id="Resource_i6dxq"]
+script = ExtResource("2_05014")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_q8tlj"]
+script = ExtResource("3_ka0uf")
+stage = -1
+stat = 5
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_knbwj"]
+script = ExtResource("4_lkged")
+buff = SubResource("Resource_q8tlj")
+chance = 30
+targ = 0
+
+[resource]
+script = ExtResource("5_lbenu")
+_name = "Constrict"
+type = 0
+level_learned = 16
+power = 35
+acc = 100
+move_type = 0
+energy = 5
+targ = 0
+perform_type = 0
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_l1pyv")]([SubResource("Resource_i6dxq"), SubResource("Resource_knbwj")])
+passive_effect = Array[ExtResource("1_l1pyv")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

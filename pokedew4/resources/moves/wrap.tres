@@ -1,0 +1,57 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://ddaj6s3uudl1m"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_3nrol"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_dghn4"]
+[ext_resource type="Script" path="res://scripts/buffs/bind_type_buff.gd" id="3_bbywi"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="4_wr4pp"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="5_vcjsl"]
+
+[sub_resource type="Resource" id="Resource_dmkqq"]
+script = ExtResource("2_dghn4")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_8nwb0"]
+script = ExtResource("3_bbywi")
+min_turns = 2
+max_turns = 5
+d_factor = 0
+move_name = "Wrap"
+cant_attack = false
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_nba7p"]
+script = ExtResource("4_wr4pp")
+buff = SubResource("Resource_8nwb0")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("5_vcjsl")
+_name = "Wrap"
+type = 0
+level_learned = 16
+power = 35
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 1
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_3nrol")]([SubResource("Resource_dmkqq"), SubResource("Resource_nba7p")])
+passive_effect = Array[ExtResource("1_3nrol")]([])
+contact = true
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

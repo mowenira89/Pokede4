@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://be5m6m3a4w1a4"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_g800v"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_jwlu3"]
+[ext_resource type="Texture2D" uid="uid://cmtr2a5qiwmw3" path="res://images/crops/batch1/LumTreeTallerIII.png" id="3_skvtx"]
+[ext_resource type="Texture2D" uid="uid://cjnk7kkpe8cw7" path="res://images/crops/batch1/LumTreeBloomIII.png" id="4_p0epl"]
+[ext_resource type="Texture2D" uid="uid://lv4b61scsvdl" path="res://images/crops/batch1/LumTreeBerryIII.png" id="5_6lfr6"]
+
+[resource]
+script = ExtResource("2_jwlu3")
+_name = "Lum"
+growth_time = 150
+growth_speed = 2
+sprites = Array[Texture2D]([ExtResource("3_skvtx"), ExtResource("4_p0epl"), ExtResource("5_6lfr6")])
+pest_rate = 20
+pests = Array[ExtResource("1_g800v")]([])
+min_berries = 2
+max_barries = 3
+thirst = 8
+is_herb = false

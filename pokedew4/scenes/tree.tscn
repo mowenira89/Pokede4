@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmyibthl47q5m"]
+
+[ext_resource type="Script" path="res://scripts/tree.gd" id="1_wdvwp"]
+[ext_resource type="Texture2D" uid="uid://baj6jdl4idukr" path="res://images/trees/oak/seed.png" id="2_0um6w"]
+[ext_resource type="PackedScene" uid="uid://ej67xagvlj7k" path="res://scenes/obstruction_area.tscn" id="3_ag5tq"]
+[ext_resource type="Texture2D" uid="uid://b6ojawqgkgnl2" path="res://images/machines/Tapper.png" id="4_3g0e8"]
+
+[sub_resource type="Animation" id="Animation_p7x2m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_g5oud"]
+resource_name = "fall"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tree:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.866667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.5708]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xp7th"]
+_data = {
+"RESET": SubResource("Animation_p7x2m"),
+"fall": SubResource("Animation_g5oud")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k2ia2"]
+radius = 30.1496
+
+[node name="Tree" type="StaticBody2D" groups=["Obstruction"]]
+y_sort_enabled = true
+script = ExtResource("1_wdvwp")
+
+[node name="Base" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("2_0um6w")
+
+[node name="Tree" type="Sprite2D" parent="."]
+y_sort_enabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xp7th")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_k2ia2")
+
+[node name="ObstructionArea" parent="." instance=ExtResource("3_ag5tq")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_3g0e8")

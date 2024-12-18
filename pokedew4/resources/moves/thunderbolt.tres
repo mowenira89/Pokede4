@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://7dcy5xa7npr8"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5j41w"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_gice4"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_uw05s"]
+
+[sub_resource type="Resource" id="Resource_5h551"]
+script = ExtResource("2_gice4")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_uw05s")
+_name = "Thunderbolt"
+type = 4
+level_learned = 0
+power = 90
+acc = 100
+move_type = 1
+energy = 20
+targ = 0
+perform_type = 7
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_5j41w")]([SubResource("Resource_5h551")])
+passive_effect = Array[ExtResource("1_5j41w")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 6
+psi = 0
+depester = false

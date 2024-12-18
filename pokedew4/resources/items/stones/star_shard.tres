@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ccb3i4d10w0np"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_6da5d"]
+[ext_resource type="Texture2D" uid="uid://cf6p4obnaf505" path="res://images/items/mining/geode/star_shards.png" id="2_q38od"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_c0iur"]
+
+[resource]
+script = ExtResource("3_c0iur")
+image = ExtResource("2_q38od")
+item_name = "Star Shards"
+item_type = 5
+rarity = 1
+flavor_text = "What's a star doing underground? Maybe we'll find out some day?"
+use_effect = Array[ExtResource("1_6da5d")]([])
+throw_effect = Array[ExtResource("1_6da5d")]([])
+equip_effect = Array[ExtResource("1_6da5d")]([])
+base_value = 2000
+consumable = false
+stone = false
+wood = false

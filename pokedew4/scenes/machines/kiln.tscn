@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://cyxaxcx8l3t3l"]
+
+[ext_resource type="Script" path="res://scripts/machines/kiln.gd" id="1_0ows0"]
+[ext_resource type="Texture2D" uid="uid://dsmnwno4tlwm6" path="res://images/machines/Charcoal_Kiln_Off.png" id="1_7kpos"]
+[ext_resource type="Texture2D" uid="uid://cc46manusop3c" path="res://images/machines/Charcoal_Kiln.png" id="2_fjamd"]
+[ext_resource type="Resource" uid="uid://0hkif6dt6iqb" path="res://resources/items/wood_oak.tres" id="2_i2sqh"]
+[ext_resource type="Resource" uid="uid://dfwg6joalq4h0" path="res://resources/recipes/charcoal.tres" id="3_8pyom"]
+[ext_resource type="Script" path="res://scripts/placeable.gd" id="3_hctxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5k8u"]
+size = Vector2(64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3axla"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7kpos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fjamd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2dsfq"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Node2D" node_paths=PackedStringArray("placeable")]
+y_sort_enabled = true
+script = ExtResource("1_0ows0")
+acceptable_items = {
+ExtResource("2_i2sqh"): ExtResource("3_8pyom")
+}
+placeable = NodePath("Placeable")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["PokeAssignment"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -9)
+shape = SubResource("RectangleShape2D_d5k8u")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-1, 2)
+sprite_frames = SubResource("SpriteFrames_3axla")
+offset = Vector2(0, -30)
+
+[node name="Placeable" type="Node2D" parent="." node_paths=PackedStringArray("collision_seeker", "collider")]
+script = ExtResource("3_hctxk")
+collision_seeker = NodePath("Area2D")
+collider = NodePath("../StaticBody2D/CollisionShape2D")
+
+[node name="Area2D" type="Area2D" parent="Placeable"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placeable/Area2D"]
+position = Vector2(1, -9)
+shape = SubResource("RectangleShape2D_2dsfq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(-1, -83)

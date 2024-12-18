@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=3 format=3 uid="uid://cx246748ac0yu"]
+
+[ext_resource type="Texture2D" uid="uid://d0mfg0khmohhj" path="res://images/pokemon/charizard.png" id="1_v0af5"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="2_pp7mb"]
+
+[resource]
+script = ExtResource("2_pp7mb")
+image = ExtResource("1_v0af5")
+species = "Charizard"
+num = 6
+type = Array[int]([1, 16])
+base_stats = {
+"attk": 84,
+"cook": 75,
+"craft": 60,
+"def": 78,
+"energy": 300,
+"farm": 10,
+"fishing": 16,
+"forage": 75,
+"hp": 78,
+"mine": 25,
+"perform": 75,
+"sattk": 109,
+"sdef": 85,
+"speed": 100
+}
+base_happiness = 50
+height = 17
+weight = 905
+base_exp = 267
+capture_rate = 45
+abilities = Array[String](["Solar Power"])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 20

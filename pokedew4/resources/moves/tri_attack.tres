@@ -1,0 +1,56 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://gk5miklsinkd"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_8dqa2"]
+[ext_resource type="Script" path="res://resources/effects/apply_main_status.gd" id="2_4d0nq"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="3_156g6"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_gxgcw"]
+
+[sub_resource type="Resource" id="Resource_5d5as"]
+script = ExtResource("2_4d0nq")
+chance = 30
+status = 4
+
+[sub_resource type="Resource" id="Resource_o465o"]
+script = ExtResource("2_4d0nq")
+chance = 30
+status = 3
+
+[sub_resource type="Resource" id="Resource_mcrpj"]
+script = ExtResource("2_4d0nq")
+chance = 30
+status = 1
+
+[sub_resource type="Resource" id="Resource_wi4fo"]
+script = ExtResource("3_156g6")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("4_gxgcw")
+_name = "Tri Attack"
+type = 0
+level_learned = 0
+power = 60
+acc = 100
+move_type = 1
+energy = 15
+targ = 0
+perform_type = 7
+perform_value = 5
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_8dqa2")]([SubResource("Resource_5d5as"), SubResource("Resource_o465o"), SubResource("Resource_mcrpj"), SubResource("Resource_wi4fo")])
+passive_effect = Array[ExtResource("1_8dqa2")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Provides Fire, Ice, and Electric"
+jaw_move = false
+ice = 1
+fire = 1
+water = 0
+electric = 1
+psi = 0
+depester = false

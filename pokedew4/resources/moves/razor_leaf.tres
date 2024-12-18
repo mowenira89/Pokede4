@@ -1,0 +1,58 @@
+[gd_resource type="Resource" script_class="Move" load_steps=10 format=3 uid="uid://b5h8edceyck8a"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_r1itn"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_ddrjo"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_noklt"]
+[ext_resource type="Resource" uid="uid://bm85p1jq01v6" path="res://resources/items/fiber.tres" id="3_sa0rx"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="4_sp3b7"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="5_p8ua7"]
+
+[sub_resource type="Resource" id="Resource_86s4f"]
+script = ExtResource("2_ddrjo")
+high_crit = true
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_qtiai"]
+script = ExtResource("4_sp3b7")
+data = ExtResource("3_sa0rx")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_rhojt"]
+script = ExtResource("5_p8ua7")
+item = SubResource("Resource_qtiai")
+min = 10
+max = 20
+method = 0
+min_production_time = 0
+production_time = 1
+weight = 0
+
+[resource]
+script = ExtResource("3_noklt")
+_name = "Razor Leaf"
+type = 3
+level_learned = 12
+power = 55
+acc = 95
+move_type = 0
+energy = 13
+targ = 0
+perform_type = 0
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_r1itn")]([SubResource("Resource_86s4f")])
+passive_effect = Array[ExtResource("1_r1itn")]([])
+produce = SubResource("Resource_rhojt")
+contact = false
+sound = false
+unmissable = false
+description = "Hits the opponent with razor sharp leafs."
+description_passive = "Produces fiber."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://j4he6xcrl5xy"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_t4wga"]
+[ext_resource type="Script" path="res://resources/effects/hyper_fang.gd" id="2_vfrmh"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_3h6y5"]
+
+[sub_resource type="Resource" id="Resource_mosrp"]
+script = ExtResource("2_vfrmh")
+percentage = 0.5
+
+[resource]
+script = ExtResource("3_3h6y5")
+_name = "Hyper Fang"
+type = 0
+power = 0
+acc = 100
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 3
+mining_value = 2
+priority = 1
+effect = Array[ExtResource("1_t4wga")]([SubResource("Resource_mosrp")])
+passive_effect = Array[ExtResource("1_t4wga")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

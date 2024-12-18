@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://bukrewaxinu3i"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_fkhwy"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_pgx1w"]
+
+[resource]
+script = ExtResource("4_pgx1w")
+_name = "Double Slap"
+type = 0
+level_learned = 14
+power = 15
+acc = 85
+move_type = 0
+energy = 4
+targ = 0
+perform_type = 0
+perform_value = 0
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_fkhwy")]([])
+passive_effect = Array[ExtResource("1_fkhwy")]([])
+contact = true
+sound = false
+unmissable = false
+description = "Hits 2-5 times."
+description_passive = ""
+jaw_move = false

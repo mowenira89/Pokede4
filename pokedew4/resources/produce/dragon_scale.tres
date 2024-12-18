@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="Produce" load_steps=5 format=3 uid="uid://qc440qcyspv0"]
+
+[ext_resource type="Resource" uid="uid://o38qroiq7bdv" path="res://resources/items/dragon_scale.tres" id="1_xs66i"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="2_hlsc8"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="3_g0rmj"]
+
+[sub_resource type="Resource" id="Resource_ll1xv"]
+script = ExtResource("2_hlsc8")
+data = ExtResource("1_xs66i")
+quantity = 0
+
+[resource]
+script = ExtResource("3_g0rmj")
+item = SubResource("Resource_ll1xv")
+min = 1
+max = 1
+method = 1
+min_production_time = 400
+production_time = 500
+weight = 1

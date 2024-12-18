@@ -1,0 +1,37 @@
+[gd_resource type="Resource" script_class="Move" load_steps=5 format=3 uid="uid://e4adckp6854f"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_me1v7"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_usuvu"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_pfgv2"]
+
+[sub_resource type="Resource" id="Resource_1fv3w"]
+script = ExtResource("2_usuvu")
+power = 120
+acc = 100
+type = 0
+attack_type = 1
+defense_type = 2
+high_crit = false
+recoil = 0.25
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_pfgv2")
+_name = "Take Down"
+type = 0
+power = 90
+acc = 85
+move_type = 0
+energy = 15
+targ = 0
+perform_type = 0
+perform_value = 3
+priority = 1
+effect = Array[ExtResource("1_me1v7")]([SubResource("Resource_1fv3w")])
+passive_effect = Array[ExtResource("1_me1v7")]([])
+contact = true
+sound = false
+unmissable = false
+description = "An all out attack! Damages the user also."
+description_passive = ""
+recoil = 0.0

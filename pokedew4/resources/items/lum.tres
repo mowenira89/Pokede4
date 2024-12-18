@@ -1,0 +1,54 @@
+[gd_resource type="Resource" script_class="Berry" load_steps=11 format=3 uid="uid://cgpicij34s5g5"]
+
+[ext_resource type="Resource" uid="uid://be5m6m3a4w1a4" path="res://resources/crops/lum.tres" id="1_y7jpj"]
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="2_bcost"]
+[ext_resource type="Texture2D" uid="uid://cmhs78hqbyej2" path="res://images/items/berries/Dream_Lum_Berry_Sprite.png" id="3_pf3ap"]
+[ext_resource type="Script" path="res://scripts/berry.gd" id="4_1gs0b"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="5_riw21"]
+[ext_resource type="Script" path="res://resources/effects/plant_berry.gd" id="6_uo2r0"]
+[ext_resource type="Script" path="res://resources/effects/heal_all_status.gd" id="7_a12nq"]
+
+[sub_resource type="Resource" id="Resource_ir2ew"]
+script = ExtResource("5_riw21")
+flavor = Array[int]([0, 1, 2, 3, 5])
+flavor_profile = 1
+health_restored = 0
+energy_restored = 0
+happiness_bonus = 0
+
+[sub_resource type="Resource" id="Resource_3ydv8"]
+script = ExtResource("6_uo2r0")
+crop = ExtResource("1_y7jpj")
+
+[sub_resource type="Resource" id="Resource_kx4si"]
+script = ExtResource("7_a12nq")
+
+[resource]
+script = ExtResource("4_1gs0b")
+crop = ExtResource("1_y7jpj")
+flavor = Array[int]([0, 1, 2, 3, 5])
+flavor_profile = 1
+image = ExtResource("3_pf3ap")
+item_name = ""
+item_type = 2
+rarity = 0
+flavor_text = "A hearty, flavorful berry that can cure many ailments. "
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("2_bcost")]([SubResource("Resource_ir2ew"), SubResource("Resource_3ydv8"), SubResource("Resource_kx4si")])
+throw_effect = Array[ExtResource("2_bcost")]([])
+equip_effect = Array[ExtResource("2_bcost")]([])
+base_value = 10
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 4
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

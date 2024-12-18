@@ -1,0 +1,31 @@
+[gd_resource type="Resource" script_class="PlaceableItemData" load_steps=5 format=3 uid="uid://biffqsc3sbff"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_8dlm4"]
+[ext_resource type="Texture2D" uid="uid://dsmnwno4tlwm6" path="res://images/machines/Charcoal_Kiln_Off.png" id="2_jijno"]
+[ext_resource type="PackedScene" uid="uid://cyxaxcx8l3t3l" path="res://scenes/machines/kiln.tscn" id="3_7quja"]
+[ext_resource type="Script" path="res://scripts/placeable_object.gd" id="4_2y2mr"]
+
+[resource]
+script = ExtResource("4_2y2mr")
+path_to_scene = ExtResource("3_7quja")
+image = ExtResource("2_jijno")
+item_name = "Charcoal Kiln"
+item_type = 7
+rarity = 0
+flavor_text = "A charcoal kiln turns 10 wood into 1 charcoal, or 5 charcoal when powered by a Pokemon."
+has_use_effect = false
+untossable = false
+unthrowable = true
+ungivable = true
+use_from_bag = false
+use_effect = Array[ExtResource("1_8dlm4")]([])
+throw_effect = Array[ExtResource("1_8dlm4")]([])
+equip_effect = Array[ExtResource("1_8dlm4")]([])
+base_value = 0
+consumable = false
+stone = false
+wood = false
+mulchable = false
+mulch_type = 0
+fuel = false
+fuel_amount = 0

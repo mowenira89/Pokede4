@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Move" load_steps=7 format=3 uid="uid://egw2v5s01p3s"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_mvf17"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="2_flxdl"]
+[ext_resource type="Script" path="res://resources/effects/doubleslap_like_attack.gd" id="3_ds516"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_7hnr7"]
+
+[sub_resource type="Resource" id="Resource_ppqgf"]
+script = ExtResource("2_flxdl")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[sub_resource type="Resource" id="Resource_tptq4"]
+script = ExtResource("3_ds516")
+min_hits = 2
+max_hits = 5
+damage = SubResource("Resource_ppqgf")
+
+[resource]
+script = ExtResource("4_7hnr7")
+_name = "Barrage"
+type = 0
+level_learned = 0
+power = 15
+acc = 85
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 0
+perform_value = 3
+mining_value = 2
+priority = 1
+effect = Array[ExtResource("1_mvf17")]([SubResource("Resource_tptq4")])
+passive_effect = Array[ExtResource("1_mvf17")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

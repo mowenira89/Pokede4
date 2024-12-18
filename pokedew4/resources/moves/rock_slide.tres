@@ -1,0 +1,52 @@
+[gd_resource type="Resource" script_class="Move" load_steps=9 format=3 uid="uid://eitpdglgv37s"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_5qcbf"]
+[ext_resource type="Script" path="res://scripts/buffs/flinch.gd" id="2_gl864"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_mtk5i"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_q3n5m"]
+[ext_resource type="Script" path="res://resources/effects/attk_damage.gd" id="4_dcdgo"]
+
+[sub_resource type="Resource" id="Resource_jihbs"]
+script = ExtResource("2_gl864")
+permanent = false
+lost_on_switch_out = false
+
+[sub_resource type="Resource" id="Resource_mm4a4"]
+script = ExtResource("3_q3n5m")
+buff = SubResource("Resource_jihbs")
+chance = 30
+targ = 0
+
+[sub_resource type="Resource" id="Resource_x6pku"]
+script = ExtResource("4_dcdgo")
+high_crit = false
+recoil = 0.0
+recovered = 0.0
+
+[resource]
+script = ExtResource("3_mtk5i")
+_name = "Rock Slide"
+type = 7
+level_learned = 18
+power = 75
+acc = 90
+move_type = 0
+energy = 10
+targ = 0
+perform_type = 4
+perform_value = 5
+mining_value = 5
+priority = 1
+effect = Array[ExtResource("1_5qcbf")]([SubResource("Resource_mm4a4"), SubResource("Resource_x6pku")])
+passive_effect = Array[ExtResource("1_5qcbf")]([])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Helps prevent mine collapses."
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+depester = 0

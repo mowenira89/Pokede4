@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="Move" load_steps=6 format=3 uid="uid://bbhk6dug40v2t"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_vi4bp"]
+[ext_resource type="Script" path="res://resources/effects/change_weather.gd" id="2_sjpvd"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="3_7a1x1"]
+
+[sub_resource type="Resource" id="Resource_w48cw"]
+script = ExtResource("2_sjpvd")
+weather = 2
+
+[sub_resource type="Resource" id="Resource_pnlxt"]
+script = ExtResource("2_sjpvd")
+weather = 2
+
+[resource]
+script = ExtResource("3_7a1x1")
+_name = "Rain Dance"
+type = 2
+level_learned = 36
+power = 0
+acc = 0
+move_type = 2
+energy = 3
+targ = 1
+perform_type = 3
+perform_value = 3
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_vi4bp")]([SubResource("Resource_w48cw")])
+passive_effect = Array[ExtResource("1_vi4bp")]([SubResource("Resource_pnlxt")])
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = "Makes it rain!"
+jaw_move = false
+ice = 0
+fire = 0
+water = 1
+electric = 0
+psi = 0
+depester = false

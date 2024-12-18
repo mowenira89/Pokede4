@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqwyvq33n6wmd"]
+
+[ext_resource type="Script" path="res://scripts/mulch_machine.gd" id="1_ih4i0"]
+[ext_resource type="Texture2D" uid="uid://dgxnnyj1tyqip" path="res://images/machines/mulch_machine.png" id="1_rs1un"]
+[ext_resource type="PackedScene" uid="uid://dv3jhm5olpf1t" path="res://scenes/placeable.tscn" id="2_pn5ri"]
+[ext_resource type="PackedScene" uid="uid://ej67xagvlj7k" path="res://scenes/obstruction_area.tscn" id="3_opsp7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ge1n"]
+size = Vector2(64, 64)
+
+[sub_resource type="Animation" id="Animation_mexn1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vwfne"]
+resource_name = "working"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.90625)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5utr7"]
+_data = {
+"RESET": SubResource("Animation_mexn1"),
+"working": SubResource("Animation_vwfne")
+}
+
+[node name="MulchMachine" type="Node2D" node_paths=PackedStringArray("placeable")]
+script = ExtResource("1_ih4i0")
+placeable = NodePath("Placeable")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["WorkStation"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_0ge1n")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, 0.78125)
+texture = ExtResource("1_rs1un")
+offset = Vector2(-1, -45)
+
+[node name="Placeable" parent="." node_paths=PackedStringArray("collision_seeker", "collider") instance=ExtResource("2_pn5ri")]
+collision_seeker = NodePath("../ObstructionArea")
+collider = NodePath("../StaticBody2D/CollisionShape2D")
+
+[node name="ObstructionArea" parent="." instance=ExtResource("3_opsp7")]
+position = Vector2(-2, -5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_5utr7")
+}
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-1, -121)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+custom_minimum_size = Vector2(64, 0)
+offset_left = -31.0
+offset_top = -131.0
+offset_right = 33.0
+offset_bottom = -114.0
+show_percentage = false

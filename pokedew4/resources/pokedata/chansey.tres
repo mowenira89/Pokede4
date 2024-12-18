@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="Pokemon" load_steps=4 format=3 uid="uid://dpofgumfvu4s5"]
+
+[ext_resource type="Texture2D" uid="uid://o5ak7n1rshlf" path="res://images/pokemon/chansey.png" id="1_d12vy"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="2_y0ofw"]
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="3_ytuaq"]
+
+[resource]
+script = ExtResource("3_ytuaq")
+produce = Array[ExtResource("2_y0ofw")]([])
+image = ExtResource("1_d12vy")
+species = "Chansey"
+num = 113
+type = Array[int]([0])
+base_stats = {
+"attk": 5,
+"cook": 60,
+"craft": 60,
+"def": 5,
+"energy": 200,
+"farm": 50,
+"fishing": 20,
+"forage": 60,
+"hp": 250,
+"mine": 20,
+"perform": 60,
+"sattk": 35,
+"sdef": 105,
+"speed": 50
+}
+base_happiness = 140
+height = 11
+weight = 346
+base_exp = 395
+capture_rate = 30
+abilities = Array[String]([])
+moves = {}
+egg_moves = []
+egg_group = Array[int]([1])
+tutor_moves = []
+machine_moves = []
+hatch_counter = 40

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://bovcx34qo0tsi"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_puth3"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_hi4fw"]
+[ext_resource type="Texture2D" uid="uid://c6puveln417e8" path="res://images/crops/batch1/OranTreeTallerIII.png" id="3_i6nst"]
+[ext_resource type="Texture2D" uid="uid://ucv44w6td6d2" path="res://images/crops/batch1/OranTreeBloomIII.png" id="4_41bu2"]
+[ext_resource type="Texture2D" uid="uid://bwkj5s6iiuff7" path="res://images/crops/batch1/OranTreeBerryIII.png" id="5_fdfb3"]
+
+[resource]
+script = ExtResource("2_hi4fw")
+_name = "Oran"
+growth_time = 120
+growth_speed = 120
+sprites = Array[Texture2D]([ExtResource("3_i6nst"), ExtResource("4_41bu2"), ExtResource("5_fdfb3")])
+pest_rate = 5
+pests = Array[ExtResource("1_puth3")]([])
+min_berries = 3
+max_barries = 5
+thirst = 2
+is_herb = false

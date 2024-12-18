@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="Move" load_steps=8 format=3 uid="uid://brlh6kfw23xd7"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_h8vqy"]
+[ext_resource type="Script" path="res://scripts/buffs/charge_attack.gd" id="2_2katf"]
+[ext_resource type="Resource" uid="uid://cksvtmobvrghb" path="res://resources/moves/solar_beam2.tres" id="2_dm4vg"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_dkpyu"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_4o7oo"]
+
+[sub_resource type="Resource" id="Resource_8jt4i"]
+script = ExtResource("2_2katf")
+move = ExtResource("2_dm4vg")
+s = "absorbed solar energy!"
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_gqxhy"]
+script = ExtResource("3_dkpyu")
+buff = SubResource("Resource_8jt4i")
+chance = 100
+targ = 0
+
+[resource]
+script = ExtResource("4_4o7oo")
+_name = "Solar Beam"
+type = 3
+level_learned = 44
+power = 120
+acc = 100
+move_type = 1
+energy = 5
+targ = 0
+perform_type = 7
+perform_value = 6
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_h8vqy")]([SubResource("Resource_gqxhy")])
+passive_effect = Array[ExtResource("1_h8vqy")]([])
+contact = false
+sound = false
+unmissable = false
+description = "A two turn attack where the user absorbs energy from the sun and releases it in beam form."
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

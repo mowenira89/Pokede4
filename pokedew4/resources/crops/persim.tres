@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=6 format=3 uid="uid://cjus5gekhngxa"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_wxpsa"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_rvf4b"]
+[ext_resource type="Texture2D" uid="uid://hseogm4i70qw" path="res://images/crops/batch1/PersimTreeTallerIII.png" id="3_bu3kd"]
+[ext_resource type="Texture2D" uid="uid://dkhqsvr7opgp8" path="res://images/crops/batch1/PersimTreeBloomIII.png" id="4_vibgm"]
+[ext_resource type="Texture2D" uid="uid://cjarg0n0vgrfa" path="res://images/crops/batch1/PersimTreeBerryIII.png" id="5_1s6io"]
+
+[resource]
+script = ExtResource("2_rvf4b")
+_name = "Persim"
+growth_time = 120
+growth_speed = 1
+sprites = Array[Texture2D]([ExtResource("3_bu3kd"), ExtResource("4_vibgm"), ExtResource("5_1s6io")])
+pest_rate = 10
+pests = Array[ExtResource("1_wxpsa")]([])
+min_berries = 2
+max_barries = 6
+thirst = 6
+is_herb = false

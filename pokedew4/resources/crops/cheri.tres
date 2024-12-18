@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="CropData" load_steps=8 format=3 uid="uid://cot532i8g0ald"]
+
+[ext_resource type="Script" path="res://scripts/pokemon.gd" id="1_b8m3i"]
+[ext_resource type="Script" path="res://scripts/crop_data.gd" id="2_mn84n"]
+[ext_resource type="Resource" uid="uid://bsu6rdh2csaax" path="res://resources/pokedata/weedle.tres" id="2_mwlm6"]
+[ext_resource type="Resource" uid="uid://bu10is8ycwklu" path="res://resources/pokedata/caterpie.tres" id="3_gfk2l"]
+[ext_resource type="Texture2D" uid="uid://bsqvykvaiy3x" path="res://images/crops/batch1/CheriTreeTaller.png" id="3_lsy60"]
+[ext_resource type="Texture2D" uid="uid://kdso1f4f0fip" path="res://images/crops/batch1/CheriTreeBloom.png" id="4_jo30s"]
+[ext_resource type="Texture2D" uid="uid://dlyhg47qyqct8" path="res://images/crops/batch1/CheriTreeBerry.png" id="5_het7j"]
+
+[resource]
+script = ExtResource("2_mn84n")
+_name = "Cheri"
+growth_time = 100
+growth_speed = 3
+sprites = Array[Texture2D]([ExtResource("3_lsy60"), ExtResource("4_jo30s"), ExtResource("5_het7j")])
+pest_rate = 10
+pests = Array[ExtResource("1_b8m3i")]([ExtResource("2_mwlm6"), ExtResource("3_gfk2l")])
+min_berries = 2
+max_barries = 7
+thirst = 4
+is_herb = false

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Food" load_steps=6 format=3 uid="uid://boldu3dpfty82"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_nfwx3"]
+[ext_resource type="Texture2D" uid="uid://cqf286bf5lnj0" path="res://images/items/forage/seaweed.png" id="2_2wepv"]
+[ext_resource type="Script" path="res://scripts/food.gd" id="3_33r6l"]
+[ext_resource type="Script" path="res://resources/effects/eat_effect.gd" id="4_blxj2"]
+
+[sub_resource type="Resource" id="Resource_shc0n"]
+script = ExtResource("4_blxj2")
+flavor = Array[int]([5])
+flavor_profile = 1
+health_restored = 0
+energy_restored = 2
+happiness_bonus = 0
+
+[resource]
+script = ExtResource("3_33r6l")
+flavor = Array[int]([5])
+flavor_profile = 1
+image = ExtResource("2_2wepv")
+item_name = "Seaweed"
+item_type = 1
+rarity = 110
+flavor_text = "A wed found in the sea."
+has_use_effect = true
+untossable = false
+unthrowable = false
+ungivable = false
+use_from_bag = true
+unstackable = false
+use_effect = Array[ExtResource("1_nfwx3")]([SubResource("Resource_shc0n")])
+throw_effect = Array[ExtResource("1_nfwx3")]([])
+equip_effect = Array[ExtResource("1_nfwx3")]([])
+base_value = 2
+consumable = true
+stone = false
+wood = false
+mulchable = true
+mulch_type = 1
+fuel = false
+fuel_amount = 0
+has_modulate = false
+_modulate = Color(0, 0, 0, 1)

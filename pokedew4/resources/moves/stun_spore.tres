@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="Move" load_steps=3 format=3 uid="uid://kwcs8cxp2kbj"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_2thmw"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_pm0y2"]
+
+[resource]
+script = ExtResource("4_pm0y2")
+_name = "Stun Spore"
+type = 3
+power = null
+acc = 75
+move_type = 2
+energy = 5
+targ = null
+perform_type = 4
+perform_value = null
+mining_value = 0
+priority = null
+effect = Array[ExtResource("1_2thmw")]([])
+passive_effect = null
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false

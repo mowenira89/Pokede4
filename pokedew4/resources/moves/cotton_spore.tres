@@ -1,0 +1,67 @@
+[gd_resource type="Resource" script_class="Move" load_steps=12 format=3 uid="uid://dpbcc45nm2b4p"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_mjhi8"]
+[ext_resource type="Script" path="res://scripts/buffs/stat_stages.gd" id="2_vxa2p"]
+[ext_resource type="Script" path="res://resources/effects/apply_buff.gd" id="3_4dqq2"]
+[ext_resource type="Script" path="res://scripts/moves/move.gd" id="4_erguo"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="4_txsgx"]
+[ext_resource type="Resource" uid="uid://xtbxlv6duo1p" path="res://resources/items/raw_cotton.tres" id="4_wxo50"]
+[ext_resource type="Script" path="res://scripts/produce_object.gd" id="5_reg0c"]
+
+[sub_resource type="Resource" id="Resource_ck7ic"]
+script = ExtResource("2_vxa2p")
+stage = -2
+stat = 5
+permanent = false
+lost_on_switch_out = true
+
+[sub_resource type="Resource" id="Resource_dxmrh"]
+script = ExtResource("3_4dqq2")
+buff = SubResource("Resource_ck7ic")
+chance = 100
+targ = 0
+
+[sub_resource type="Resource" id="Resource_3htrp"]
+script = ExtResource("4_txsgx")
+data = ExtResource("4_wxo50")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_1do55"]
+script = ExtResource("5_reg0c")
+item = SubResource("Resource_3htrp")
+min = 2
+max = 4
+method = 0
+min_production_time = 6
+production_time = 8
+weight = 0
+
+[resource]
+script = ExtResource("4_erguo")
+_name = "Cotton Spore"
+type = 3
+level_learned = 24
+power = 0
+acc = 85
+move_type = 2
+energy = 5
+targ = 0
+perform_type = 5
+perform_value = 2
+mining_value = 0
+priority = 1
+effect = Array[ExtResource("1_mjhi8")]([SubResource("Resource_dxmrh")])
+passive_effect = Array[ExtResource("1_mjhi8")]([])
+produce = SubResource("Resource_1do55")
+contact = false
+sound = false
+unmissable = false
+description = ""
+description_passive = ""
+jaw_move = false
+ice = 0
+fire = 0
+water = 0
+electric = 0
+psi = 0
+depester = false

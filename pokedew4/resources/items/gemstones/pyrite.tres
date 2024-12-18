@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://j7fd2eeigj54"]
+
+[ext_resource type="Script" path="res://resources/effects/effect.gd" id="1_mtwa6"]
+[ext_resource type="Texture2D" uid="uid://b8hnb2gpu0u53" path="res://images/items/mining/geode/pyrite.png" id="2_hsb1l"]
+[ext_resource type="Script" path="res://scripts/item_data.gd" id="3_n5ef2"]
+
+[resource]
+script = ExtResource("3_n5ef2")
+image = ExtResource("2_hsb1l")
+item_name = "Pyrite"
+item_type = 5
+rarity = 100
+flavor_text = "Commonly known as \"Fool's Gold\"."
+use_effect = Array[ExtResource("1_mtwa6")]([])
+throw_effect = Array[ExtResource("1_mtwa6")]([])
+equip_effect = Array[ExtResource("1_mtwa6")]([])
+base_value = 10
+consumable = false
+stone = false
+wood = false
